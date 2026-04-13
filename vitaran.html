@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>HP Cell Vitaran J — Polynucleotide Injection | PHARMA-Connectiv</title>
+  <link rel="stylesheet" href="css/styles.css"/>
+  <style>
+    .prod-hero{padding-top:72px;position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden}
+    .prod-hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;transform:scale(1.04);animation:hzoom 12s ease-out forwards}
+    @keyframes hzoom{to{transform:scale(1)}}
+    .prod-hero-overlay{position:absolute;inset:0;background:linear-gradient(120deg,rgba(13,17,23,.94) 0%,rgba(13,17,23,.72) 55%,rgba(10,22,60,.25) 100%)}
+    .prod-hero-content{position:relative;z-index:2;padding:80px 6%;display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center;width:100%}
+    .phc-left h1{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,6vw,5.2rem);font-weight:400;color:#fff;line-height:1.05;margin:20px 0}
+    .tagline{font-size:1.05rem;color:rgba(255,255,255,.65);line-height:1.8;max-width:480px;margin-bottom:36px}
+    .phc-pills{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:40px}
+    .phc-pill{padding:7px 18px;border-radius:100px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);backdrop-filter:blur(8px);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:rgba(255,255,255,.85)}
+    .phc-pill.gold{background:rgba(184,151,90,.2);border-color:rgba(184,151,90,.4);color:var(--gold-light)}
+    .phc-right{display:flex;justify-content:center}
+    .product-box-img{width:100%;max-width:400px;border-radius:12px;box-shadow:0 32px 80px rgba(0,0,0,.45);animation:floatup 1s .4s both}
+    @keyframes floatup{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+
+    /* PN Science section */
+    .pn-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;min-height:580px}
+    .pn-img{position:relative;overflow:hidden}
+    .pn-img img{width:100%;height:100%;object-fit:cover}
+    .pn-text{padding:80px 64px;display:flex;flex-direction:column;justify-content:center;background:var(--ink)}
+    .pn-text h2{font-size:clamp(1.9rem,3vw,2.7rem);color:#fff;margin:14px 0 22px}
+    .pn-text p{font-size:.92rem;line-height:1.9;color:rgba(255,255,255,.55);margin-bottom:16px}
+
+    /* 3 features */
+    .feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:52px;background:var(--grey-2);border-radius:12px;overflow:hidden}
+    .feat{padding:36px 28px;background:var(--white);text-align:center;transition:background .3s}
+    .feat:hover{background:var(--grey-1)}
+    .feat-icon{font-size:2.2rem;margin-bottom:16px}
+    .feat-num{font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:400;color:var(--grey-2);line-height:1;margin-bottom:14px}
+    .feat-title{font-size:.85rem;font-weight:700;color:var(--ink);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
+    .feat-desc{font-size:.83rem;line-height:1.75;color:var(--grey-3)}
+
+    /* Certs strip */
+    .cert-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:52px}
+    .cert-box{padding:32px 24px;border-radius:var(--r);border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.05);text-align:center}
+    .cert-box-icon{font-size:2rem;margin-bottom:14px}
+    .cert-box-name{font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--gold-light);margin-bottom:8px}
+    .cert-box-desc{font-size:.8rem;color:rgba(255,255,255,.45);line-height:1.6}
+
+    /* Specs table */
+    .specs-table{width:100%;border-collapse:collapse;margin-top:36px}
+    .specs-table tr{border-bottom:1px solid var(--grey-2)}
+    .specs-table tr:last-child{border-bottom:none}
+    .specs-table td{padding:18px 0;font-size:.9rem}
+    .specs-table td:first-child{font-weight:600;color:var(--ink);width:200px}
+    .specs-table td:last-child{color:var(--grey-4);line-height:1.65}
+
+    /* Brochure pages */
+    .brochure-pages{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:52px}
+    .brochure-page{border-radius:12px;overflow:hidden;box-shadow:var(--shadow-md);border:1px solid var(--border);transition:transform .3s}
+    .brochure-page:hover{transform:translateY(-4px)}
+    .brochure-page img{width:100%;display:block}
+    .bp-label{padding:14px 18px;background:var(--white);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600;color:var(--grey-3)}
+
+    /* Split */
+    .split-section{display:grid;grid-template-columns:1fr 1fr;gap:0;min-height:500px}
+    .split-img{position:relative;overflow:hidden}
+    .split-img img{width:100%;height:100%;object-fit:cover}
+    .split-text{padding:80px 64px;display:flex;flex-direction:column;justify-content:center}
+
+    /* Related */
+    .related-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:40px}
+
+    @media(max-width:900px){
+      .prod-hero-content{grid-template-columns:1fr}.phc-right{display:none}
+      .pn-grid{grid-template-columns:1fr}.pn-img{min-height:340px}.pn-text{padding:52px 32px}
+      .feat-grid{grid-template-columns:1fr 1fr}.cert-strip{grid-template-columns:1fr 1fr}
+      .split-section{grid-template-columns:1fr}.split-img{min-height:320px}
+      .split-text{padding:52px 32px}.related-grid{grid-template-columns:1fr}
+      .brochure-pages{grid-template-columns:1fr}
+    }
+    @media(max-width:600px){
+      .feat-grid{grid-template-columns:1fr}
+      .cert-strip{grid-template-columns:1fr}
+      .phc-left h1{font-size:2.4rem}
+    }
+  </style>
+</head>
+<body>
+<nav id="navbar">
+  <a href="index.html" class="nav-logo"><div class="nav-logo-main">PHARMA<span>-Connectiv</span></div><div class="nav-logo-sub">Pte Ltd · Singapore</div></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li>
+    <li class="nav-has-drop"><a href="products.html" class="active">Products ▾</a>
+      <div class="nav-drop"><a href="products.html"><span class="nav-drop-icon">💊</span>All Products</a><a href="pometate.html"><span class="nav-drop-icon">🌿</span>Pometate</a><a href="prostamax.html"><span class="nav-drop-icon">🛡️</span>ProstaMax</a><a href="vitaran.html"><span class="nav-drop-icon">💉</span>HP Cell Vitaran J</a></div>
+    </li>
+    <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+  </ul>
+  <button class="nav-toggle" id="nav-toggle"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-drawer" id="nav-drawer">
+  <a href="index.html">Home</a><a href="about.html">About Us</a><a href="products.html">All Products</a><a href="pometate.html">Pometate</a><a href="prostamax.html">ProstaMax</a><a href="vitaran.html">HP Cell Vitaran J</a>
+  <a href="contact.html" class="drawer-cta">Contact Us</a>
+</div>
+
+<!-- HERO -->
+<section class="prod-hero">
+  <img class="prod-hero-bg" src="assets/images/vitaran-hero.jpg" alt="HP Cell Vitaran J — Polynucleotides Intra-Articular Injection"/>
+  <div class="prod-hero-overlay"></div>
+  <div class="prod-hero-content">
+    <div class="phc-left">
+      <div class="breadcrumb" style="margin-bottom:24px"><a href="index.html">Home</a><span class="breadcrumb-sep">/</span><a href="products.html">Products</a><span class="breadcrumb-sep">/</span><span>HP Cell Vitaran J</span></div>
+      <div class="eyebrow light">Medical Device · Class III · Intra-Articular Injection</div>
+      <h1>HP Cell<br>Vitaran J</h1>
+      <p class="tagline">Polynucleotides Intra-Articular Injection — a biomaterial for tissue restoration that reduces joint friction, improves knee mobility and relieves inflammation.</p>
+      <div class="phc-pills">
+        <span class="phc-pill gold">CE Class III ✓</span>
+        <span class="phc-pill gold">Korea FDA (MFDS) ✓</span>
+        <span class="phc-pill">🇰🇷 Made in Korea</span>
+        <span class="phc-pill">DMF Approved</span>
+        <span class="phc-pill">240+ Clinical Patients</span>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:8px">
+        <div style="display:inline-flex;align-items:center;gap:12px;background:rgba(184,151,90,.15);border:1px solid rgba(184,151,90,.35);border-radius:var(--r);padding:12px 18px">
+          <span style="font-size:1.3rem">💉</span>
+          <div><div style="font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--gold-light)">Formulation</div><div style="font-size:.9rem;font-weight:600;color:#fff;margin-top:2px">Sodium Polynucleotide 20mg/mL</div></div>
+        </div>
+        <div style="display:inline-flex;align-items:center;gap:12px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:var(--r);padding:12px 18px">
+          <span style="font-size:1.3rem">📦</span>
+          <div><div style="font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:rgba(255,255,255,.55)">Packaging</div><div style="font-size:.9rem;font-weight:600;color:#fff;margin-top:2px">2mL Prefilled Syringe</div></div>
+        </div>
+      </div>
+      <div style="margin-top:32px;display:flex;flex-wrap:wrap;gap:12px;align-items:center">
+        <a href="contact.html" class="btn btn-gold btn-arrow" style="flex-shrink:0;min-width:max-content">Clinical Enquiry</a>
+        <a href="products.html" class="btn btn-ghost" style="flex-shrink:0;min-width:max-content">View All Products</a>
+      </div>
+    </div>
+    <div class="phc-right">
+      <img class="product-box-img" src="assets/images/vitaran-hero.jpg" alt="HP Cell Vitaran J — prefilled syringe and packaging"/>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap" aria-hidden="true">
+  <div class="marquee-track">
+    <span class="marquee-item"><span class="marquee-dot"></span>Polynucleotide PN</span><span class="marquee-item"><span class="marquee-dot"></span>Korea FDA (MFDS)</span><span class="marquee-item"><span class="marquee-dot"></span>CE Class III</span><span class="marquee-item"><span class="marquee-dot"></span>DMF Approved</span><span class="marquee-item"><span class="marquee-dot"></span>BR PHARM</span><span class="marquee-item"><span class="marquee-dot"></span>240+ Clinical Patients</span><span class="marquee-item"><span class="marquee-dot"></span>Joint Pain Relief</span><span class="marquee-item"><span class="marquee-dot"></span>RAS Technology</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Polynucleotide PN</span><span class="marquee-item"><span class="marquee-dot"></span>Korea FDA (MFDS)</span><span class="marquee-item"><span class="marquee-dot"></span>CE Class III</span><span class="marquee-item"><span class="marquee-dot"></span>DMF Approved</span><span class="marquee-item"><span class="marquee-dot"></span>BR PHARM</span><span class="marquee-item"><span class="marquee-dot"></span>240+ Clinical Patients</span><span class="marquee-item"><span class="marquee-dot"></span>Joint Pain Relief</span><span class="marquee-item"><span class="marquee-dot"></span>RAS Technology</span>
+  </div>
+</div>
+
+<!-- WHAT IS VITARAN J -->
+<section class="section" style="background:var(--white)">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start">
+    <div>
+      <div class="eyebrow reveal">What is HP Cell Vitaran J?</div>
+      <h2 class="display reveal rv1" style="font-size:clamp(2rem,3.5vw,3rem);margin:16px 0 24px">Tissue Restoration<br><em>Through Science</em></h2>
+      <p class="reveal rv2" style="font-size:.95rem;line-height:1.9;color:var(--grey-4);margin-bottom:16px">HP Cell VITARAN J is a biomaterial for tissue restoration using Polynucleotide (PN) that can be treated to reduce physical friction between the articular cartilage of the synovial (joint). It helps improve the functional mobility of the knee and relieves joint pain and inflammation.</p>
+      <p class="reveal rv2" style="font-size:.95rem;line-height:1.9;color:var(--grey-4);margin-bottom:24px">Polynucleotide is a long-chain DNA polymer extracted from salmon or trout. It is injected into the joint cavity to reduce mechanical friction of the joint by maintaining its volume for a certain period of time — offering sustained relief.</p>
+      <div class="reveal rv3" style="background:var(--ink);border-radius:12px;padding:28px;margin-bottom:24px">
+        <div style="font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--gold);margin-bottom:14px">Key Technical Facts</div>
+        <div style="display:grid;gap:12px">
+          <div style="display:flex;gap:12px;align-items:center"><span style="color:var(--sage-light);font-size:1rem">→</span><span style="font-size:.85rem;color:rgba(255,255,255,.75)">Long-chain DNA polymer extracted from salmon or trout</span></div>
+          <div style="display:flex;gap:12px;align-items:center"><span style="color:var(--sage-light);font-size:1rem">→</span><span style="font-size:.85rem;color:rgba(255,255,255,.75)">Viscoelastic properties similar to Hyaluronic Acid (HA)</span></div>
+          <div style="display:flex;gap:12px;align-items:center"><span style="color:var(--sage-light);font-size:1rem">→</span><span style="font-size:.85rem;color:rgba(255,255,255,.75)">Forms a 3D gel structure providing cushioning and mechanical support</span></div>
+          <div style="display:flex;gap:12px;align-items:center"><span style="color:var(--sage-light);font-size:1rem">→</span><span style="font-size:.85rem;color:rgba(255,255,255,.75)">Reduces inflammation through natural biological mechanisms</span></div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="reveal rv2" style="position:relative;margin-bottom:20px">
+        <img src="assets/images/vitaran-detail.jpg" alt="HP Cell Vitaran J — polynucleotide science detail" style="border-radius:12px;box-shadow:var(--shadow-xl);width:100%"/>
+      </div>
+      <div class="reveal rv3" style="position:relative">
+        <img src="assets/images/vitaran-specs.jpg" alt="HP Cell Vitaran J — product specifications and packaging" style="border-radius:12px;box-shadow:var(--shadow-md);width:100%"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 FEATURES (dark bg with brochure photo) -->
+<div class="pn-grid">
+  <div class="pn-img reveal">
+    <img src="assets/images/vitaran-knee.jpg" alt="HP Cell Vitaran J — knee joint injection procedure" loading="lazy"/>
+  </div>
+  <div class="pn-text">
+    <div class="eyebrow light reveal">How It Works</div>
+    <h2 class="display reveal rv1">Three Mechanisms<br>of <span class="gold-em">Action</span></h2>
+    <p class="reveal rv2">HP Cell VITARAN J works through three distinct, synergistic biological mechanisms to restore joint function and relieve pain.</p>
+    <div style="margin-top:36px;display:flex;flex-direction:column;gap:24px">
+      <div class="reveal rv1" style="display:flex;gap:18px;align-items:flex-start">
+        <div style="width:42px;height:42px;background:rgba(184,151,90,.2);border:1px solid rgba(184,151,90,.35);border-radius:var(--r);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0">🧬</div>
+        <div><div style="font-size:.85rem;font-weight:700;color:#fff;margin-bottom:6px;text-transform:uppercase;letter-spacing:.08em">High Molecular DNA Polymer</div><p style="font-size:.82rem;line-height:1.7;color:rgba(255,255,255,.5)">PN features a polymerized DNA structure with a highly viscous gel-like texture, similar to hyaluronic acid (HA), providing elasticity and mechanical support.</p></div>
+      </div>
+      <div class="reveal rv2" style="display:flex;gap:18px;align-items:flex-start">
+        <div style="width:42px;height:42px;background:rgba(61,107,79,.25);border:1px solid rgba(61,107,79,.4);border-radius:var(--r);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0">🦵</div>
+        <div><div style="font-size:.85rem;font-weight:700;color:#fff;margin-bottom:6px;text-transform:uppercase;letter-spacing:.08em">Enhances Functional Mobility</div><p style="font-size:.82rem;line-height:1.7;color:rgba(255,255,255,.5)">By forming a 3D gel structure, PN creates a cushioning effect that helps reduce physical friction within the joints, restoring natural movement.</p></div>
+      </div>
+      <div class="reveal rv3" style="display:flex;gap:18px;align-items:flex-start">
+        <div style="width:42px;height:42px;background:rgba(59,100,180,.25);border:1px solid rgba(59,100,180,.4);border-radius:var(--r);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0">💊</div>
+        <div><div style="font-size:.85rem;font-weight:700;color:#fff;margin-bottom:6px;text-transform:uppercase;letter-spacing:.08em">Reduces Inflammation &amp; Pain</div><p style="font-size:.82rem;line-height:1.7;color:rgba(255,255,255,.5)">PN helps relieve joint pain and inflammation through its natural biological mechanisms, promoting improved joint comfort and daily function.</p></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CERTIFICATIONS (dark) -->
+<section class="section" style="background:var(--ink)">
+  <div class="eyebrow light reveal">Verified &amp; Approved</div>
+  <h2 class="display reveal rv1" style="font-size:clamp(2rem,3.5vw,3rem);color:#fff;margin-top:14px">Manufacturer Credentials<br><span class="gold-em">BR PHARM</span></h2>
+  <p class="reveal rv2" style="font-size:.93rem;line-height:1.85;color:rgba(255,255,255,.5);max-width:640px;margin-top:16px">HP Cell VITARAN J is manufactured by BR PHARM — a verified, world-leading PN/PDRN manufacturer from South Korea, with multiple international approvals and patented technology.</p>
+  <div class="cert-strip">
+    <div class="cert-box reveal">
+      <div class="cert-box-icon">🏆</div>
+      <div class="cert-box-name">World's First RAS</div>
+      <p class="cert-box-desc">World's first PN/PDRN produced via Recirculating Aquaculture System — ensuring the highest purity and sustainability standards.</p>
+    </div>
+    <div class="cert-box reveal rv1">
+      <div class="cert-box-icon">🔬</div>
+      <div class="cert-box-name">Patented Purification</div>
+      <p class="cert-box-desc">Patented high-purity PN purification method and API DMF-approved PDRN — the gold standard in polynucleotide production.</p>
+    </div>
+    <div class="cert-box reveal rv2">
+      <div class="cert-box-icon">🧪</div>
+      <div class="cert-box-name">240+ Patients Studied</div>
+      <p class="cert-box-desc">First PN intra-articular injection to conduct a clinical trial in Korea — 240+ patients studied, proving both safety and efficacy.</p>
+    </div>
+    <div class="cert-box reveal">
+      <div class="cert-box-icon">🇰🇷</div>
+      <div class="cert-box-name">Korea FDA (MFDS)</div>
+      <p class="cert-box-desc">Approved medical device by Korea's Ministry of Food and Drug Safety — one of Asia's most rigorous regulatory bodies.</p>
+    </div>
+    <div class="cert-box reveal rv1">
+      <div class="cert-box-icon">🇪🇺</div>
+      <div class="cert-box-name">CE Class III Approved</div>
+      <p class="cert-box-desc">European Conformity marking for Class III medical devices — the highest category of medical device regulation in Europe.</p>
+    </div>
+    <div class="cert-box reveal rv2">
+      <div class="cert-box-icon">📋</div>
+      <div class="cert-box-name">DMF &amp; ISO Certified</div>
+      <p class="cert-box-desc">Drug Master File approval and ISO certification confirm adherence to international pharmaceutical manufacturing excellence.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BROCHURE IMAGE GALLERY -->
+<section class="section" style="background:var(--cream)">
+  <div class="eyebrow reveal">Product Documentation</div>
+  <h2 class="display reveal rv1" style="font-size:clamp(1.9rem,3vw,2.6rem);margin-top:14px">From the <em>Brochure</em></h2>
+  <div class="brochure-pages">
+    <div class="brochure-page reveal rv1">
+      <img src="assets/images/vitaran-certs.jpg" alt="Vitaran J — certifications and manufacturer credentials"/>
+      <div class="bp-label">Certifications &amp; Approvals</div>
+    </div>
+    <div class="brochure-page reveal rv2">
+      <img src="assets/images/vitaran-specs.jpg" alt="Vitaran J — full product specifications"/>
+      <div class="bp-label">Product Specifications</div>
+    </div>
+  </div>
+</section>
+
+<!-- FULL SPECS -->
+<div class="split-section">
+  <div class="split-text" style="background:var(--white)">
+    <div class="eyebrow reveal">Product Specifications</div>
+    <h2 class="display reveal rv1" style="font-size:clamp(1.9rem,3vw,2.6rem);margin-top:14px">Full Product <em>Details</em></h2>
+    <table class="specs-table reveal rv2">
+      <tr><td>Product Name</td><td>HP Cell VITARAN J</td></tr>
+      <tr><td>Classification</td><td>Class III Medical Device</td></tr>
+      <tr><td>Ingredient</td><td>Sodium Polynucleotide 20mg/mL</td></tr>
+      <tr><td>Packaging Unit</td><td>2mL Prefilled Syringe</td></tr>
+      <tr><td>Storage</td><td>Store below 25°C in a cool, dry place. Protect from direct sunlight.</td></tr>
+      <tr><td>Approvals</td><td>Korea FDA (MFDS) · CE Class III · API DMF · ISO</td></tr>
+      <tr><td>Clinical Data</td><td>240+ patients — first PN intra-articular injection clinical trial in Korea</td></tr>
+      <tr><td>Manufacturer</td><td>BR PHARM Co., Ltd · 13 Sinpyeong-ro, Jijeong-myeon, Wonju-si, Gangwon-do, Republic of Korea</td></tr>
+      <tr><td>Distributed By</td><td>PHARMA-Connectiv Pte Ltd · 85 Playfair Road, L5 · Singapore 368000 · T: +65 6282 8732</td></tr>
+    </table>
+    <div class="reveal rv3" style="margin-top:32px;display:flex;gap:12px;flex-wrap:wrap">
+      <a href="contact.html" class="btn btn-gold btn-arrow">Clinical Enquiry</a>
+      <a href="products.html" class="btn btn-outline">All Products</a>
+    </div>
+  </div>
+  <div class="split-img reveal">
+    <img src="assets/images/vitaran-inject.jpg" alt="HP Cell Vitaran J — knee injection procedure"/>
+  </div>
+</div>
+
+<!-- RELATED -->
+<section class="section" style="background:var(--cream)">
+  <div class="eyebrow reveal">Also From Our Range</div>
+  <h2 class="display reveal rv1" style="font-size:clamp(1.9rem,3vw,2.6rem);margin-top:14px"><em>Related</em> Products</h2>
+  <div class="related-grid">
+    <a href="pometate.html" class="pcard reveal rv1">
+      <div class="pcard-img"><img src="assets/images/pometate-product-crop.jpg" alt="Pometate" loading="lazy"/><div class="pcard-gradient"></div><span class="pcard-badge badge-green">Vegetarian</span><div class="pcard-overlay-text"><div class="pcard-cat">Dietary Supplement</div><div class="pcard-name">Pometate</div></div></div>
+      <div class="pcard-body"><p>Daily vegetarian supplement with pomegranate, green tea, turmeric and broccoli.</p><div class="tag-row"><span class="tag">Pomegranate</span><span class="tag">Green Tea</span><span class="tag">Turmeric</span></div></div>
+      <div class="pcard-foot"><div class="pcard-origin">Made in <strong>USA</strong></div><span class="pcard-link">View Product</span></div>
+    </a>
+    <a href="prostamax.html" class="pcard reveal rv2">
+      <div class="pcard-img"><img src="assets/images/prostamax-photo-crop.jpg" alt="ProstaMax" loading="lazy"/><div class="pcard-gradient"></div><span class="pcard-badge badge-amber">Men's Health</span><div class="pcard-overlay-text"><div class="pcard-cat">Prostate Health</div><div class="pcard-name">ProstaMax</div></div></div>
+      <div class="pcard-body"><p>Clinically formulated prostate-supportive supplement with Saw Palmetto, Selenium, Zinc and Pumpkin Seed.</p><div class="tag-row"><span class="tag">Saw Palmetto</span><span class="tag">Selenium</span><span class="tag">Zinc</span></div></div>
+      <div class="pcard-foot"><div class="pcard-origin">Made in <strong>USA</strong></div><span class="pcard-link">View Product</span></div>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div><div class="f-brand-name">PHARMA<span>-Connectiv</span></div><p class="f-brand-desc">Connecting healthcare professionals and patients with world-class pharmaceutical, nutraceutical and veterinary solutions.</p><div class="f-certs"><span class="f-cert">FDA</span><span class="f-cert">GMP</span><span class="f-cert">CE</span><span class="f-cert">KFDA</span><span class="f-cert">DMF</span><span class="f-cert">ISO</span></div></div>
+    <div class="fcol"><h5>Navigation</h5><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="products.html">Products</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
+    <div class="fcol"><h5>Products</h5><ul><li><a href="pometate.html">Pometate</a></li><li><a href="prostamax.html">ProstaMax</a></li><li><a href="vitaran.html">HP Cell Vitaran J</a></li></ul></div>
+    <div class="fcol"><h5>Contact</h5><ul><li><a href="tel:+6562828732">+65 6282 8732</a></li><li><a href="mailto:info@pharma-connectiv.com">info@pharma-connectiv.com</a></li><li><a href="#">85 Playfair Road, L5<br>Singapore 368000</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>© 2024 PHARMA-Connectiv Pte Ltd · Singapore 368000</p><p>For use by licensed healthcare professionals only. Not for self-administration.</p></div>
+</footer>
+<script src="js/main.js"></script>
+</body></html>
