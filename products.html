@@ -1,126 +1,452 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Products — PHARMA-Connectiv Pte Ltd</title>
-  <link rel="stylesheet" href="css/styles.css"/>
-  <style>
-    .filter-bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:52px}
-    .fbtn{padding:9px 22px;border-radius:100px;border:1.5px solid var(--grey-2);font-size:.73rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600;background:transparent;color:var(--grey-4);transition:all .25s;font-family:'Outfit',sans-serif}
-    .fbtn.active,.fbtn:hover{background:var(--ink);color:var(--gold);border-color:var(--ink)}
-    .cat-hdr{display:flex;align-items:center;gap:18px;margin-bottom:32px;margin-top:48px}
-    .cat-hdr:first-of-type{margin-top:0}
-    .cat-hdr-icon{font-size:1.3rem}.cat-hdr-txt{font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;font-weight:700;color:var(--grey-3)}
-    .cat-hdr-line{flex:1;height:1px;background:var(--grey-2)}
-    .cat-row{margin-bottom:56px}
-    @media(max-width:600px){.filter-bar{gap:6px}}
-  </style>
-</head>
-<body>
-<nav id="navbar" class="solid">
-  <a href="index.html" class="nav-logo"><div class="nav-logo-main">PHARMA<span>-Connectiv</span></div><div class="nav-logo-sub">Pte Ltd · Singapore</div></a>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li>
-    <li class="nav-has-drop"><a href="products.html" class="active">Products ▾</a>
-      <div class="nav-drop"><a href="products.html"><span class="nav-drop-icon">💊</span>All Products</a><a href="pometate.html"><span class="nav-drop-icon">🌿</span>Pometate</a><a href="prostamax.html"><span class="nav-drop-icon">🛡️</span>ProstaMax</a><a href="vitaran.html"><span class="nav-drop-icon">💉</span>HP Cell Vitaran J</a></div>
-    </li>
-    <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
-  </ul>
-  <button class="nav-toggle" id="nav-toggle"><span></span><span></span><span></span></button>
-</nav>
-<div class="nav-drawer" id="nav-drawer">
-  <a href="index.html">Home</a><a href="about.html">About Us</a><a href="products.html">All Products</a><a href="pometate.html">Pometate</a><a href="prostamax.html">ProstaMax</a><a href="vitaran.html">HP Cell Vitaran J</a>
-  <a href="contact.html" class="drawer-cta">Contact Us</a>
-</div>
-
-<div class="page-hero">
-  <img class="page-hero-img" src="assets/images/pometate-hero.jpg" alt="PHARMA-Connectiv products"/>
-  <div class="page-hero-overlay"></div>
-  <div class="page-hero-content">
-    <div class="breadcrumb"><a href="index.html">Home</a><span class="breadcrumb-sep">/</span><span>Products</span></div>
-    <h1 class="display" style="font-size:clamp(2.5rem,6vw,4.5rem)">Our Product <em>Portfolio</em></h1>
-    <p>A curated range of FDA-registered supplements, CE-approved medical devices, and veterinary care solutions — all backed by clinical evidence.</p>
-  </div>
-</div>
-
-<div class="marquee-wrap" aria-hidden="true">
-  <div class="marquee-track">
-    <span class="marquee-item"><span class="marquee-dot"></span>FDA Registered</span><span class="marquee-item"><span class="marquee-dot"></span>GMP Certified</span><span class="marquee-item"><span class="marquee-dot"></span>CE Class III Approved</span><span class="marquee-item"><span class="marquee-dot"></span>Korea FDA (MFDS)</span><span class="marquee-item"><span class="marquee-dot"></span>100% Natural</span><span class="marquee-item"><span class="marquee-dot"></span>Vegetarian Formulas</span><span class="marquee-item"><span class="marquee-dot"></span>Clinically Tested</span>
-    <span class="marquee-item"><span class="marquee-dot"></span>FDA Registered</span><span class="marquee-item"><span class="marquee-dot"></span>GMP Certified</span><span class="marquee-item"><span class="marquee-dot"></span>CE Class III Approved</span><span class="marquee-item"><span class="marquee-dot"></span>Korea FDA (MFDS)</span><span class="marquee-item"><span class="marquee-dot"></span>100% Natural</span><span class="marquee-item"><span class="marquee-dot"></span>Vegetarian Formulas</span><span class="marquee-item"><span class="marquee-dot"></span>Clinically Tested</span>
-  </div>
-</div>
-
-<section class="section" style="background:var(--cream)">
-  <div class="filter-bar">
-    <button class="fbtn active" onclick="filter('all',this)">All Products</button>
-    <button class="fbtn" onclick="filter('supplements',this)">Supplements &amp; Vitamins</button>
-    <button class="fbtn" onclick="filter('medical',this)">Medical Device</button>
-    <button class="fbtn" onclick="filter('veterinary',this)">Veterinary Care</button>
-  </div>
-
-  <!-- Supplements -->
-  <div class="cat-row" data-cat="supplements">
-    <div class="cat-hdr"><span class="cat-hdr-icon">💊</span><span class="cat-hdr-txt">Supplements &amp; Vitamins</span><span class="cat-hdr-line"></span></div>
-    <div class="products-grid">
-      <a href="pometate.html" class="pcard reveal">
-        <div class="pcard-img"><img src="assets/images/pometate-product-crop.jpg" alt="Pometate supplement with pomegranate, turmeric, green tea and broccoli" loading="lazy"/><div class="pcard-gradient"></div><span class="pcard-badge badge-green">Vegetarian</span><div class="pcard-overlay-text"><div class="pcard-cat">Dietary Supplement</div><div class="pcard-name">Pometate</div></div></div>
-        <div class="pcard-body"><p>A unique vegetarian blend of pomegranate, green tea, turmeric and broccoli in a convenient daily capsule. 100% natural with no added preservatives.</p><div class="tag-row"><span class="tag">Pomegranate</span><span class="tag">Green Tea</span><span class="tag">Turmeric</span><span class="tag">Broccoli</span></div></div>
-        <div class="pcard-foot"><div class="pcard-origin">Made in <strong>USA</strong></div><span class="pcard-link">Full Details</span></div>
-      </a>
-      <a href="prostamax.html" class="pcard reveal rv1">
-        <div class="pcard-img"><img src="assets/images/prostamax-photo-crop.jpg" alt="ProstaMax prostate health supplement" loading="lazy"/><div class="pcard-gradient"></div><span class="pcard-badge badge-amber">Men's Health</span><div class="pcard-overlay-text"><div class="pcard-cat">Prostate Health</div><div class="pcard-name">ProstaMax</div></div></div>
-        <div class="pcard-body"><p>Clinically formulated prostate-supportive nutrients. Saw Palmetto, Selenium, Zinc and Pumpkin Seed in easy-to-digest veggie capsules.</p><div class="tag-row"><span class="tag">Saw Palmetto</span><span class="tag">Selenium</span><span class="tag">Zinc</span><span class="tag">Pumpkin Seed</span></div></div>
-        <div class="pcard-foot"><div class="pcard-origin">Made in <strong>USA</strong></div><span class="pcard-link">Full Details</span></div>
-      </a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Products — PHARMA-Connectiv Pte Ltd</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <style>
+      .filter-bar {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin-bottom: 52px;
+      }
+      .fbtn {
+        padding: 9px 22px;
+        border-radius: 100px;
+        border: 1.5px solid var(--grey-2);
+        font-size: 0.73rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        font-weight: 600;
+        background: transparent;
+        color: var(--grey-4);
+        transition: all 0.25s;
+        font-family: "Outfit", sans-serif;
+      }
+      .fbtn.active,
+      .fbtn:hover {
+        background: var(--ink);
+        color: var(--gold);
+        border-color: var(--ink);
+      }
+      .cat-hdr {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        margin-bottom: 32px;
+        margin-top: 48px;
+      }
+      .cat-hdr:first-of-type {
+        margin-top: 0;
+      }
+      .cat-hdr-icon {
+        font-size: 1.3rem;
+      }
+      .cat-hdr-txt {
+        font-size: 0.7rem;
+        letter-spacing: 0.24em;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: var(--grey-3);
+      }
+      .cat-hdr-line {
+        flex: 1;
+        height: 1px;
+        background: var(--grey-2);
+      }
+      .cat-row {
+        margin-bottom: 56px;
+      }
+      @media (max-width: 600px) {
+        .filter-bar {
+          gap: 6px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav id="navbar" class="solid">
+      <a href="index.html" class="nav-logo"
+        ><div class="nav-logo-main">PHARMA<span>-Connectiv</span></div>
+        <div class="nav-logo-sub">Pte Ltd · Singapore</div></a
+      >
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li class="nav-has-drop">
+          <a href="products.html" class="active">Products ▾</a>
+          <div class="nav-drop">
+            <a href="products.html"
+              ><span class="nav-drop-icon">💊</span>All Products</a
+            ><a href="pometate.html"
+              ><span class="nav-drop-icon">🌿</span>Pometate</a
+            ><a href="prostamax.html"
+              ><span class="nav-drop-icon">🛡️</span>ProstaMax</a
+            ><a href="vitaran.html"
+              ><span class="nav-drop-icon">💉</span>HP Cell Vitaran J</a
+            >
+          </div>
+        </li>
+        <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+      </ul>
+      <button class="nav-toggle" id="nav-toggle">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <div class="nav-drawer" id="nav-drawer">
+      <a href="index.html">Home</a><a href="about.html">About Us</a
+      ><a href="products.html">All Products</a
+      ><a href="pometate.html">Pometate</a><a href="prostamax.html">ProstaMax</a
+      ><a href="vitaran.html">HP Cell Vitaran J</a>
+      <a href="contact.html" class="drawer-cta">Contact Us</a>
     </div>
-  </div>
 
-  <!-- Medical -->
-  <div class="cat-row" data-cat="medical">
-    <div class="cat-hdr"><span class="cat-hdr-icon">⚕️</span><span class="cat-hdr-txt">Medical Device</span><span class="cat-hdr-line"></span></div>
-    <div class="products-grid">
-      <a href="vitaran.html" class="pcard reveal">
-        <div class="pcard-img"><img src="assets/images/vitaran-knee-crop.jpg" alt="HP Cell Vitaran J — polynucleotide intra-articular injection" loading="lazy"/><div class="pcard-gradient"></div><span class="pcard-badge badge-navy">CE Class III</span><div class="pcard-overlay-text"><div class="pcard-cat">Intra-Articular Injection</div><div class="pcard-name">HP Cell Vitaran J</div></div></div>
-        <div class="pcard-body"><p>Polynucleotide (PN) biomaterial for tissue restoration — reduces joint friction, improves knee mobility and relieves inflammation. Korea FDA and CE approved.</p><div class="tag-row"><span class="tag">Polynucleotide</span><span class="tag">Korea FDA</span><span class="tag">CE Class III</span><span class="tag">DMF Approved</span></div></div>
-        <div class="pcard-foot"><div class="pcard-origin">Made in <strong>Korea</strong></div><span class="pcard-link">Full Details</span></div>
-      </a>
-    </div>
-  </div>
-
-  <!-- Veterinary -->
-  <div class="cat-row" data-cat="veterinary">
-    <div class="cat-hdr"><span class="cat-hdr-icon">🐾</span><span class="cat-hdr-txt">Veterinary Care</span><span class="cat-hdr-line"></span></div>
-    <div class="products-grid">
-      <div class="pcard reveal" style="cursor:default">
-        <div class="pcard-img" style="background:linear-gradient(135deg,#0d4a5a,#1a7a8a);display:flex;align-items:center;justify-content:center;font-size:5rem">🐾<div class="pcard-gradient"></div><span class="pcard-badge badge-teal">Coming Soon</span><div class="pcard-overlay-text"><div class="pcard-cat">Veterinary Solutions</div><div class="pcard-name">Vet Care Range</div></div></div>
-        <div class="pcard-body"><p>Our upcoming veterinary range will bring the same scientific rigor applied to human health to companion and working animals. Contact us for early access.</p><div class="tag-row"><span class="tag">Animal Health</span><span class="tag">Supplements</span><span class="tag">Coming Soon</span></div></div>
-        <div class="pcard-foot"><div class="pcard-origin">Enquire for <strong>Details</strong></div><a href="contact.html" class="pcard-link">Contact Us</a></div>
+    <div class="page-hero">
+      <img
+        class="page-hero-img"
+        src="assets/images/pometate-hero.jpg"
+        alt="PHARMA-Connectiv products"
+      />
+      <div class="page-hero-overlay"></div>
+      <div class="page-hero-content">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a><span class="breadcrumb-sep">/</span
+          ><span>Products</span>
+        </div>
+        <h1 class="display" style="font-size: clamp(2.5rem, 6vw, 4.5rem)">
+          Our Product <em style="color: var(--gold)">Portfolio</em>
+        </h1>
+        <p>
+          A curated range of FDA-registered supplements, CE-approved medical
+          devices, and veterinary care solutions — all backed by clinical
+          evidence.
+        </p>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- CTA -->
-<section style="background:var(--sage);padding:72px 6%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:28px">
-  <div><h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.4rem);font-weight:400;color:#fff">Need more information?</h2><p style="font-size:.93rem;color:rgba(255,255,255,.7);margin-top:10px">Our team can help you find the right product for your clinical or personal needs.</p></div>
-  <a href="contact.html" class="btn btn-gold btn-arrow">Contact Our Team</a>
-</section>
+    <div class="marquee-wrap" aria-hidden="true">
+      <div class="marquee-track">
+        <span class="marquee-item"
+          ><span class="marquee-dot"></span>FDA Registered</span
+        ><span class="marquee-item"
+          ><span class="marquee-dot"></span>GMP Certified</span
+        ><span class="marquee-item"
+          ><span class="marquee-dot"></span>CE Class III Approved</span
+        ><span class="marquee-item"
+          ><span class="marquee-dot"></span>Korea FDA (MFDS)</span
+        ><span class="marquee-item"
+          ><span class="marquee-dot"></span>100% Natural</span
+        ><span class="marquee-item"
+          ><span class="marquee-dot"></span>Vegetarian Formulas</span
+        ><span class="marquee-item"
+          ><span class="marquee-dot"></span>Clinically Tested</span
+        >
+        <span class="marquee-item"
+          ><span class="marquee-dot"></span>FDA Registered</span
+        ><span class="marquee-item"
+          ><span class="marquee-dot"></span>GMP Certified</span
+        ><span class="marquee-item"
+          ><span class="marquee-dot"></span>CE Class III Approved</span
+        ><span class="marquee-item"
+          ><span class="marquee-dot"></span>Korea FDA (MFDS)</span
+        ><span class="marquee-item"
+          ><span class="marquee-dot"></span>100% Natural</span
+        ><span class="marquee-item"
+          ><span class="marquee-dot"></span>Vegetarian Formulas</span
+        ><span class="marquee-item"
+          ><span class="marquee-dot"></span>Clinically Tested</span
+        >
+      </div>
+    </div>
 
-<footer>
-  <div class="footer-top">
-    <div><div class="f-brand-name">PHARMA<span>-Connectiv</span></div><p class="f-brand-desc">Connecting healthcare professionals and patients with world-class pharmaceutical, nutraceutical and veterinary solutions.</p><div class="f-certs"><span class="f-cert">FDA</span><span class="f-cert">GMP</span><span class="f-cert">CE</span><span class="f-cert">KFDA</span><span class="f-cert">DMF</span><span class="f-cert">ISO</span></div></div>
-    <div class="fcol"><h5>Navigation</h5><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="products.html">Products</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
-    <div class="fcol"><h5>Products</h5><ul><li><a href="pometate.html">Pometate</a></li><li><a href="prostamax.html">ProstaMax</a></li><li><a href="vitaran.html">HP Cell Vitaran J</a></li></ul></div>
-    <div class="fcol"><h5>Contact</h5><ul><li><a href="tel:+6562828732">+65 6282 8732</a></li><li><a href="mailto:info@pharma-connectiv.com">info@pharma-connectiv.com</a></li><li><a href="#">85 Playfair Road, L5<br>Singapore 368000</a></li></ul></div>
-  </div>
-  <div class="footer-bottom"><p>© 2024 PHARMA-Connectiv Pte Ltd · Singapore 368000</p><p>Products are not intended to diagnose, treat, cure or prevent any disease.</p></div>
-</footer>
-<script src="js/main.js"></script>
-<script>
-function filter(cat, btn) {
-  document.querySelectorAll('.fbtn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  document.querySelectorAll('.cat-row').forEach(r => { r.style.display = (cat === 'all' || r.dataset.cat === cat) ? 'block' : 'none'; });
-}
-</script>
-</body></html>
+    <section class="section" style="background: var(--cream)">
+      <div class="filter-bar">
+        <button class="fbtn active" onclick="filter('all', this)">
+          All Products
+        </button>
+        <button class="fbtn" onclick="filter('supplements', this)">
+          Supplements &amp; Vitamins
+        </button>
+        <button class="fbtn" onclick="filter('medical', this)">
+          Medical Device
+        </button>
+        <button class="fbtn" onclick="filter('veterinary', this)">
+          Veterinary Care
+        </button>
+      </div>
+
+      <!-- Supplements -->
+      <div class="cat-row" data-cat="supplements">
+        <div class="cat-hdr">
+          <span class="cat-hdr-icon">💊</span
+          ><span class="cat-hdr-txt">Supplements &amp; Vitamins</span
+          ><span class="cat-hdr-line"></span>
+        </div>
+        <div class="products-grid">
+          <a href="pometate.html" class="pcard reveal">
+            <div class="pcard-img">
+              <img
+                src="assets/images/pometate-product-crop.jpg"
+                alt="Pometate supplement with pomegranate, turmeric, green tea and broccoli"
+                loading="lazy"
+              />
+              <div class="pcard-gradient"></div>
+              <span class="pcard-badge badge-green">Vegetarian</span>
+              <div class="pcard-overlay-text">
+                <div class="pcard-cat">Dietary Supplement</div>
+                <div class="pcard-name">Pometate</div>
+              </div>
+            </div>
+            <div class="pcard-body">
+              <p>
+                A unique vegetarian blend of pomegranate, green tea, turmeric
+                and broccoli in a convenient daily capsule. 100% natural with no
+                added preservatives.
+              </p>
+              <div class="tag-row">
+                <span class="tag">Pomegranate</span
+                ><span class="tag">Green Tea</span
+                ><span class="tag">Turmeric</span
+                ><span class="tag">Broccoli</span>
+              </div>
+            </div>
+            <div class="pcard-foot">
+              <div class="pcard-origin">Made in <strong>USA</strong></div>
+              <span class="pcard-link">Full Details</span>
+            </div>
+          </a>
+          <a href="prostamax.html" class="pcard reveal rv1">
+            <div class="pcard-img">
+              <img
+                src="assets/images/prostamax-photo-crop.jpg"
+                alt="ProstaMax prostate health supplement"
+                loading="lazy"
+              />
+              <div class="pcard-gradient"></div>
+              <span class="pcard-badge badge-amber">Men's Health</span>
+              <div class="pcard-overlay-text">
+                <div class="pcard-cat">Prostate Health</div>
+                <div class="pcard-name">ProstaMax</div>
+              </div>
+            </div>
+            <div class="pcard-body">
+              <p>
+                Clinically formulated prostate-supportive nutrients. Saw
+                Palmetto, Selenium, Zinc and Pumpkin Seed in easy-to-digest
+                veggie capsules.
+              </p>
+              <div class="tag-row">
+                <span class="tag">Saw Palmetto</span
+                ><span class="tag">Selenium</span><span class="tag">Zinc</span
+                ><span class="tag">Pumpkin Seed</span>
+              </div>
+            </div>
+            <div class="pcard-foot">
+              <div class="pcard-origin">Made in <strong>USA</strong></div>
+              <span class="pcard-link">Full Details</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Medical -->
+      <div class="cat-row" data-cat="medical">
+        <div class="cat-hdr">
+          <span class="cat-hdr-icon">⚕️</span
+          ><span class="cat-hdr-txt">Medical Device</span
+          ><span class="cat-hdr-line"></span>
+        </div>
+        <div class="products-grid">
+          <a href="vitaran.html" class="pcard reveal">
+            <div class="pcard-img">
+              <img
+                src="assets/images/vitaran-knee-crop.jpg"
+                alt="HP Cell Vitaran J — polynucleotide intra-articular injection"
+                loading="lazy"
+              />
+              <div class="pcard-gradient"></div>
+              <span class="pcard-badge badge-navy">CE Class III</span>
+              <div class="pcard-overlay-text">
+                <div class="pcard-cat">Intra-Articular Injection</div>
+                <div class="pcard-name">HP Cell Vitaran J</div>
+              </div>
+            </div>
+            <div class="pcard-body">
+              <p>
+                Polynucleotide (PN) biomaterial for tissue restoration — reduces
+                joint friction, improves knee mobility and relieves
+                inflammation. Korea FDA and CE approved.
+              </p>
+              <div class="tag-row">
+                <span class="tag">Polynucleotide</span
+                ><span class="tag">Korea FDA</span
+                ><span class="tag">CE Class III</span
+                ><span class="tag">DMF Approved</span>
+              </div>
+            </div>
+            <div class="pcard-foot">
+              <div class="pcard-origin">Made in <strong>Korea</strong></div>
+              <span class="pcard-link">Full Details</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Veterinary -->
+      <div class="cat-row" data-cat="veterinary">
+        <div class="cat-hdr">
+          <span class="cat-hdr-icon">🐾</span
+          ><span class="cat-hdr-txt">Veterinary Care</span
+          ><span class="cat-hdr-line"></span>
+        </div>
+        <div class="products-grid">
+          <div class="pcard reveal" style="cursor: default">
+            <div
+              class="pcard-img"
+              style="
+                background: linear-gradient(135deg, #0d4a5a, #1a7a8a);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 5rem;
+              "
+            >
+              🐾
+              <div class="pcard-gradient"></div>
+              <span class="pcard-badge badge-teal">Coming Soon</span>
+              <div class="pcard-overlay-text">
+                <div class="pcard-cat">Veterinary Solutions</div>
+                <div class="pcard-name">Vet Care Range</div>
+              </div>
+            </div>
+            <div class="pcard-body">
+              <p>
+                Our upcoming veterinary range will bring the same scientific
+                rigor applied to human health to companion and working animals.
+                Contact us for early access.
+              </p>
+              <div class="tag-row">
+                <span class="tag">Animal Health</span
+                ><span class="tag">Supplements</span
+                ><span class="tag">Coming Soon</span>
+              </div>
+            </div>
+            <div class="pcard-foot">
+              <div class="pcard-origin">
+                Enquire for <strong>Details</strong>
+              </div>
+              <a href="contact.html" class="pcard-link">Contact Us</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section
+      style="
+        background: var(--sage);
+        padding: 72px 6%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 28px;
+      "
+    >
+      <div>
+        <h2
+          style="
+            font-family: &quot;Playfair Display&quot;, serif;
+            font-size: clamp(1.8rem, 3vw, 2.4rem);
+            font-weight: 400;
+            color: #fff;
+          "
+        >
+          Need more information?
+        </h2>
+        <p
+          style="
+            font-size: 0.93rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-top: 10px;
+          "
+        >
+          Our team can help you find the right product for your clinical or
+          personal needs.
+        </p>
+      </div>
+      <a href="contact.html" class="btn btn-gold btn-arrow">Contact Our Team</a>
+    </section>
+
+    <footer>
+      <div class="footer-top">
+        <div>
+          <div class="f-brand-name">PHARMA<span>-Connectiv</span></div>
+          <p class="f-brand-desc">
+            Connecting healthcare professionals and patients with world-class
+            pharmaceutical, nutraceutical and veterinary solutions.
+          </p>
+          <div class="f-certs">
+            <span class="f-cert">FDA</span><span class="f-cert">GMP</span
+            ><span class="f-cert">CE</span><span class="f-cert">KFDA</span
+            ><span class="f-cert">DMF</span><span class="f-cert">ISO</span>
+          </div>
+        </div>
+        <div class="fcol">
+          <h5>Navigation</h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="fcol">
+          <h5>Products</h5>
+          <ul>
+            <li><a href="pometate.html">Pometate</a></li>
+            <li><a href="prostamax.html">ProstaMax</a></li>
+            <li><a href="vitaran.html">HP Cell Vitaran J</a></li>
+          </ul>
+        </div>
+        <div class="fcol">
+          <h5>Contact</h5>
+          <ul>
+            <li><a href="tel:+6562828732">+65 6282 8732</a></li>
+            <li>
+              <a href="mailto:info@pharma-connectiv.com"
+                >info@pharma-connectiv.com</a
+              >
+            </li>
+            <li>
+              <a href="#">85 Playfair Road, L5<br />Singapore 368000</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 PHARMA-Connectiv Pte Ltd · Singapore 368000</p>
+        <p>
+          Products are not intended to diagnose, treat, cure or prevent any
+          disease.
+        </p>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+    <script>
+      function filter(cat, btn) {
+        document
+          .querySelectorAll(".fbtn")
+          .forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+        document.querySelectorAll(".cat-row").forEach((r) => {
+          r.style.display =
+            cat === "all" || r.dataset.cat === cat ? "block" : "none";
+        });
+      }
+    </script>
+  </body>
+</html>
