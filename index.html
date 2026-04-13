@@ -1,402 +1,1093 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>PHARMA-Connectiv Pte Ltd | Health Solutions Singapore</title>
-  <meta name="description" content="Premium pharmaceutical, nutraceutical and veterinary health products distributed across Singapore. FDA registered, GMP certified."/>
-  <link rel="stylesheet" href="css/styles.css"/>
-  <style>
-    /* ── HOME HERO ── */
-    #hero{
-      position:relative;
-      min-height:100vh;
-      display:flex;
-      flex-direction:column;
-      overflow:hidden;
-      padding-top:72px;
-    }
-    .hero-bg{position:absolute;inset:0;background:url('assets/images/home-pometate-wide.jpg') center 40%/cover no-repeat;transform:scale(1.04);animation:hzoom 14s ease-out forwards}
-    @keyframes hzoom{to{transform:scale(1)}}
-    .hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(13,17,23,.95) 0%,rgba(13,17,23,.80) 50%,rgba(13,17,23,.55) 100%)}
-    .hero-grid{position:absolute;inset:0;pointer-events:none;background-image:repeating-linear-gradient(90deg,rgba(184,151,90,.04) 0,rgba(184,151,90,.04) 1px,transparent 1px,transparent 90px),repeating-linear-gradient(0deg,rgba(184,151,90,.04) 0,rgba(184,151,90,.04) 1px,transparent 1px,transparent 90px)}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>PHARMA-Connectiv Pte Ltd | Health Solutions Singapore</title>
+    <meta
+      name="description"
+      content="Premium pharmaceutical, nutraceutical and veterinary health products distributed across Singapore. FDA registered, GMP certified."
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <style>
+      /* ── HOME HERO ── */
+      #hero {
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        padding-top: 72px;
+      }
+      .hero-bg {
+        position: absolute;
+        inset: 0;
+        background: url("assets/images/home-pometate-wide.jpg") center 40% /
+          cover no-repeat;
+        transform: scale(1.04);
+        animation: hzoom 14s ease-out forwards;
+      }
+      @keyframes hzoom {
+        to {
+          transform: scale(1);
+        }
+      }
+      .hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          135deg,
+          rgba(13, 17, 23, 0.95) 0%,
+          rgba(13, 17, 23, 0.8) 50%,
+          rgba(13, 17, 23, 0.55) 100%
+        );
+      }
+      .hero-grid {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background-image:
+          repeating-linear-gradient(
+            90deg,
+            rgba(184, 151, 90, 0.04) 0,
+            rgba(184, 151, 90, 0.04) 1px,
+            transparent 1px,
+            transparent 90px
+          ),
+          repeating-linear-gradient(
+            0deg,
+            rgba(184, 151, 90, 0.04) 0,
+            rgba(184, 151, 90, 0.04) 1px,
+            transparent 1px,
+            transparent 90px
+          );
+      }
 
-    /* Hero body: flex-1 fills space above stats, vertically centered */
-    .hero-body{
-      position:relative;z-index:2;
-      padding:80px 6% 60px;
-      flex:1;
-      display:flex;flex-direction:column;justify-content:center;
-    }
-    .hero-pill{display:inline-flex;align-items:center;gap:8px;background:rgba(184,151,90,.16);border:1px solid rgba(184,151,90,.35);border-radius:100px;padding:6px 16px;font-size:.67rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--gold-light);margin-bottom:28px;animation:slin 1s .15s both;width:fit-content}
-    .hero-pill::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0}
-    .hero-h1{font-family:'Playfair Display',serif;font-size:clamp(2.6rem,5.5vw,5.2rem);font-weight:400;color:#fff;line-height:1.06;margin-bottom:20px;animation:slin 1s .3s both}
-    .hero-h1 .i{font-style:italic;color:var(--gold-light)}
-    .hero-h1 .g{color:var(--sage-light)}
-    .hero-sub{font-size:.97rem;line-height:1.8;color:rgba(255,255,255,.62);max-width:480px;margin-bottom:36px;animation:slin 1s .45s both}
+      /* Hero body: flex-1 fills space above stats, vertically centered */
+      .hero-body {
+        position: relative;
+        z-index: 2;
+        padding: 80px 6% 60px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .hero-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(184, 151, 90, 0.16);
+        border: 1px solid rgba(184, 151, 90, 0.35);
+        border-radius: 100px;
+        padding: 6px 16px;
+        font-size: 0.67rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: var(--gold-light);
+        margin-bottom: 28px;
+        animation: slin 1s 0.15s both;
+        width: fit-content;
+      }
+      .hero-pill::before {
+        content: "";
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--gold);
+        flex-shrink: 0;
+      }
+      .hero-h1 {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(2.6rem, 5.5vw, 5.2rem);
+        font-weight: 400;
+        color: #fff;
+        line-height: 1.06;
+        margin-bottom: 20px;
+        animation: slin 1s 0.3s both;
+      }
+      .hero-h1 .i {
+        font-style: italic;
+        color: var(--gold-light);
+      }
+      .hero-h1 .g {
+        color: var(--sage-light);
+      }
+      .hero-sub {
+        font-size: 0.97rem;
+        line-height: 1.8;
+        color: rgba(255, 255, 255, 0.62);
+        max-width: 480px;
+        margin-bottom: 36px;
+        animation: slin 1s 0.45s both;
+      }
 
-    /* ── BUTTONS — Never overlap, always wrap cleanly ── */
-    .hero-btns{
-      display:flex;
-      flex-wrap:wrap;           /* wraps to next line on small screens */
-      gap:14px;
-      align-items:center;
-      animation:slin 1s .6s both;
-    }
-    .hero-btns .btn{
-      flex-shrink:0;            /* buttons never squish */
-      min-width:max-content;    /* prevents text wrapping inside button */
-    }
-    @keyframes slin{from{opacity:0;transform:translateX(-28px)}to{opacity:1;transform:none}}
+      /* ── BUTTONS — Never overlap, always wrap cleanly ── */
+      .hero-btns {
+        display: flex;
+        flex-wrap: wrap; /* wraps to next line on small screens */
+        gap: 14px;
+        align-items: center;
+        animation: slin 1s 0.6s both;
+      }
+      .hero-btns .btn {
+        flex-shrink: 0; /* buttons never squish */
+        min-width: max-content; /* prevents text wrapping inside button */
+      }
+      @keyframes slin {
+        from {
+          opacity: 0;
+          transform: translateX(-28px);
+        }
+        to {
+          opacity: 1;
+          transform: none;
+        }
+      }
 
-    /* Stats bar: always at bottom, never overlaps body */
-    .hero-stats{
-      position:relative;z-index:2;
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      flex-shrink:0;            /* never compressed by flex */
-      animation:fadeup 1s .8s both;
-    }
-    @keyframes fadeup{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
-    .hstat{padding:22px 28px;border-right:1px solid rgba(255,255,255,.09);background:rgba(13,17,23,.75);backdrop-filter:blur(14px)}
-    .hstat:last-child{border-right:none}
-    .hstat-num{font-family:'Playfair Display',serif;font-size:2rem;font-weight:400;color:#fff;line-height:1}
-    .hstat-num span{color:var(--gold);font-size:1.2rem}
-    .hstat-lbl{font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.42);margin-top:6px;font-weight:500}
+      /* Stats bar: always at bottom, never overlaps body */
+      .hero-stats {
+        position: relative;
+        z-index: 2;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        flex-shrink: 0; /* never compressed by flex */
+        animation: fadeup 1s 0.8s both;
+      }
+      @keyframes fadeup {
+        from {
+          opacity: 0;
+          transform: translateY(16px);
+        }
+        to {
+          opacity: 1;
+          transform: none;
+        }
+      }
+      .hstat {
+        padding: 22px 28px;
+        border-right: 1px solid rgba(255, 255, 255, 0.09);
+        background: rgba(13, 17, 23, 0.75);
+        backdrop-filter: blur(14px);
+      }
+      .hstat:last-child {
+        border-right: none;
+      }
+      .hstat-num {
+        font-family: "Playfair Display", serif;
+        font-size: 2rem;
+        font-weight: 400;
+        color: #fff;
+        line-height: 1;
+      }
+      .hstat-num span {
+        color: var(--gold);
+        font-size: 1.2rem;
+      }
+      .hstat-lbl {
+        font-size: 0.62rem;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.42);
+        margin-top: 6px;
+        font-weight: 500;
+      }
 
-    /* About strip */
-    .about-strip{display:grid;grid-template-columns:1fr 1fr;min-height:680px}
-    .as-img{position:relative;overflow:hidden}
-    .as-img img{width:100%;height:100%;object-fit:cover;transition:transform .8s ease}
-    .as-img:hover img{transform:scale(1.04)}
-    .as-badge{position:absolute;bottom:36px;left:36px;background:rgba(13,17,23,.88);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.12);border-radius:var(--r);padding:22px 26px}
-    .as-badge-num{font-family:'Playfair Display',serif;font-size:2.6rem;font-weight:400;color:var(--gold);line-height:1}
-    .as-badge-txt{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-top:7px;font-weight:600;line-height:1.5}
-    .as-text{padding:90px 72px;display:flex;flex-direction:column;justify-content:center;background:#fff}
-    .as-text h2{font-size:clamp(2rem,3.5vw,2.9rem);margin:16px 0 26px}
-    .as-text p{font-size:.93rem;line-height:1.9;color:var(--grey-4);margin-bottom:16px}
-    .as-pillars{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:36px}
-    .pillar{padding:20px;background:var(--grey-1);border-radius:var(--r);border-left:3px solid var(--sage);transition:box-shadow .3s}
-    .pillar:hover{box-shadow:var(--shadow-sm)}
-    .pillar-icon{font-size:1.3rem;margin-bottom:9px}
-    .pillar h4{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--ink);margin-bottom:5px}
-    .pillar p{font-size:.8rem;color:var(--grey-3);line-height:1.65}
+      /* About strip */
+      .about-strip {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        min-height: 680px;
+      }
+      .as-img {
+        position: relative;
+        overflow: hidden;
+      }
+      .as-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.8s ease;
+      }
+      .as-img:hover img {
+        transform: scale(1.04);
+      }
+      .as-badge {
+        position: absolute;
+        bottom: 36px;
+        left: 36px;
+        background: rgba(13, 17, 23, 0.88);
+        backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: var(--r);
+        padding: 22px 26px;
+      }
+      .as-badge-num {
+        font-family: "Playfair Display", serif;
+        font-size: 2.6rem;
+        font-weight: 400;
+        color: var(--gold);
+        line-height: 1;
+      }
+      .as-badge-txt {
+        font-size: 0.7rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.6);
+        margin-top: 7px;
+        font-weight: 600;
+        line-height: 1.5;
+      }
+      .as-text {
+        padding: 90px 72px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: #fff;
+      }
+      .as-text h2 {
+        font-size: clamp(2rem, 3.5vw, 2.9rem);
+        margin: 16px 0 26px;
+      }
+      .as-text p {
+        font-size: 0.93rem;
+        line-height: 1.9;
+        color: var(--grey-4);
+        margin-bottom: 16px;
+      }
+      .as-pillars {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+        margin-top: 36px;
+      }
+      .pillar {
+        padding: 20px;
+        background: var(--grey-1);
+        border-radius: var(--r);
+        border-left: 3px solid var(--sage);
+        transition: box-shadow 0.3s;
+      }
+      .pillar:hover {
+        box-shadow: var(--shadow-sm);
+      }
+      .pillar-icon {
+        font-size: 1.3rem;
+        margin-bottom: 9px;
+      }
+      .pillar h4 {
+        font-size: 0.78rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: var(--ink);
+        margin-bottom: 5px;
+      }
+      .pillar p {
+        font-size: 0.8rem;
+        color: var(--grey-3);
+        line-height: 1.65;
+      }
 
-    /* Products preview */
-    .section-hdr{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:56px;flex-wrap:wrap;gap:20px}
-    .section-hdr h2{font-size:clamp(2rem,3.5vw,2.9rem);margin-top:14px}
+      /* Products preview */
+      .section-hdr {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 56px;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      .section-hdr h2 {
+        font-size: clamp(2rem, 3.5vw, 2.9rem);
+        margin-top: 14px;
+      }
 
-    /* Trust dark section */
-    .trust-sec{background:var(--ink);position:relative;overflow:hidden}
-    .trust-bg-img{position:absolute;inset:0;object-fit:cover;width:100%;height:100%;opacity:.08}
-    .trust-inner{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
-    .trust-text h2{font-size:clamp(2rem,3.5vw,3rem);color:#fff;margin:16px 0 22px}
-    .trust-text p{font-size:1rem;line-height:1.75;color:rgba(255,255,255,.68)}
-    .trust-cards{display:flex;flex-direction:column;gap:14px}
-    .tc{display:flex;gap:18px;align-items:flex-start;padding:22px 24px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);border-radius:var(--r);transition:background .3s,border-color .3s}
-    .tc:hover{background:rgba(255,255,255,.08);border-color:rgba(184,151,90,.3)}
-    .tc-icon{width:48px;height:48px;border-radius:var(--r);display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0}
-    .tci-sage{background:rgba(61,107,79,.25)}.tci-gold{background:rgba(184,151,90,.25)}.tci-blue{background:rgba(59,100,180,.25)}
-    .tc-title{font-size:1.05rem;font-weight:600;color:#fff;margin-bottom:8px}
-    .tc-desc{font-size:0.95rem;line-height:1.7;color:rgba(255,255,255,.65)}
+      /* Trust dark section */
+      .trust-sec {
+        background: var(--ink);
+        position: relative;
+        overflow: hidden;
+      }
+      .trust-bg-img {
+        position: absolute;
+        inset: 0;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        opacity: 0.08;
+      }
+      .trust-inner {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        align-items: center;
+      }
+      .trust-text h2 {
+        font-size: clamp(2rem, 3.5vw, 3rem);
+        color: #fff;
+        margin: 16px 0 22px;
+      }
+      .trust-text p {
+        font-size: 1rem;
+        line-height: 1.75;
+        color: rgba(255, 255, 255, 0.68);
+      }
+      .trust-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+      .tc {
+        display: flex;
+        gap: 18px;
+        align-items: flex-start;
+        padding: 22px 24px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.09);
+        border-radius: var(--r);
+        transition:
+          background 0.3s,
+          border-color 0.3s;
+      }
+      .tc:hover {
+        background: rgba(255, 255, 255, 0.08);
+        border-color: rgba(184, 151, 90, 0.3);
+      }
+      .tc-icon {
+        width: 48px;
+        height: 48px;
+        border-radius: var(--r);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.4rem;
+        flex-shrink: 0;
+      }
+      .tci-sage {
+        background: rgba(61, 107, 79, 0.25);
+      }
+      .tci-gold {
+        background: rgba(184, 151, 90, 0.25);
+      }
+      .tci-blue {
+        background: rgba(59, 100, 180, 0.25);
+      }
+      .tc-title {
+        font-size: 1.05rem;
+        font-weight: 600;
+        color: #fff;
+        margin-bottom: 8px;
+      }
+      .tc-desc {
+        font-size: 0.95rem;
+        line-height: 1.7;
+        color: rgba(255, 255, 255, 0.65);
+      }
 
-    /* Brands */
-    .brands-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:56px;border:1px solid var(--grey-2);border-radius:12px;overflow:hidden}
-    .brand-tile{display:flex;flex-direction:column;align-items:center;gap:14px;padding:44px 28px;text-align:center;border-right:1px solid var(--grey-2);transition:background .3s;cursor:pointer;text-decoration:none}
-    .brand-tile:last-child{border-right:none}
-    .brand-tile:hover{background:var(--grey-1)}
-    .bt-img{width:90px;height:90px;border-radius:50%;overflow:hidden;border:3px solid var(--grey-2);transition:border-color .3s}
-    .brand-tile:hover .bt-img{border-color:var(--sage)}
-    .bt-img img{width:100%;height:100%;object-fit:cover}
-    .bt-name{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:400;color:var(--ink)}
-    .bt-sub{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--grey-3);font-weight:500}
-    .bt-chip{padding:4px 14px;border-radius:100px;font-size:.63rem;letter-spacing:.15em;text-transform:uppercase;font-weight:700}
-    .chip-sage{background:var(--sage-pale);color:var(--sage)}
-    .chip-gold{background:var(--gold-pale);color:var(--gold)}
+      /* Brands */
+      .brands-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2px;
+        margin-top: 56px;
+        border: 1px solid var(--grey-2);
+        border-radius: 12px;
+        overflow: hidden;
+      }
+      .brand-tile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+        padding: 44px 28px;
+        text-align: center;
+        border-right: 1px solid var(--grey-2);
+        transition: background 0.3s;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      .brand-tile:last-child {
+        border-right: none;
+      }
+      .brand-tile:hover {
+        background: var(--grey-1);
+      }
+      .bt-img {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 3px solid var(--grey-2);
+        transition: border-color 0.3s;
+      }
+      .brand-tile:hover .bt-img {
+        border-color: var(--sage);
+      }
+      .bt-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .bt-name {
+        font-family: "Playfair Display", serif;
+        font-size: 1.25rem;
+        font-weight: 400;
+        color: var(--ink);
+      }
+      .bt-sub {
+        font-size: 0.7rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--grey-3);
+        font-weight: 500;
+      }
+      .bt-chip {
+        padding: 4px 14px;
+        border-radius: 100px;
+        font-size: 0.63rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+      .chip-sage {
+        background: var(--sage-pale);
+        color: var(--sage);
+      }
+      .chip-gold {
+        background: var(--gold-pale);
+        color: var(--gold);
+      }
 
-    @media(max-width:1024px){
-      .hero-stats{grid-template-columns:1fr 1fr}
-      .hstat{padding:18px 20px}
-    }
-    @media(max-width:900px){
-      .about-strip{grid-template-columns:1fr}
-      .as-img{min-height:360px}
-      .as-text{padding:52px 32px}
-      .trust-inner{grid-template-columns:1fr}
-      .brands-grid{grid-template-columns:1fr 1fr}
-      .brand-tile:nth-child(2){border-right:none}
-      .brand-tile:nth-child(n+3){border-top:1px solid var(--grey-2)}
-    }
-    @media(max-width:600px){
-      .hero-stats{grid-template-columns:1fr 1fr}
-      .hstat{padding:14px 16px}
-      .hstat-num{font-size:1.5rem}
-      .as-pillars{grid-template-columns:1fr}
-      .brands-grid{grid-template-columns:1fr}
-      .brand-tile{border-right:none !important;border-bottom:1px solid var(--grey-2)}
-      .hero-btns{flex-direction:column;align-items:flex-start}
-      .hero-btns .btn{width:100%;justify-content:center}
-    }
-    @media(max-width:400px){
-      .hero-stats{grid-template-columns:1fr 1fr}
-      .hstat{padding:12px}
-      .hstat-num{font-size:1.3rem}
-      .hstat-lbl{font-size:.55rem;letter-spacing:.1em}
-    }
-  </style>
-</head>
-<body>
-
-<!-- NAVBAR -->
-<nav id="navbar">
-  <a href="index.html" class="nav-logo">
-    <div class="nav-logo-main">PHARMA<span>-Connectiv</span></div>
-    <div class="nav-logo-sub">Pte Ltd · Singapore</div>
-  </a>
-  <ul class="nav-links">
-    <li><a href="index.html" class="active">Home</a></li>
-    <li><a href="about.html">About Us</a></li>
-    <li class="nav-has-drop">
-      <a href="products.html">Products ▾</a>
-      <div class="nav-drop">
-        <a href="products.html"><span class="nav-drop-icon">💊</span>All Products</a>
-        <a href="pometate.html"><span class="nav-drop-icon">🌿</span>Pometate</a>
-        <a href="prostamax.html"><span class="nav-drop-icon">🛡️</span>ProstaMax</a>
-        <a href="vitaran.html"><span class="nav-drop-icon">💉</span>HP Cell Vitaran J</a>
-      </div>
-    </li>
-    <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
-  </ul>
-  <button class="nav-toggle" id="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
-</nav>
-<div class="nav-drawer" id="nav-drawer">
-  <a href="index.html">Home</a>
-  <a href="about.html">About Us</a>
-  <a href="products.html">All Products</a>
-  <a href="pometate.html">Pometate</a>
-  <a href="prostamax.html">ProstaMax</a>
-  <a href="vitaran.html">HP Cell Vitaran J</a>
-  <a href="contact.html" class="drawer-cta">Contact Us</a>
-</div>
-
-<!-- HERO -->
-<section id="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-overlay"></div>
-  <div class="hero-grid"></div>
-  <div class="hero-body">
-    <div class="hero-pill">Singapore · Est. PHARMA-Connectiv Pte Ltd</div>
-    <h1 class="hero-h1">Elevating Health<br>Through <span class="i">Science</span><br>&amp; <span class="g">Nature</span></h1>
-    <p class="hero-sub">Premium pharmaceutical, nutraceutical and veterinary solutions — FDA-registered, GMP-certified, and clinically validated for your confidence.</p>
-    <div class="hero-btns">
-      <a href="products.html" class="btn btn-gold btn-arrow">Explore Products</a>
-      <a href="about.html" class="btn btn-ghost">Our Story</a>
+      @media (max-width: 1024px) {
+        .hero-stats {
+          grid-template-columns: 1fr 1fr;
+        }
+        .hstat {
+          padding: 18px 20px;
+        }
+      }
+      @media (max-width: 900px) {
+        .about-strip {
+          grid-template-columns: 1fr;
+        }
+        .as-img {
+          min-height: 360px;
+        }
+        .as-text {
+          padding: 52px 32px;
+        }
+        .trust-inner {
+          grid-template-columns: 1fr;
+        }
+        .brands-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .brand-tile:nth-child(2) {
+          border-right: none;
+        }
+        .brand-tile:nth-child(n + 3) {
+          border-top: 1px solid var(--grey-2);
+        }
+      }
+      @media (max-width: 600px) {
+        .hero-stats {
+          grid-template-columns: 1fr 1fr;
+        }
+        .hstat {
+          padding: 14px 16px;
+        }
+        .hstat-num {
+          font-size: 1.5rem;
+        }
+        .as-pillars {
+          grid-template-columns: 1fr;
+        }
+        .brands-grid {
+          grid-template-columns: 1fr;
+        }
+        .brand-tile {
+          border-right: none !important;
+          border-bottom: 1px solid var(--grey-2);
+        }
+        .hero-btns {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .hero-btns .btn {
+          width: 100%;
+          justify-content: center;
+        }
+      }
+      @media (max-width: 400px) {
+        .hero-stats {
+          grid-template-columns: 1fr 1fr;
+        }
+        .hstat {
+          padding: 12px;
+        }
+        .hstat-num {
+          font-size: 1.3rem;
+        }
+        .hstat-lbl {
+          font-size: 0.55rem;
+          letter-spacing: 0.1em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav id="navbar">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-main">PHARMA<span>-Connectiv</span></div>
+        <div class="nav-logo-sub">Pte Ltd · Singapore</div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li class="nav-has-drop">
+          <a href="products.html">Products ▾</a>
+          <div class="nav-drop">
+            <a href="products.html"
+              ><span class="nav-drop-icon">💊</span>All Products</a
+            >
+            <a href="pometate.html"
+              ><span class="nav-drop-icon">🌿</span>Pometate</a
+            >
+            <a href="prostamax.html"
+              ><span class="nav-drop-icon">🛡️</span>ProstaMax</a
+            >
+            <a href="vitaran.html"
+              ><span class="nav-drop-icon">💉</span>HP Cell Vitaran J</a
+            >
+          </div>
+        </li>
+        <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+      </ul>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <div class="nav-drawer" id="nav-drawer">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="products.html">All Products</a>
+      <a href="pometate.html">Pometate</a>
+      <a href="prostamax.html">ProstaMax</a>
+      <a href="vitaran.html">HP Cell Vitaran J</a>
+      <a href="contact.html" class="drawer-cta">Contact Us</a>
     </div>
-  </div>
-  <div class="hero-stats">
-    <div class="hstat">
-      <div class="hstat-num"><span data-count="3" data-suffix="+">3+</span></div>
-      <div class="hstat-lbl">Product Lines</div>
-    </div>
-    <div class="hstat">
-      <div class="hstat-num">FDA<span style="font-size:1rem;vertical-align:middle;margin-left:4px">✓</span></div>
-      <div class="hstat-lbl">Registered Products</div>
-    </div>
-    <div class="hstat">
-      <div class="hstat-num"><span data-count="240" data-suffix="+">240+</span></div>
-      <div class="hstat-lbl">Clinical Trial Patients</div>
-    </div>
-    <div class="hstat">
-      <div class="hstat-num">GMP<span style="font-size:1rem;vertical-align:middle;margin-left:4px">✓</span></div>
-      <div class="hstat-lbl">Certified Manufacturing</div>
-    </div>
-  </div>
-</section>
 
-<!-- MARQUEE -->
-<div class="marquee-wrap" aria-hidden="true">
-  <div class="marquee-track">
-    <span class="marquee-item"><span class="marquee-dot"></span>FDA Registered</span>
-    <span class="marquee-item"><span class="marquee-dot"></span>GMP Certified</span>
-    <span class="marquee-item"><span class="marquee-dot"></span>CE Class III Approved</span>
-    <span class="marquee-item"><span class="marquee-dot"></span>Korea FDA (MFDS) Approved</span>
-    <span class="marquee-item"><span class="marquee-dot"></span>100% Natural Ingredients</span>
-    <span class="marquee-item"><span class="marquee-dot"></span>Vegetarian Formulas</span>
-    <span class="marquee-item"><span class="marquee-dot"></span>Clinically Tested</span>
-    <span class="marquee-item"><span class="marquee-dot"></span>ISO Certified</span>
-    <span class="marquee-item"><span class="marquee-dot"></span>FDA Registered</span>
-    <span class="marquee-item"><span class="marquee-dot"></span>GMP Certified</span>
-    <span class="marquee-item"><span class="marquee-dot"></span>CE Class III Approved</span>
-    <span class="marquee-item"><span class="marquee-dot"></span>Korea FDA (MFDS) Approved</span>
-    <span class="marquee-item"><span class="marquee-dot"></span>100% Natural Ingredients</span>
-    <span class="marquee-item"><span class="marquee-dot"></span>Vegetarian Formulas</span>
-    <span class="marquee-item"><span class="marquee-dot"></span>Clinically Tested</span>
-    <span class="marquee-item"><span class="marquee-dot"></span>ISO Certified</span>
-  </div>
-</div>
+    <!-- HERO -->
+    <section id="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-grid"></div>
+      <div class="hero-body">
+        <div class="hero-pill">Singapore · Est. PHARMA-Connectiv Pte Ltd</div>
+        <h1 class="hero-h1">
+          Elevating Health<br />Through <span class="i">Science</span
+          ><br />&amp; <span class="g">Nature</span>
+        </h1>
+        <p class="hero-sub">
+          Premium pharmaceutical, nutraceutical and veterinary solutions —
+          FDA-registered, GMP-certified, and clinically validated for your
+          confidence.
+        </p>
+        <div class="hero-btns">
+          <a href="products.html" class="btn btn-gold btn-arrow"
+            >Explore Products</a
+          >
+          <a href="about.html" class="btn btn-ghost">Our Story</a>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="hstat">
+          <div class="hstat-num">
+            <span data-count="3" data-suffix="+">3+</span>
+          </div>
+          <div class="hstat-lbl">Product Lines</div>
+        </div>
+        <div class="hstat">
+          <div class="hstat-num">
+            FDA<span
+              style="font-size: 1rem; vertical-align: middle; margin-left: 4px"
+              >✓</span
+            >
+          </div>
+          <div class="hstat-lbl">Registered Products</div>
+        </div>
+        <div class="hstat">
+          <div class="hstat-num">
+            <span data-count="240" data-suffix="+">240+</span>
+          </div>
+          <div class="hstat-lbl">Clinical Trial Patients</div>
+        </div>
+        <div class="hstat">
+          <div class="hstat-num">
+            GMP<span
+              style="font-size: 1rem; vertical-align: middle; margin-left: 4px"
+              >✓</span
+            >
+          </div>
+          <div class="hstat-lbl">Certified Manufacturing</div>
+        </div>
+      </div>
+    </section>
 
-<!-- ABOUT STRIP -->
-<div class="about-strip">
-  <div class="as-img reveal">
-    <img src="assets/images/pometate-hero.jpg" alt="Pometate — natural ingredients including pomegranate, turmeric, broccoli and green tea" loading="lazy"/>
-    <div class="as-badge">
-      <div class="as-badge-num">100%</div>
-      <div class="as-badge-txt">Natural &amp;<br>Certified Quality</div>
-    </div>
-  </div>
-  <div class="as-text">
-    <div class="eyebrow reveal">Who We Are</div>
-    <h2 class="display reveal rv1">A Trusted Partner in<br><em>Health &amp; Wellness</em></h2>
-    <p class="reveal rv2">PHARMA-Connectiv Pte Ltd is a Singapore-based distributor committed to bringing premium quality health solutions to patients and healthcare professionals. Founded on the belief that access to scientifically validated products should be seamless.</p>
-    <p class="reveal rv2">We partner with FDA-registered US manufacturers and Korea FDA-approved innovators to deliver a curated range — supplements, medical devices, and veterinary care.</p>
-    <div class="as-pillars reveal rv3">
-      <div class="pillar"><div class="pillar-icon">🏅</div><h4>Quality Assured</h4><p>FDA-registered &amp; GMP-certified manufacturing.</p></div>
-      <div class="pillar"><div class="pillar-icon">🔬</div><h4>Science-Backed</h4><p>Clinically tested and evidence-based formulations.</p></div>
-      <div class="pillar"><div class="pillar-icon">🌿</div><h4>Natural First</h4><p>No added colors, preservatives or chelating agents.</p></div>
-      <div class="pillar"><div class="pillar-icon">🌏</div><h4>Regional Reach</h4><p>Reliable distribution across Singapore &amp; SE Asia.</p></div>
-    </div>
-    <div class="reveal rv4" style="margin-top:36px"><a href="about.html" class="btn btn-sage btn-arrow">Learn More</a></div>
-  </div>
-</div>
-
-<!-- PRODUCTS PREVIEW -->
-<section class="section" style="background:var(--cream)">
-  <div class="section-hdr">
-    <div>
-      <div class="eyebrow reveal">What We Offer</div>
-      <h2 class="display reveal rv1">Our Products</h2>
-    </div>
-    <a href="products.html" class="btn btn-outline reveal rv2">View All Products →</a>
-  </div>
-  <div class="products-grid">
-    <a href="pometate.html" class="pcard reveal">
-      <div class="pcard-img">
-        <img src="assets/images/pometate-product-crop.jpg" alt="Pometate dietary supplement with pomegranate and natural herbs" loading="lazy"/>
-        <div class="pcard-gradient"></div>
-        <span class="pcard-badge badge-green">Vegetarian</span>
-        <div class="pcard-overlay-text"><div class="pcard-cat">Dietary Supplement</div><div class="pcard-name">Pometate</div></div>
-      </div>
-      <div class="pcard-body">
-        <p>A unique vegetarian blend of pomegranate, green tea, turmeric and broccoli in a convenient daily capsule.</p>
-        <div class="tag-row"><span class="tag">Pomegranate</span><span class="tag">Green Tea</span><span class="tag">Turmeric</span><span class="tag">Broccoli</span></div>
-      </div>
-      <div class="pcard-foot"><div class="pcard-origin">Made in <strong>USA</strong></div><span class="pcard-link">Learn More</span></div>
-    </a>
-    <a href="prostamax.html" class="pcard reveal rv1">
-      <div class="pcard-img">
-        <img src="assets/images/prostamax-photo-crop.jpg" alt="ProstaMax — prostate health supplement for men" loading="lazy"/>
-        <div class="pcard-gradient"></div>
-        <span class="pcard-badge badge-amber">Men's Health</span>
-        <div class="pcard-overlay-text"><div class="pcard-cat">Prostate Health</div><div class="pcard-name">ProstaMax</div></div>
-      </div>
-      <div class="pcard-body">
-        <p>Saw Palmetto, Selenium, Zinc and Pumpkin Seed — clinically validated prostate-supportive nutrients.</p>
-        <div class="tag-row"><span class="tag">Saw Palmetto</span><span class="tag">Selenium</span><span class="tag">Zinc</span><span class="tag">Pumpkin Seed</span></div>
-      </div>
-      <div class="pcard-foot"><div class="pcard-origin">Made in <strong>USA</strong></div><span class="pcard-link">Learn More</span></div>
-    </a>
-    <a href="vitaran.html" class="pcard reveal rv2">
-      <div class="pcard-img">
-        <img src="assets/images/vitaran-knee-crop.jpg" alt="HP Cell Vitaran J — intra-articular polynucleotide injection for joint pain" loading="lazy"/>
-        <div class="pcard-gradient"></div>
-        <span class="pcard-badge badge-navy">CE Class III</span>
-        <div class="pcard-overlay-text"><div class="pcard-cat">Medical Device</div><div class="pcard-name">HP Cell Vitaran J</div></div>
-      </div>
-      <div class="pcard-body">
-        <p>Polynucleotide intra-articular injection — reduces joint friction, restores mobility and relieves pain.</p>
-        <div class="tag-row"><span class="tag">Polynucleotide</span><span class="tag">Korea FDA</span><span class="tag">CE Approved</span></div>
-      </div>
-      <div class="pcard-foot"><div class="pcard-origin">Made in <strong>Korea</strong></div><span class="pcard-link">Learn More</span></div>
-    </a>
-  </div>
-</section>
-
-<!-- TRUST -->
-<section class="section trust-sec">
-  <img class="trust-bg-img" src="assets/images/why-choose-us.jpg" alt="" aria-hidden="true"/>
-  <div class="trust-inner">
-    <div class="trust-text">
-      <div class="eyebrow light reveal">Why Choose Us</div>
-      <h2 class="display reveal rv1">Backed by Science,<br>Driven by <span class="gold-em">Results</span></h2>
-      <p class="reveal rv2">Every product is chosen for its scientific rigor, regulatory compliance and clinical evidence. We don't just distribute — we curate, validate, and stand behind every solution.</p>
-      <div style="margin-top:36px" class="reveal rv3"><a href="about.html" class="btn btn-gold btn-arrow">Our Story</a></div>
-    </div>
-    <div class="trust-cards">
-      <div class="tc reveal">
-        <div class="tc-icon tci-sage">🏛️</div>
-        <div><div class="tc-title">Regulatory Compliance</div><div class="tc-desc">FDA, Korea FDA (MFDS), CE Class III and GMP certified across all product lines.</div></div>
-      </div>
-      <div class="tc reveal rv1">
-        <div class="tc-icon tci-gold">🧬</div>
-        <div><div class="tc-title">Clinical Evidence</div><div class="tc-desc">240+ patients in clinical trials. World-first intra-articular PN clinical study in Korea.</div></div>
-      </div>
-      <div class="tc reveal rv2">
-        <div class="tc-icon tci-blue">🌿</div>
-        <div><div class="tc-title">100% Natural Formulations</div><div class="tc-desc">No colors, preservatives, flavoring, bulking or chelating agents — pure and purposeful.</div></div>
-      </div>
-      <div class="tc reveal rv3">
-        <div class="tc-icon tci-sage">🔬</div>
-        <div><div class="tc-title">Patented Technology</div><div class="tc-desc">World's first PN/PDRN via Recirculating Aquaculture System with patented high-purity PN purification.</div></div>
+    <!-- MARQUEE -->
+    <div class="marquee-wrap" aria-hidden="true">
+      <div class="marquee-track">
+        <span class="marquee-item"
+          ><span class="marquee-dot"></span>FDA Registered</span
+        >
+        <span class="marquee-item"
+          ><span class="marquee-dot"></span>GMP Certified</span
+        >
+        <span class="marquee-item"
+          ><span class="marquee-dot"></span>CE Class III Approved</span
+        >
+        <span class="marquee-item"
+          ><span class="marquee-dot"></span>Korea FDA (MFDS) Approved</span
+        >
+        <span class="marquee-item"
+          ><span class="marquee-dot"></span>100% Natural Ingredients</span
+        >
+        <span class="marquee-item"
+          ><span class="marquee-dot"></span>Vegetarian Formulas</span
+        >
+        <span class="marquee-item"
+          ><span class="marquee-dot"></span>Clinically Tested</span
+        >
+        <span class="marquee-item"
+          ><span class="marquee-dot"></span>ISO Certified</span
+        >
+        <span class="marquee-item"
+          ><span class="marquee-dot"></span>FDA Registered</span
+        >
+        <span class="marquee-item"
+          ><span class="marquee-dot"></span>GMP Certified</span
+        >
+        <span class="marquee-item"
+          ><span class="marquee-dot"></span>CE Class III Approved</span
+        >
+        <span class="marquee-item"
+          ><span class="marquee-dot"></span>Korea FDA (MFDS) Approved</span
+        >
+        <span class="marquee-item"
+          ><span class="marquee-dot"></span>100% Natural Ingredients</span
+        >
+        <span class="marquee-item"
+          ><span class="marquee-dot"></span>Vegetarian Formulas</span
+        >
+        <span class="marquee-item"
+          ><span class="marquee-dot"></span>Clinically Tested</span
+        >
+        <span class="marquee-item"
+          ><span class="marquee-dot"></span>ISO Certified</span
+        >
       </div>
     </div>
-  </div>
-</section>
 
-<!-- BRANDS -->
-<section class="section" style="background:var(--white)">
-  <div class="eyebrow reveal">Our Portfolio</div>
-  <h2 class="display reveal rv1" style="margin-top:14px;font-size:clamp(2rem,3.5vw,3rem)">Products <em>By Brand</em></h2>
-  <div class="brands-grid">
-    <a href="pometate.html" class="brand-tile reveal">
-      <div class="bt-img"><img src="assets/images/pometate-product-crop.jpg" alt="Pometate brand"/></div>
-      <div class="bt-name">Pometate</div>
-      <div class="bt-sub">Dietary Supplements</div>
-      <div class="bt-chip chip-sage">Supplements</div>
-    </a>
-    <a href="prostamax.html" class="brand-tile reveal rv1">
-      <div class="bt-img"><img src="assets/images/prostamax-photo-crop.jpg" alt="ProstaMax brand"/></div>
-      <div class="bt-name">ProstaMax</div>
-      <div class="bt-sub">Prostate Health</div>
-      <div class="bt-chip chip-sage">Supplements</div>
-    </a>
-    <a href="vitaran.html" class="brand-tile reveal rv2">
-      <div class="bt-img"><img src="assets/images/vitaran-knee-crop.jpg" alt="HP Cell Vitaran J brand"/></div>
-      <div class="bt-name">HP Cell Vitaran J</div>
-      <div class="bt-sub">by BR PHARM</div>
-      <div class="bt-chip chip-gold">Medical Device</div>
-    </a>
-  </div>
-</section>
-
-<!-- CTA BAND -->
-<section style="background:var(--sage);padding:72px 6%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:28px">
-  <div style="flex:1;min-width:260px">
-    <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3vw,2.5rem);font-weight:400;color:#fff;line-height:1.2">Ready to find the right health solution?</h2>
-    <p style="font-size:.93rem;color:rgba(255,255,255,.7);margin-top:12px;line-height:1.7">Contact our team for product enquiries, distribution partnerships or clinical information.</p>
-  </div>
-  <div style="display:flex;gap:12px;flex-wrap:wrap;flex-shrink:0">
-    <a href="contact.html" class="btn btn-gold btn-arrow" style="min-width:max-content">Get in Touch</a>
-    <a href="products.html" class="btn btn-ghost" style="min-width:max-content">Browse Products</a>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="footer-top">
-    <div>
-      <div class="f-brand-name">PHARMA<span>-Connectiv</span></div>
-      <p class="f-brand-desc">Connecting healthcare professionals and patients with world-class pharmaceutical, nutraceutical and veterinary solutions across Singapore.</p>
-      <div class="f-certs"><span class="f-cert">FDA</span><span class="f-cert">GMP</span><span class="f-cert">CE</span><span class="f-cert">KFDA</span><span class="f-cert">DMF</span><span class="f-cert">ISO</span></div>
+    <!-- ABOUT STRIP -->
+    <div class="about-strip">
+      <div class="as-img reveal">
+        <img
+          src="assets/images/pometate-hero.jpg"
+          alt="Pometate — natural ingredients including pomegranate, turmeric, broccoli and green tea"
+          loading="lazy"
+        />
+        <div class="as-badge">
+          <div class="as-badge-num">100%</div>
+          <div class="as-badge-txt">Natural &amp;<br />Certified Quality</div>
+        </div>
+      </div>
+      <div class="as-text">
+        <div class="eyebrow reveal">Who We Are</div>
+        <h2 class="display reveal rv1">
+          A Trusted Partner in<br /><em>Health &amp; Wellness</em>
+        </h2>
+        <p class="reveal rv2">
+          PHARMA-Connectiv Pte Ltd is a Singapore-based distributor committed to
+          bringing premium quality health solutions to patients and healthcare
+          professionals. Founded on the belief that access to scientifically
+          validated products should be seamless.
+        </p>
+        <p class="reveal rv2">
+          We partner with FDA-registered US manufacturers and Korea FDA-approved
+          innovators to deliver a curated range — supplements, medical devices,
+          and veterinary care.
+        </p>
+        <div class="as-pillars reveal rv3">
+          <div class="pillar">
+            <div class="pillar-icon">🏅</div>
+            <h4>Quality Assured</h4>
+            <p>FDA-registered &amp; GMP-certified manufacturing.</p>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">🔬</div>
+            <h4>Science-Backed</h4>
+            <p>Clinically tested and evidence-based formulations.</p>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">🌿</div>
+            <h4>Natural First</h4>
+            <p>No added colors, preservatives or chelating agents.</p>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">🌏</div>
+            <h4>Regional Reach</h4>
+            <p>Reliable distribution across Singapore &amp; SE Asia.</p>
+          </div>
+        </div>
+        <div class="reveal rv4" style="margin-top: 36px">
+          <a href="about.html" class="btn btn-sage btn-arrow">Learn More</a>
+        </div>
+      </div>
     </div>
-    <div class="fcol"><h5>Navigation</h5><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="products.html">Products</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
-    <div class="fcol"><h5>Products</h5><ul><li><a href="pometate.html">Pometate</a></li><li><a href="prostamax.html">ProstaMax</a></li><li><a href="vitaran.html">HP Cell Vitaran J</a></li></ul></div>
-    <div class="fcol"><h5>Contact</h5><ul><li><a href="tel:+6562828732">+65 6282 8732</a></li><li><a href="mailto:info@pharma-connectiv.com">info@pharma-connectiv.com</a></li><li><a href="contact.html">85 Playfair Road, L5<br>Singapore 368000</a></li></ul></div>
-  </div>
-  <div class="footer-bottom">
-    <p>© 2024 PHARMA-Connectiv Pte Ltd · Singapore 368000</p>
-    <p>Products are not intended to diagnose, treat, cure or prevent any disease.</p>
-  </div>
-</footer>
 
-<script src="js/main.js"></script>
-</body>
+    <!-- PRODUCTS PREVIEW -->
+    <section class="section" style="background: var(--cream)">
+      <div class="section-hdr">
+        <div>
+          <div class="eyebrow reveal">What We Offer</div>
+          <h2 class="display reveal rv1">Our Products</h2>
+        </div>
+        <a href="products.html" class="btn btn-outline reveal rv2"
+          >View All Products →</a
+        >
+      </div>
+      <div class="products-grid">
+        <a href="pometate.html" class="pcard reveal">
+          <div class="pcard-img">
+            <img
+              src="assets/images/pometate-product-crop.jpg"
+              alt="Pometate dietary supplement with pomegranate and natural herbs"
+              loading="lazy"
+            />
+            <div class="pcard-gradient"></div>
+            <span class="pcard-badge badge-green">Vegetarian</span>
+            <div class="pcard-overlay-text">
+              <div class="pcard-cat">Dietary Supplement</div>
+              <div class="pcard-name">Pometate</div>
+            </div>
+          </div>
+          <div class="pcard-body">
+            <p>
+              A unique vegetarian blend of pomegranate, green tea, turmeric and
+              broccoli in a convenient daily capsule.
+            </p>
+            <div class="tag-row">
+              <span class="tag">Pomegranate</span
+              ><span class="tag">Green Tea</span
+              ><span class="tag">Turmeric</span
+              ><span class="tag">Broccoli</span>
+            </div>
+          </div>
+          <div class="pcard-foot">
+            <div class="pcard-origin">Made in <strong>USA</strong></div>
+            <span class="pcard-link">Learn More</span>
+          </div>
+        </a>
+        <a href="prostamax.html" class="pcard reveal rv1">
+          <div class="pcard-img">
+            <img
+              src="assets/images/prostamax-photo-crop.jpg"
+              alt="ProstaMax — prostate health supplement for men"
+              loading="lazy"
+            />
+            <div class="pcard-gradient"></div>
+            <span class="pcard-badge badge-amber">Men's Health</span>
+            <div class="pcard-overlay-text">
+              <div class="pcard-cat">Prostate Health</div>
+              <div class="pcard-name">ProstaMax</div>
+            </div>
+          </div>
+          <div class="pcard-body">
+            <p>
+              Saw Palmetto, Selenium, Zinc and Pumpkin Seed — clinically
+              validated prostate-supportive nutrients.
+            </p>
+            <div class="tag-row">
+              <span class="tag">Saw Palmetto</span
+              ><span class="tag">Selenium</span><span class="tag">Zinc</span
+              ><span class="tag">Pumpkin Seed</span>
+            </div>
+          </div>
+          <div class="pcard-foot">
+            <div class="pcard-origin">Made in <strong>USA</strong></div>
+            <span class="pcard-link">Learn More</span>
+          </div>
+        </a>
+        <a href="vitaran.html" class="pcard reveal rv2">
+          <div class="pcard-img">
+            <img
+              src="assets/images/vitaran-knee-crop.jpg"
+              alt="HP Cell Vitaran J — intra-articular polynucleotide injection for joint pain"
+              loading="lazy"
+            />
+            <div class="pcard-gradient"></div>
+            <span class="pcard-badge badge-navy">CE Class III</span>
+            <div class="pcard-overlay-text">
+              <div class="pcard-cat">Medical Device</div>
+              <div class="pcard-name">HP Cell Vitaran J</div>
+            </div>
+          </div>
+          <div class="pcard-body">
+            <p>
+              Polynucleotide intra-articular injection — reduces joint friction,
+              restores mobility and relieves pain.
+            </p>
+            <div class="tag-row">
+              <span class="tag">Polynucleotide</span
+              ><span class="tag">Korea FDA</span
+              ><span class="tag">CE Approved</span>
+            </div>
+          </div>
+          <div class="pcard-foot">
+            <div class="pcard-origin">Made in <strong>Korea</strong></div>
+            <span class="pcard-link">Learn More</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- TRUST -->
+    <section class="section trust-sec">
+      <img
+        class="trust-bg-img"
+        src="assets/images/why-choose-us.jpg"
+        alt=""
+        aria-hidden="true"
+      />
+      <div class="trust-inner">
+        <div class="trust-text">
+          <div class="eyebrow light reveal">Why Choose Us</div>
+          <h2 class="display reveal rv1">
+            Backed by Science,<br />Driven by
+            <span class="gold-em">Results</span>
+          </h2>
+          <p class="reveal rv2">
+            Every product is chosen for its scientific rigor, regulatory
+            compliance and clinical evidence. We don't just distribute — we
+            curate, validate, and stand behind every solution.
+          </p>
+          <div style="margin-top: 36px" class="reveal rv3">
+            <a href="about.html" class="btn btn-gold btn-arrow">Our Story</a>
+          </div>
+        </div>
+        <div class="trust-cards">
+          <div class="tc reveal">
+            <div class="tc-icon tci-sage">🏛️</div>
+            <div>
+              <div class="tc-title">Regulatory Compliance</div>
+              <div class="tc-desc">
+                FDA, Korea FDA (MFDS), CE Class III and GMP certified across all
+                product lines.
+              </div>
+            </div>
+          </div>
+          <div class="tc reveal rv1">
+            <div class="tc-icon tci-gold">🧬</div>
+            <div>
+              <div class="tc-title">Clinical Evidence</div>
+              <div class="tc-desc">
+                240+ patients in clinical trials. World-first intra-articular PN
+                clinical study in Korea.
+              </div>
+            </div>
+          </div>
+          <div class="tc reveal rv2">
+            <div class="tc-icon tci-blue">🌿</div>
+            <div>
+              <div class="tc-title">100% Natural Formulations</div>
+              <div class="tc-desc">
+                No colors, preservatives, flavoring, bulking or chelating agents
+                — pure and purposeful.
+              </div>
+            </div>
+          </div>
+          <div class="tc reveal rv3">
+            <div class="tc-icon tci-sage">🔬</div>
+            <div>
+              <div class="tc-title">Patented Technology</div>
+              <div class="tc-desc">
+                World's first PN/PDRN via Recirculating Aquaculture System with
+                patented high-purity PN purification.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BRANDS -->
+    <section class="section" style="background: var(--white)">
+      <div class="eyebrow reveal">Our Portfolio</div>
+      <h2
+        class="display reveal rv1"
+        style="margin-top: 14px; font-size: clamp(2rem, 3.5vw, 3rem)"
+      >
+        Products <em>By Brand</em>
+      </h2>
+      <div class="brands-grid">
+        <a href="pometate.html" class="brand-tile reveal">
+          <div class="bt-img">
+            <img
+              src="assets/images/pometate-product-crop.jpg"
+              alt="Pometate brand"
+            />
+          </div>
+          <div class="bt-name">Pometate</div>
+          <div class="bt-sub">Dietary Supplements</div>
+          <div class="bt-chip chip-sage">Supplements</div>
+        </a>
+        <a href="prostamax.html" class="brand-tile reveal rv1">
+          <div class="bt-img">
+            <img
+              src="assets/images/prostamax-photo-crop.jpg"
+              alt="ProstaMax brand"
+            />
+          </div>
+          <div class="bt-name">ProstaMax</div>
+          <div class="bt-sub">Prostate Health</div>
+          <div class="bt-chip chip-sage">Supplements</div>
+        </a>
+        <a href="vitaran.html" class="brand-tile reveal rv2">
+          <div class="bt-img">
+            <img
+              src="assets/images/vitaran-knee-crop.jpg"
+              alt="HP Cell Vitaran J brand"
+            />
+          </div>
+          <div class="bt-name">HP Cell Vitaran J</div>
+          <div class="bt-sub">by BR PHARM</div>
+          <div class="bt-chip chip-gold">Medical Device</div>
+        </a>
+      </div>
+    </section>
+
+    <!-- CTA BAND -->
+    <section
+      style="
+        background: var(--sage);
+        padding: 72px 6%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 28px;
+      "
+    >
+      <div style="flex: 1; min-width: 260px">
+        <h2
+          style="
+            font-family: &quot;Playfair Display&quot;, serif;
+            font-size: clamp(1.6rem, 3vw, 2.5rem);
+            font-weight: 400;
+            color: #fff;
+            line-height: 1.2;
+          "
+        >
+          Ready to find the right health solution?
+        </h2>
+        <p
+          style="
+            font-size: 0.93rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-top: 12px;
+            line-height: 1.7;
+          "
+        >
+          Contact our team for product enquiries, distribution partnerships or
+          clinical information.
+        </p>
+      </div>
+      <div style="display: flex; gap: 12px; flex-wrap: wrap; flex-shrink: 0">
+        <a
+          href="contact.html"
+          class="btn btn-gold btn-arrow"
+          style="min-width: max-content"
+          >Get in Touch</a
+        >
+        <a
+          href="products.html"
+          class="btn btn-ghost"
+          style="min-width: max-content"
+          >Browse Products</a
+        >
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-top">
+        <div>
+          <div class="f-brand-name">PHARMA<span>-Connectiv</span></div>
+          <p class="f-brand-desc">
+            Connecting healthcare professionals and patients with world-class
+            pharmaceutical, nutraceutical and veterinary solutions across
+            Singapore.
+          </p>
+          <div class="f-certs">
+            <span class="f-cert">FDA</span><span class="f-cert">GMP</span
+            ><span class="f-cert">CE</span><span class="f-cert">KFDA</span
+            ><span class="f-cert">DMF</span><span class="f-cert">ISO</span>
+          </div>
+        </div>
+        <div class="fcol">
+          <h5>Navigation</h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="fcol">
+          <h5>Products</h5>
+          <ul>
+            <li><a href="pometate.html">Pometate</a></li>
+            <li><a href="prostamax.html">ProstaMax</a></li>
+            <li><a href="vitaran.html">HP Cell Vitaran J</a></li>
+          </ul>
+        </div>
+        <div class="fcol">
+          <h5>Contact</h5>
+          <ul>
+            <li><a href="tel:+6562828732">+65 6282 8732</a></li>
+            <li>
+              <a href="mailto:info@pharma-connectiv.com"
+                >info@pharma-connectiv.com</a
+              >
+            </li>
+            <li>
+              <a href="contact.html"
+                >85 Playfair Road, L5<br />Singapore 368000</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom nav-links">
+        <p>© 2024 PHARMA-Connectiv Pte Ltd · Singapore 368000</p>
+        <p>
+          Products are not intended to diagnose, treat, cure or prevent any
+          disease.
+        </p>
+        <p>
+          Web Solutions by
+          <a href="https://www.renderinfotech.com/" target="_blank"
+            >Render Infotech</a
+          >
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
 </html>
