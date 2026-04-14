@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>MegaCal K2 — Bone Health Supplement | PHARMA-Connectiv</title>
+  <meta name="description" content="MegaCal K2 — Increase absorption of calcium with K2 Vitamin. Calcium Citrate 1000mg, Vitamin K2, D3 1000IU, Magnesium, Zinc, Boron. Singapore."/>
+  <link rel="stylesheet" href="css/styles.css"/>
+  <style>
+    .prod-hero{padding-top:72px;position:relative;min-height:92vh;display:flex;align-items:flex-end;overflow:hidden}
+    .prod-hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.04);animation:hzoom 12s ease-out forwards}
+    @keyframes hzoom{to{transform:scale(1)}}
+    .prod-hero-overlay{position:absolute;inset:0}
+    .prod-hero-content{position:relative;z-index:2;padding:0 6% 64px;width:100%;display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:end}
+    .phc-left h1{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,6vw,5rem);font-weight:400;color:#fff;line-height:1.05;margin:18px 0}
+    .tagline{font-size:1rem;color:rgba(255,255,255,.65);line-height:1.8;max-width:480px;margin-bottom:28px}
+    .phc-pills{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:28px}
+    .phc-pill{padding:5px 14px;border-radius:100px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);backdrop-filter:blur(8px);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600;color:rgba(255,255,255,.85)}
+    .phc-pill.gold{background:rgba(184,151,90,.2);border-color:rgba(184,151,90,.4);color:var(--gold-light)}
+    .phc-right{display:flex;justify-content:center;align-items:flex-end}
+    .product-box-img{width:100%;max-width:340px;border-radius:12px;box-shadow:0 32px 80px rgba(0,0,0,.4);animation:floatup 1s .4s both}
+    @keyframes floatup{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+    .phc-cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+    .phc-cta-row .btn{flex-shrink:0;min-width:max-content}
+    .spec-pills{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:28px}
+    .spec-pill{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:var(--r);padding:10px 16px;backdrop-filter:blur(8px)}
+    .spec-pill-label{font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;font-weight:700;color:var(--gold-light)}
+    .spec-pill-value{font-size:.88rem;font-weight:600;color:#fff}
+    /* Content sections */
+    .ingr-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:48px}
+    .ingr-card{background:var(--white);border-radius:var(--r);padding:28px;border:1px solid var(--border);box-shadow:var(--shadow-sm);transition:transform .3s,box-shadow .3s}
+    .ingr-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
+    .ingr-icon{font-size:2rem;margin-bottom:12px}
+    .ingr-compound{font-size:.63rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--gold);margin-bottom:7px}
+    .ingr-name{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:400;color:var(--ink);margin-bottom:10px}
+    .ingr-desc{font-size:.83rem;line-height:1.75;color:var(--grey-4)}
+    .ingr-benefit{margin-top:12px;font-size:.8rem;color:var(--grey-3);line-height:1.6;display:flex;align-items:flex-start;gap:7px}
+    .ingr-benefit::before{content:'✓';color:var(--sage);font-weight:700;flex-shrink:0}
+    .split-sec{display:grid;grid-template-columns:1fr 1fr;min-height:480px}
+    .split-img{overflow:hidden;position:relative}.split-img img{width:100%;height:100%;object-fit:cover}
+    .split-text{padding:72px 56px;display:flex;flex-direction:column;justify-content:center}
+    .split-text p{font-size:.92rem;line-height:1.9;color:var(--grey-4);margin-bottom:14px}
+    .specs-table{width:100%;border-collapse:collapse;margin-top:28px}
+    .specs-table tr{border-bottom:1px solid var(--grey-2)}.specs-table tr:last-child{border-bottom:none}
+    .specs-table td{padding:16px 0;font-size:.88rem}
+    .specs-table td:first-child{font-weight:600;color:var(--ink);width:180px}
+    .specs-table td:last-child{color:var(--grey-4);line-height:1.65}
+    .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:36px}
+    .hiw-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:44px}
+    .hiw-card{padding:32px 24px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(--r);text-align:center}
+    .hiw-num{font-family:'Playfair Display',serif;font-size:2.8rem;font-weight:400;color:var(--gold);margin-bottom:12px}
+    .hiw-title{font-size:.82rem;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}
+    .hiw-desc{font-size:.8rem;line-height:1.7;color:rgba(255,255,255,.5)}
+    @media(max-width:900px){.prod-hero-content{grid-template-columns:1fr;padding-bottom:48px}.phc-right{display:none}.ingr-grid{grid-template-columns:1fr}.split-sec{grid-template-columns:1fr}.split-img{min-height:300px}.split-text{padding:48px 28px}.related-grid{grid-template-columns:1fr 1fr}.hiw-grid{grid-template-columns:1fr}}
+    @media(max-width:600px){.related-grid{grid-template-columns:1fr}.phc-left h1{font-size:2.4rem}.phc-cta-row{flex-direction:column}.phc-cta-row .btn{width:100%;justify-content:center}}
+    .prod-hero-overlay{background:linear-gradient(120deg,rgba(13,17,23,.96) 0%,rgba(13,17,23,.80) 50%,rgba(5,20,60,.35) 100%)}
+  </style>
+</head>
+<body>
+<nav id="navbar">
+  <a href="index.html" class="nav-logo" aria-label="PHARMA-Connectiv Pte Ltd">
+    <img src="assets/images/logo.png" alt="PHARMA-Connectiv Pte Ltd" height="36"/>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li class="nav-has-drop"><a href="products.html" class="active">Products ▾</a>
+      <div class="nav-drop">
+        <a href="products.html"><span class="nav-drop-icon">💊</span>All Products</a>
+        <a href="pometate.html"><span class="nav-drop-icon">🌿</span>Pometate</a>
+        <a href="prostamax.html"><span class="nav-drop-icon">🛡️</span>ProstaMax</a>
+        <a href="megacal.html"><span class="nav-drop-icon">🦴</span>MegaCal K2</a>
+        <a href="megaflex.html"><span class="nav-drop-icon">🔩</span>MegaFlex Basic &amp; Forte</a>
+        <a href="willfertil.html"><span class="nav-drop-icon">👫</span>Willfertil</a>
+        <a href="crystal-white.html"><span class="nav-drop-icon">✨</span>Crystal White</a>
+        <a href="vitaran.html"><span class="nav-drop-icon">💉</span>HP Cell Vitaran J</a>
+        <a href="vetcare.html"><span class="nav-drop-icon">🐾</span>Veterinary Care</a>
+      </div>
+    </li>
+    <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+  </ul>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-drawer" id="nav-drawer">
+  <a href="index.html">Home</a><a href="about.html">About Us</a><a href="products.html">All Products</a>
+  <a href="pometate.html">Pometate</a><a href="prostamax.html">ProstaMax</a><a href="megacal.html">MegaCal K2</a>
+  <a href="megaflex.html">MegaFlex Basic &amp; Forte</a><a href="willfertil.html">Willfertil</a>
+  <a href="crystal-white.html">Crystal White</a><a href="vitaran.html">HP Cell Vitaran J</a>
+  <a href="vetcare.html">Veterinary Care</a>
+  <a href="contact.html" class="drawer-cta">Contact Us</a>
+</div>
+
+<section class="prod-hero">
+  <img class="prod-hero-bg" src="assets/images/megacal-1.jpg" alt="MegaCal K2 — Increase Absorption of Calcium with K2 Vitamin"/>
+  <div class="prod-hero-overlay"></div>
+  <div class="prod-hero-content">
+    <div class="phc-left">
+      <div class="breadcrumb" style="margin-bottom:20px"><a href="index.html">Home</a><span class="breadcrumb-sep">/</span><a href="products.html">Products</a><span class="breadcrumb-sep">/</span><span>MegaCal K2</span></div>
+      <div class="eyebrow light">Bone Health · Nutraceutical</div>
+      <h1>MegaCal K2</h1>
+      <p class="tagline">Increase Absorption of Calcium with K2 Vitamin — a comprehensive bone health formula combining Calcium Citrate, Vitamin K2, D3, Magnesium, Zinc and Boron.</p>
+      <div class="phc-pills">
+        <span class="phc-pill gold">1000mg Calcium Citrate</span>
+        <span class="phc-pill gold">Vitamin K2-7</span>
+        <span class="phc-pill">D3 1000 IU</span>
+        <span class="phc-pill">100mg Magnesium</span>
+        <span class="phc-pill">Film Coated Tablet</span>
+      </div>
+      <div class="spec-pills">
+        <div class="spec-pill"><div><div class="spec-pill-label">Key Mineral</div><div class="spec-pill-value">Calcium Citrate 1000mg</div></div></div>
+        <div class="spec-pill"><div><div class="spec-pill-label">Vitamin K2-7(1%)</div><div class="spec-pill-value">100 mcg</div></div></div>
+      </div>
+      <div class="phc-cta-row">
+        <a href="contact.html" class="btn btn-sage btn-arrow">Enquire Now</a>
+        <a href="products.html" class="btn btn-ghost">All Products</a>
+      </div>
+    </div>
+    <div class="phc-right">
+      <img class="product-box-img" src="assets/images/megacal-1.jpg" alt="MegaCal K2 supplement"/>
+    </div>
+  </div>
+</section>
+
+<div class="marquee-wrap" aria-hidden="true"><div class="marquee-track">
+  <span class="marquee-item"><span class="marquee-dot"></span>Calcium Citrate 1000mg</span>
+  <span class="marquee-item"><span class="marquee-dot"></span>Vitamin K2-7 100mcg</span>
+  <span class="marquee-item"><span class="marquee-dot"></span>Vitamin D3 1000 IU</span>
+  <span class="marquee-item"><span class="marquee-dot"></span>Magnesium Hydroxide 100mg</span>
+  <span class="marquee-item"><span class="marquee-dot"></span>Zinc 3mg</span>
+  <span class="marquee-item"><span class="marquee-dot"></span>Boron 100mcg</span>
+  <span class="marquee-item"><span class="marquee-dot"></span>Bone Health</span>
+  <span class="marquee-item"><span class="marquee-dot"></span>Cardiovascular Support</span>
+  <span class="marquee-item"><span class="marquee-dot"></span>Calcium Citrate 1000mg</span>
+  <span class="marquee-item"><span class="marquee-dot"></span>Vitamin K2-7 100mcg</span>
+  <span class="marquee-item"><span class="marquee-dot"></span>Vitamin D3 1000 IU</span>
+  <span class="marquee-item"><span class="marquee-dot"></span>Magnesium Hydroxide 100mg</span>
+  <span class="marquee-item"><span class="marquee-dot"></span>Zinc 3mg</span>
+  <span class="marquee-item"><span class="marquee-dot"></span>Boron 100mcg</span>
+  <span class="marquee-item"><span class="marquee-dot"></span>Bone Health</span>
+  <span class="marquee-item"><span class="marquee-dot"></span>Cardiovascular Support</span>
+</div></div>
+
+<!-- OVERVIEW -->
+<section class="section" style="background:var(--white)">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center">
+    <div>
+      <div class="eyebrow reveal">What is MegaCal K2?</div>
+      <h2 class="display reveal rv1" style="font-size:clamp(2rem,3.5vw,3rem);margin:16px 0 22px">Comprehensive Bone Health<br><em>in One Tablet</em></h2>
+      <p class="reveal rv2" style="font-size:.93rem;line-height:1.9;color:var(--grey-4);margin-bottom:14px">MegaCal K2 is a nutraceutical film-coated tablet delivering a powerful combination of nutrients specifically formulated to support bone density, muscle function, cardiovascular health and energy production.</p>
+      <p class="reveal rv2" style="font-size:.93rem;line-height:1.9;color:var(--grey-4);margin-bottom:14px">The unique inclusion of Vitamin K2 is key — it activates proteins that direct calcium specifically into the bones and teeth, while preventing it from accumulating in arteries and soft tissues. This makes MegaCal K2 superior to conventional calcium supplements.</p>
+      <p class="reveal rv2" style="font-size:.93rem;line-height:1.9;color:var(--grey-4)">Store in a cool &amp; dry place, protect from direct sunlight. Usage as directed by the dietician or health practitioner. Nutraceutical, not for medicinal use.</p>
+      <div class="reveal rv3" style="margin-top:28px"><a href="contact.html" class="btn btn-sage btn-arrow">Enquire About MegaCal K2</a></div>
+    </div>
+    <div class="reveal rv2">
+      <img src="assets/images/megacal-2.jpg" alt="MegaCal K2 nutritional information table" style="border-radius:12px;box-shadow:var(--shadow-xl);width:100%"/>
+    </div>
+  </div>
+</section>
+
+<!-- KEY INGREDIENTS -->
+<section class="section" style="background:var(--cream)">
+  <div class="eyebrow reveal">Active Ingredients</div>
+  <h2 class="display reveal rv1" style="font-size:clamp(2rem,3.5vw,3rem);margin-top:14px">Four Pillars of<br><em>Bone Health</em></h2>
+  <p class="reveal rv2" style="font-size:.92rem;color:var(--grey-3);line-height:1.85;max-width:580px;margin-top:14px">Each ingredient in MegaCal K2 plays a distinct and complementary role in supporting overall bone and cardiovascular health.</p>
+  <div class="ingr-grid">
+    <div class="ingr-card reveal">
+      <div class="ingr-icon">🦴</div>
+      <div class="ingr-compound">Calcium Citrate · 1000mg</div>
+      <div class="ingr-name">Calcium Citrate</div>
+      <p class="ingr-desc">Calcium Citrate is the most bioavailable form of calcium supplement. Unlike calcium carbonate, it can be absorbed without food and is particularly beneficial for those with low stomach acid.</p>
+      <div class="ingr-benefit">Helps address low calcium levels and supports bone density</div>
+      <div class="ingr-benefit">Superior absorption compared to calcium carbonate</div>
+      <div class="ingr-benefit">Supports teeth mineralisation and muscle contraction</div>
+    </div>
+    <div class="ingr-card reveal rv1">
+      <div class="ingr-icon">🩸</div>
+      <div class="ingr-compound">Vitamin K2-7 (1%) · 100mcg</div>
+      <div class="ingr-name">Vitamin K2</div>
+      <p class="ingr-desc">Vitamin K2 (as Menaquinone-7) activates osteocalcin — the protein that anchors calcium into bone tissue. It also activates Matrix Gla Protein (MGP), which prevents arterial calcification.</p>
+      <div class="ingr-benefit">Directs calcium into bones rather than arteries</div>
+      <div class="ingr-benefit">Prevents damage to blood vessels from calcium deposits</div>
+      <div class="ingr-benefit">Synergistic effect with Vitamin D3 for optimal calcium use</div>
+    </div>
+    <div class="ingr-card reveal">
+      <div class="ingr-icon">☀️</div>
+      <div class="ingr-compound">Vitamin D3 · 1000 IU</div>
+      <div class="ingr-name">Vitamin D3</div>
+      <p class="ingr-desc">Vitamin D3 (cholecalciferol) is essential for calcium absorption from the intestines. Without adequate D3, even high calcium intake cannot be effectively used by the body for bone formation.</p>
+      <div class="ingr-benefit">Treats and prevents bone disorders including osteoporosis</div>
+      <div class="ingr-benefit">Enhances intestinal absorption of calcium and phosphorus</div>
+      <div class="ingr-benefit">Supports immune system, muscle function and general well-being</div>
+    </div>
+    <div class="ingr-card reveal rv1">
+      <div class="ingr-icon">⚡</div>
+      <div class="ingr-compound">Magnesium Hydroxide · 100mg + Zinc + Boron</div>
+      <div class="ingr-name">Magnesium, Zinc &amp; Boron</div>
+      <p class="ingr-desc">Magnesium supports over 300 enzymatic reactions including muscle and energy production. Zinc (3mg elemental) is essential for bone metabolism, and Boron (3mg) aids calcium and magnesium retention.</p>
+      <div class="ingr-benefit">Magnesium supports muscle function and energy production</div>
+      <div class="ingr-benefit">Zinc is essential for bone cell formation and immune health</div>
+      <div class="ingr-benefit">Boron enhances the retention and use of calcium and magnesium</div>
+    </div>
+  </div>
+</section>
+
+<!-- SPECS + BROCHURE IMAGE -->
+<div class="split-sec">
+  <div class="split-text" style="background:var(--white)">
+    <div class="eyebrow reveal">Nutritional Information</div>
+    <h2 class="display reveal rv1" style="font-size:clamp(1.9rem,3vw,2.6rem);margin-top:14px">Full Product <em>Specifications</em></h2>
+    <table class="specs-table reveal rv2">
+      <tr><td>Product</td><td>MegaCal K2 Film Coated Tablets</td></tr>
+      <tr><td>Calcium Citrate</td><td>1000 mg per tablet</td></tr>
+      <tr><td>Vitamin D3</td><td>1000 I.U. per tablet</td></tr>
+      <tr><td>Magnesium Hydroxide</td><td>100 mg per tablet</td></tr>
+      <tr><td>Zinc (Elemental)</td><td>3.0 mg per tablet</td></tr>
+      <tr><td>Boron</td><td>3.0 mg per tablet</td></tr>
+      <tr><td>Vitamin K2-7 (1%)</td><td>100 mcg per tablet</td></tr>
+      <tr><td>Storage</td><td>Cool &amp; dry place. Protect from direct sunlight. Keep out of reach of children.</td></tr>
+      <tr><td>Usage</td><td>As directed by the dietician or health practitioner</td></tr>
+      <tr><td>Type</td><td>Nutraceutical — not for medicinal use</td></tr>
+      <tr><td>Distributed by</td><td>PHARMA-Connectiv Pte Ltd, Singapore 368000 · Tel: 6282 8732</td></tr>
+    </table>
+    <div class="reveal rv3" style="margin-top:28px;display:flex;gap:12px;flex-wrap:wrap">
+      <a href="contact.html" class="btn btn-sage btn-arrow">Enquire Now</a>
+      <a href="products.html" class="btn btn-outline">All Products</a>
+    </div>
+  </div>
+  <div class="split-img reveal">
+    <img src="assets/images/megacal-detail.jpg" alt="MegaCal K2 — detailed nutritional information and specifications"/>
+  </div>
+</div>
+
+<!-- RELATED -->
+<section class="section" style="background:var(--cream)">
+  <div class="eyebrow reveal">Also in Our Range</div>
+  <h2 class="display reveal rv1" style="font-size:clamp(1.9rem,3vw,2.6rem);margin-top:14px"><em>Related</em> Products</h2>
+  <div class="related-grid">
+    <a href="megaflex.html" class="pcard reveal">
+      <div class="pcard-img"><img src="assets/images/megaflex-basic-card.jpg" alt="MegaFlex Basic" loading="lazy"/><div class="pcard-gradient"></div><span class="pcard-badge badge-green">Liposomal</span><div class="pcard-overlay-text"><div class="pcard-cat">Bone &amp; Cardiovascular</div><div class="pcard-name">MegaFlex Basic</div></div></div>
+      <div class="pcard-body"><p>Liposomal K2-7 150mcg + D3 1200 IU — superior bioavailability. 30 mini-tablets once daily.</p><div class="tag-row"><span class="tag">MK-7</span><span class="tag">Liposomal D3</span></div></div>
+      <div class="pcard-foot"><div class="pcard-origin">Made in <strong>France</strong></div><span class="pcard-link">Learn More</span></div>
+    </a>
+    <a href="prostamax.html" class="pcard reveal rv1">
+      <div class="pcard-img"><img src="assets/images/prostamax-hero-clean.jpg" alt="ProstaMax" loading="lazy"/><div class="pcard-gradient"></div><span class="pcard-badge badge-amber">Men's Health</span><div class="pcard-overlay-text"><div class="pcard-cat">Prostate Health</div><div class="pcard-name">ProstaMax</div></div></div>
+      <div class="pcard-body"><p>Saw Palmetto, Selenium, Zinc &amp; Pumpkin Seed for prostate and urinary support.</p><div class="tag-row"><span class="tag">Saw Palmetto</span><span class="tag">Zinc</span></div></div>
+      <div class="pcard-foot"><div class="pcard-origin">Made in <strong>USA</strong></div><span class="pcard-link">Learn More</span></div>
+    </a>
+    <a href="vitaran.html" class="pcard reveal rv2">
+      <div class="pcard-img"><img src="assets/images/vitaran-knee-crop.jpg" alt="HP Cell Vitaran J" loading="lazy"/><div class="pcard-gradient"></div><span class="pcard-badge badge-navy">CE Class III</span><div class="pcard-overlay-text"><div class="pcard-cat">Medical Device</div><div class="pcard-name">HP Cell Vitaran J</div></div></div>
+      <div class="pcard-body"><p>Polynucleotide injection for joint pain relief and improved knee mobility.</p><div class="tag-row"><span class="tag">Polynucleotide</span><span class="tag">Korea FDA</span></div></div>
+      <div class="pcard-foot"><div class="pcard-origin">Made in <strong>Korea</strong></div><span class="pcard-link">Learn More</span></div>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div>
+      <img src="assets/images/logo.png" alt="PHARMA-Connectiv Pte Ltd" class="f-logo-img"/>
+      <p class="f-brand-desc">Connecting healthcare professionals and patients with world-class pharmaceutical, nutraceutical and veterinary solutions across Singapore and Southeast Asia.</p>
+      <div class="f-certs"><span class="f-cert">FDA</span><span class="f-cert">GMP</span><span class="f-cert">CE</span><span class="f-cert">KFDA</span><span class="f-cert">DMF</span><span class="f-cert">ISO</span></div>
+    </div>
+    <div class="fcol"><h5>Navigation</h5><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="products.html">Products</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
+    <div class="fcol"><h5>Products</h5><ul>
+      <li><a href="pometate.html">Pometate</a></li><li><a href="prostamax.html">ProstaMax</a></li>
+      <li><a href="megacal.html">MegaCal K2</a></li><li><a href="megaflex.html">MegaFlex</a></li>
+      <li><a href="willfertil.html">Willfertil</a></li><li><a href="crystal-white.html">Crystal White</a></li>
+      <li><a href="vitaran.html">HP Cell Vitaran J</a></li><li><a href="vetcare.html">Veterinary Care</a></li>
+    </ul></div>
+    <div class="fcol"><h5>Contact</h5><ul>
+      <li><a href="tel:+6562828732">+65 6282 8732</a></li>
+      <li><a href="mailto:info@pharma-connectiv.com">info@pharma-connectiv.com</a></li>
+      <li><a href="contact.html">85 Playfair Road, L5<br>Singapore 368000</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2024 PHARMA-Connectiv Pte Ltd &middot; Singapore 368000</p>
+    <p>Products are not intended to diagnose, treat, cure or prevent any disease.</p>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body></html>

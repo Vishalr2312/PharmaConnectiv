@@ -5,6 +5,8 @@
 
 :root {
   --ink: #0d1117;
+  --brand-red: #8b1a1a;
+  --brand-red-l: #b02020;
   --sage: #3d6b4f;
   --sage-light: #5a9470;
   --sage-pale: #e4ede7;
@@ -210,11 +212,25 @@ em {
 }
 
 .nav-logo {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   line-height: 1;
+  text-decoration: none; */
+  display: flex;
+  align-items: center;
   text-decoration: none;
+  line-height: 1;
 }
+.nav-logo img {
+  height: 36px;
+  width: auto;
+  filter: brightness(0) invert(1);
+  transition: opacity 0.3s;
+}
+.nav-logo img:hover {
+  opacity: 0.85;
+}
+/* Fallback text logo */
 .nav-logo-main {
   font-family: "Playfair Display", serif;
   font-size: 1.18rem;
@@ -230,6 +246,17 @@ em {
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.38);
   margin-top: 3px;
+}
+
+/* Footer logo */
+.f-logo-img {
+  height: 32px;
+  width: auto;
+  filter: brightness(0) invert(1);
+  opacity: 0.75;
+}
+.f-logo-img:hover {
+  opacity: 1;
 }
 
 .nav-links {
