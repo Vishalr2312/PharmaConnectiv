@@ -163,7 +163,7 @@
       .ingr-img img {
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: contain;
         transition: transform 0.5s;
       }
       .ingr-card:hover .ingr-img img {
@@ -174,13 +174,13 @@
       }
       .ingr-name {
         font-family: "Playfair Display", serif;
-        font-size: 1.3rem;
+        font-size: 1.5rem;
         font-weight: 400;
         color: var(--ink);
         margin-bottom: 6px;
       }
       .ingr-compound {
-        font-size: 0.68rem;
+        font-size: 0.75rem;
         letter-spacing: 0.15em;
         text-transform: uppercase;
         font-weight: 700;
@@ -188,8 +188,8 @@
         margin-bottom: 12px;
       }
       .ingr-desc {
-        font-size: 0.85rem;
-        line-height: 1.78;
+        font-size: 0.95rem;
+        line-height: 1.8;
         color: var(--grey-4);
       }
       .ingr-benefit {
@@ -197,9 +197,9 @@
         display: flex;
         align-items: flex-start;
         gap: 8px;
-        font-size: 0.82rem;
+        font-size: 0.9rem;
         color: var(--grey-3);
-        line-height: 1.6;
+        line-height: 1.7;
       }
       .ingr-benefit::before {
         content: "✓";
@@ -788,9 +788,12 @@
       </p>
       <div class="ingredient-showcase">
         <div class="ingr-card reveal">
-          <div class="ingr-img">
+          <div
+            class="ingr-img"
+            style="background: linear-gradient(135deg, #e8eaf6, #c5cae9)"
+          >
             <img
-              src="assets/images/embedded/pometate-010.png"
+              src="assets/images/embedded/pom-bgremoved.png"
               alt="Pomegranate — source of ellagic acid"
               loading="lazy"
             />
@@ -815,9 +818,12 @@
           </div>
         </div>
         <div class="ingr-card reveal rv1">
-          <div class="ingr-img">
+          <div
+            class="ingr-img"
+            style="background: linear-gradient(135deg, #e8eaf6, #c5cae9)"
+          >
             <img
-              src="assets/images/embedded/pometate-002.png"
+              src="assets/images/embedded/gt-bgremoved.png"
               alt="Green tea leaves — EGCG polyphenol extract"
               loading="lazy"
             />
@@ -842,9 +848,12 @@
           </div>
         </div>
         <div class="ingr-card reveal">
-          <div class="ingr-img">
+          <div
+            class="ingr-img"
+            style="background: linear-gradient(135deg, #e3f2fd, #b3d9f5)"
+          >
             <img
-              src="assets/images/embedded/pometate-012.png"
+              src="assets/images/embedded/tur-bgremoved.png"
               alt="Turmeric root — curcumin anti-inflammatory"
               loading="lazy"
             />
@@ -871,9 +880,12 @@
           </div>
         </div>
         <div class="ingr-card reveal rv1">
-          <div class="ingr-img">
+          <div
+            class="ingr-img"
+            style="background: linear-gradient(135deg, #e3f2fd, #b3d9f5)"
+          >
             <img
-              src="assets/images/embedded/pometate-008.png"
+              src="assets/images/embedded/broc-bgremoved.png"
               alt="Broccoli — sulforaphane and isothiocyanate"
               loading="lazy"
             />
@@ -1040,7 +1052,7 @@
         <a href="prostamax.html" class="pcard reveal rv1">
           <div class="pcard-img">
             <img
-              src="assets/images/prostamax-photo-crop.jpg"
+              src="assets/images/prostamax-hero-clean.jpg"
               alt="ProstaMax"
               loading="lazy"
             />
@@ -1069,7 +1081,7 @@
         <a href="vitaran.html" class="pcard reveal rv2">
           <div class="pcard-img">
             <img
-              src="assets/images/vitaran-knee-crop.jpg"
+              src="assets/images/home-banner-wide.jpg"
               alt="HP Cell Vitaran J"
               loading="lazy"
             />
