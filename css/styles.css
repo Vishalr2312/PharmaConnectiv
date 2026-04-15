@@ -977,3 +977,16 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+/* Product Background changes */
+.bg-product-wrap {
+  position: relative;
+  background: radial-gradient(
+    circle at 50% 60%,
+    rgba(184, 151, 90, 0.28),
+    transparent 65%
+  );
+  background-color: var(--gold-pale);
+  padding: 40px;
+  border-radius: 16px;
+}

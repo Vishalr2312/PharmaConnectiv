@@ -1,269 +1,830 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Veterinary Care — Probioxin, Kezopet, Micohex | PHARMA-Connectiv Singapore</title>
-  <meta name="description" content="Veterinary care products from PHARMA-Connectiv: Probioxin gut health paste for dogs, Kezopet anti-fungal shampoo, Micohex antibacterial shampoo. Singapore."/>
-  <meta name="keywords" content="Probioxin Singapore, Kezopet pet shampoo, Micohex antifungal pet, veterinary supplements Singapore, dog gut health probiotics"/>
-  <link rel="stylesheet" href="css/styles.css"/>
-  <style>
-    .vet-hero{padding-top:72px;background:linear-gradient(135deg,#0d1117 0%,#1a2a3a 100%);min-height:60vh;display:flex;align-items:center;position:relative;overflow:hidden}
-    .vet-hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(184,151,90,.03) 0,rgba(184,151,90,.03) 1px,transparent 1px,transparent 80px),repeating-linear-gradient(0deg,rgba(184,151,90,.03) 0,rgba(184,151,90,.03) 1px,transparent 1px,transparent 80px)}
-    .vet-hero-inner{position:relative;z-index:1;padding:80px 6%}
-    .product-section{scroll-margin-top:100px}
-    .prod-card{display:grid;grid-template-columns:1fr 1fr;min-height:500px;border-radius:16px;overflow:hidden;box-shadow:var(--shadow-xl);margin-bottom:40px}
-    .prod-card.reverse{direction:rtl}.prod-card.reverse > *{direction:ltr}
-    .pc-img{position:relative;overflow:hidden;background:var(--grey-1);display:flex;align-items:center;justify-content:center;font-size:6rem}
-    .pc-img img{width:100%;height:100%;object-fit:cover}
-    .pc-text{padding:56px 48px;display:flex;flex-direction:column;justify-content:center;background:var(--white)}
-    .pc-badge{display:inline-flex;align-items:center;gap:6px;padding:4px 14px;border-radius:100px;font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;font-weight:700;margin-bottom:16px;width:fit-content}
-    .badge-teal{background:#e0f5f5;color:#0a6a6a}
-    .badge-purple{background:#f0e8f8;color:#5a1a8a}
-    .badge-blue{background:#e8eef8;color:#1a3a7a}
-    .pc-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3rem);font-weight:400;color:var(--ink);margin-bottom:8px}
-    .pc-sub{font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;font-weight:700;color:var(--sage);margin-bottom:18px}
-    .pc-desc{font-size:.9rem;line-height:1.85;color:var(--grey-4);margin-bottom:20px}
-    .pc-comp{background:var(--grey-1);border-radius:var(--r);padding:16px 20px;margin-bottom:20px}
-    .pc-comp-title{font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--gold);margin-bottom:8px}
-    .pc-comp-items{display:flex;flex-direction:column;gap:6px}
-    .pc-ci{display:flex;align-items:center;gap:8px;font-size:.82rem;color:var(--grey-4)}
-    .pc-ci::before{content:'●';color:var(--sage);font-size:.5rem;flex-shrink:0}
-    .pc-features{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
-    .pc-feat{padding:5px 14px;background:var(--sage-pale);border-radius:100px;font-size:.7rem;font-weight:600;color:var(--sage)}
-    .dosage-table{width:100%;border-collapse:collapse;margin-top:8px}
-    .dosage-table th{background:var(--sage);color:#fff;padding:8px 12px;font-size:.72rem;letter-spacing:.08em;text-align:left}
-    .dosage-table td{padding:8px 12px;font-size:.8rem;border-bottom:1px solid var(--grey-2);color:var(--grey-4)}
-    .dosage-table tr:last-child td{border-bottom:none}
-    .dosage-table tr:nth-child(even) td{background:var(--grey-1)}
-    @media(max-width:900px){.prod-card,.prod-card.reverse{grid-template-columns:1fr;direction:ltr}.pc-img{min-height:260px}.pc-text{padding:40px 28px}}
-  </style>
-</head>
-<body>
-<nav id="navbar">
-  <a href="index.html" class="nav-logo" aria-label="PHARMA-Connectiv Pte Ltd">
-    <img src="assets/images/logo.png" alt="PHARMA-Connectiv Pte Ltd" height="36"/>
-  </a>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About Us</a></li>
-    <li class="nav-has-drop"><a href="products.html">Products &#9662;</a>
-      <div class="nav-drop">
-        <a href="products.html"><span class="nav-drop-icon">&#128138;</span>All Products</a>
-        <a href="pometate.html"><span class="nav-drop-icon">&#127807;</span>Pometate</a>
-        <a href="prostamax.html"><span class="nav-drop-icon">&#128737;</span>ProstaMax</a>
-        <a href="megacal.html"><span class="nav-drop-icon">&#129460;</span>MegaCal K2</a>
-        <a href="megaflex.html"><span class="nav-drop-icon">&#128297;</span>MegaFlex Basic &amp; Forte</a>
-        <a href="willfertil.html"><span class="nav-drop-icon">&#128107;</span>Willfertil</a>
-        <a href="crystal-white.html"><span class="nav-drop-icon">&#10024;</span>Crystal White</a>
-        <a href="vitaran.html"><span class="nav-drop-icon">&#128137;</span>HP Cell Vitaran J</a>
-        <a href="vetcare.html"><span class="nav-drop-icon">&#128062;</span>Veterinary Care</a>
-      </div>
-    </li>
-    <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
-  </ul>
-  <button class="nav-toggle" id="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
-</nav>
-<div class="nav-drawer" id="nav-drawer">
-  <a href="index.html">Home</a><a href="about.html">About Us</a>
-  <a href="products.html">All Products</a><a href="pometate.html">Pometate</a>
-  <a href="prostamax.html">ProstaMax</a><a href="megacal.html">MegaCal K2</a>
-  <a href="megaflex.html">MegaFlex Basic &amp; Forte</a><a href="willfertil.html">Willfertil</a>
-  <a href="crystal-white.html">Crystal White</a><a href="vitaran.html">HP Cell Vitaran J</a>
-  <a href="vetcare.html">Veterinary Care</a>
-  <a href="contact.html" class="drawer-cta">Contact Us</a>
-</div>
-
-<!-- HERO -->
-<section class="vet-hero">
-  <div class="vet-hero-inner">
-    <div class="breadcrumb" style="margin-bottom:24px"><a href="index.html">Home</a><span class="breadcrumb-sep">/</span><a href="products.html">Products</a><span class="breadcrumb-sep">/</span><span>Veterinary Care</span></div>
-    <div class="eyebrow light">Veterinary &amp; Companion Animal Care</div>
-    <h1 style="font-family:'Playfair Display',serif;font-size:clamp(2.6rem,6vw,5rem);font-weight:400;color:#fff;line-height:1.05;margin:18px 0 22px;max-width:700px">Trusted Care for<br><em style="color:var(--gold-light)">Your Companion Animals</em></h1>
-    <p style="font-size:1rem;line-height:1.8;color:rgba(255,255,255,.65);max-width:560px;margin-bottom:32px">Three specialist veterinary products — gut health, antifungal and antibacterial solutions — for dogs and companion animals. Clinically formulated, vet-recommended.</p>
-    <div style="display:flex;flex-wrap:wrap;gap:12px">
-      <a href="#probioxin" class="btn btn-gold" style="min-width:max-content">Probioxin</a>
-      <a href="#kezopet" class="btn btn-ghost" style="min-width:max-content">Kezopet</a>
-      <a href="#micohex" class="btn btn-ghost" style="min-width:max-content">Micohex</a>
-      <a href="contact.html" class="btn btn-sage btn-arrow" style="min-width:max-content">Enquire Now</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>
+      Veterinary Care — Probioxin, Kezopet, Micohex | PHARMA-Connectiv Singapore
+    </title>
+    <meta
+      name="description"
+      content="Veterinary care products from PHARMA-Connectiv: Probioxin gut health paste for dogs, Kezopet anti-fungal shampoo, Micohex antibacterial shampoo. Singapore."
+    />
+    <meta
+      name="keywords"
+      content="Probioxin Singapore, Kezopet pet shampoo, Micohex antifungal pet, veterinary supplements Singapore, dog gut health probiotics"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <style>
+      .vet-hero {
+        padding-top: 72px;
+        background: linear-gradient(135deg, #0d1117 0%, #1a2a3a 100%);
+        min-height: 60vh;
+        display: flex;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .vet-hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          repeating-linear-gradient(
+            90deg,
+            rgba(184, 151, 90, 0.03) 0,
+            rgba(184, 151, 90, 0.03) 1px,
+            transparent 1px,
+            transparent 80px
+          ),
+          repeating-linear-gradient(
+            0deg,
+            rgba(184, 151, 90, 0.03) 0,
+            rgba(184, 151, 90, 0.03) 1px,
+            transparent 1px,
+            transparent 80px
+          );
+      }
+      .vet-hero-inner {
+        position: relative;
+        z-index: 1;
+        padding: 80px 6%;
+      }
+      .prod-hero-bg {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: scale(1.04);
+        animation: hzoom 12s ease-out forwards;
+      }
+      @keyframes hzoom {
+        to {
+          transform: scale(1);
+        }
+      }
+      .product-section {
+        scroll-margin-top: 100px;
+      }
+      .prod-card {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        min-height: 500px;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: var(--shadow-xl);
+        margin-bottom: 40px;
+      }
+      .prod-card.reverse {
+        direction: rtl;
+      }
+      .prod-card.reverse > * {
+        direction: ltr;
+      }
+      .pc-img {
+        position: relative;
+        overflow: hidden;
+        background: var(--grey-1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 6rem;
+      }
+      .pc-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        mix-blend-mode: multiply;
+      }
+      .pc-text {
+        padding: 56px 48px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: var(--white);
+      }
+      .pc-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 4px 14px;
+        border-radius: 100px;
+        font-size: 0.65rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 16px;
+        width: fit-content;
+      }
+      .badge-teal {
+        background: #e0f5f5;
+        color: #0a6a6a;
+      }
+      .badge-purple {
+        background: #f0e8f8;
+        color: #5a1a8a;
+      }
+      .badge-blue {
+        background: #e8eef8;
+        color: #1a3a7a;
+      }
+      .pc-title {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(2rem, 4vw, 3rem);
+        font-weight: 400;
+        color: var(--ink);
+        margin-bottom: 8px;
+      }
+      .pc-sub {
+        font-size: 0.75rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: var(--sage);
+        margin-bottom: 18px;
+      }
+      .pc-desc {
+        font-size: 0.9rem;
+        line-height: 1.85;
+        color: var(--grey-4);
+        margin-bottom: 20px;
+      }
+      .pc-comp {
+        background: var(--grey-1);
+        border-radius: var(--r);
+        padding: 16px 20px;
+        margin-bottom: 20px;
+      }
+      .pc-comp-title {
+        font-size: 0.65rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: var(--gold);
+        margin-bottom: 8px;
+      }
+      .pc-comp-items {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+      .pc-ci {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.82rem;
+        color: var(--grey-4);
+      }
+      .pc-ci::before {
+        content: "●";
+        color: var(--sage);
+        font-size: 0.5rem;
+        flex-shrink: 0;
+      }
+      .pc-features {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 24px;
+      }
+      .pc-feat {
+        padding: 5px 14px;
+        background: var(--sage-pale);
+        border-radius: 100px;
+        font-size: 0.7rem;
+        font-weight: 600;
+        color: var(--sage);
+      }
+      .dosage-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 8px;
+      }
+      .dosage-table th {
+        background: var(--sage);
+        color: #fff;
+        padding: 8px 12px;
+        font-size: 0.72rem;
+        letter-spacing: 0.08em;
+        text-align: left;
+      }
+      .dosage-table td {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+        border-bottom: 1px solid var(--grey-2);
+        color: var(--grey-4);
+      }
+      .dosage-table tr:last-child td {
+        border-bottom: none;
+      }
+      .dosage-table tr:nth-child(even) td {
+        background: var(--grey-1);
+      }
+      @media (max-width: 900px) {
+        .prod-card,
+        .prod-card.reverse {
+          grid-template-columns: 1fr;
+          direction: ltr;
+        }
+        .pc-img {
+          min-height: 260px;
+        }
+        .pc-text {
+          padding: 40px 28px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav id="navbar">
+      <a
+        href="index.html"
+        class="nav-logo"
+        aria-label="PHARMA-Connectiv Pte Ltd"
+      >
+        <img
+          src="assets/images/logo.png"
+          alt="PHARMA-Connectiv Pte Ltd"
+          height="36"
+        />
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li class="nav-has-drop">
+          <a href="products.html" class="active">Products &#9662;</a>
+          <div class="nav-drop">
+            <a href="products.html"
+              ><span class="nav-drop-icon">&#128138;</span>All Products</a
+            >
+            <a href="pometate.html"
+              ><span class="nav-drop-icon">&#127807;</span>Pometate</a
+            >
+            <a href="prostamax.html"
+              ><span class="nav-drop-icon">&#128737;</span>ProstaMax</a
+            >
+            <a href="megacal.html"
+              ><span class="nav-drop-icon">&#129460;</span>MegaCal K2</a
+            >
+            <a href="megaflex.html"
+              ><span class="nav-drop-icon">&#128297;</span>MegaFlex Basic &amp;
+              Forte</a
+            >
+            <a href="willfertil.html"
+              ><span class="nav-drop-icon">&#128107;</span>Willfertil</a
+            >
+            <a href="crystal-white.html"
+              ><span class="nav-drop-icon">&#10024;</span>Crystal White</a
+            >
+            <a href="vitaran.html"
+              ><span class="nav-drop-icon">&#128137;</span>HP Cell Vitaran J</a
+            >
+            <a href="vetcare.html"
+              ><span class="nav-drop-icon">&#128062;</span>Veterinary Care</a
+            >
+          </div>
+        </li>
+        <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+      </ul>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <div class="nav-drawer" id="nav-drawer">
+      <a href="index.html">Home</a><a href="about.html">About Us</a>
+      <a href="products.html">All Products</a
+      ><a href="pometate.html">Pometate</a>
+      <a href="prostamax.html">ProstaMax</a
+      ><a href="megacal.html">MegaCal K2</a>
+      <a href="megaflex.html">MegaFlex Basic &amp; Forte</a
+      ><a href="willfertil.html">Willfertil</a>
+      <a href="crystal-white.html">Crystal White</a
+      ><a href="vitaran.html">HP Cell Vitaran J</a>
+      <a href="vetcare.html">Veterinary Care</a>
+      <a href="contact.html" class="drawer-cta">Contact Us</a>
     </div>
-  </div>
-</section>
 
-<div class="marquee-wrap" aria-hidden="true"><div class="marquee-track">
-  <span class="marquee-item"><span class="marquee-dot"></span>Probioxin · Gut Health Paste</span>
-  <span class="marquee-item"><span class="marquee-dot"></span>Kezopet · Anti-fungal Shampoo</span>
-  <span class="marquee-item"><span class="marquee-dot"></span>Micohex · Antibacterial Shampoo</span>
-  <span class="marquee-item"><span class="marquee-dot"></span>Enterococcus faecium Probiotic</span>
-  <span class="marquee-item"><span class="marquee-dot"></span>Ketoconazole 2%</span>
-  <span class="marquee-item"><span class="marquee-dot"></span>Chlorhexidine Gluconate</span>
-  <span class="marquee-item"><span class="marquee-dot"></span>Companion Animal Care</span>
-  <span class="marquee-item"><span class="marquee-dot"></span>Vet Recommended</span>
-  <span class="marquee-item"><span class="marquee-dot"></span>Probioxin · Gut Health Paste</span>
-  <span class="marquee-item"><span class="marquee-dot"></span>Kezopet · Anti-fungal Shampoo</span>
-  <span class="marquee-item"><span class="marquee-dot"></span>Micohex · Antibacterial Shampoo</span>
-  <span class="marquee-item"><span class="marquee-dot"></span>Enterococcus faecium Probiotic</span>
-  <span class="marquee-item"><span class="marquee-dot"></span>Ketoconazole 2%</span>
-</div></div>
-
-<!-- PRODUCTS -->
-<section class="section" style="background:var(--cream)">
-  <div class="eyebrow reveal">Three Specialist Products</div>
-  <h2 class="display reveal rv1" style="font-size:clamp(2rem,3.5vw,3rem);margin-top:14px">Our <em>Veterinary</em> Range</h2>
-  <p class="reveal rv2" style="font-size:.92rem;color:var(--grey-3);line-height:1.85;max-width:600px;margin-top:14px">From gut health support to skin and coat care, our veterinary range addresses common health challenges faced by dogs and companion animals.</p>
-</section>
-
-<!-- PROBIOXIN -->
-<div id="probioxin" class="product-section">
-  <div class="prod-card">
-    <div class="pc-img" style="background:linear-gradient(135deg,#e8f5e9,#c8e6c9)">
-      <span>🦴</span>
-    </div>
-    <div class="pc-text">
-      <span class="pc-badge badge-teal">Gut Health · Oral Paste</span>
-      <div class="pc-title">Probioxin</div>
-      <div class="pc-sub">Pro-Kolin Advanced for Dogs</div>
-      <p class="pc-desc">A paste to support gut health, soothe the gut lining, and firm up faeces. Probioxin combines probiotics, prebiotics and gut flora stabilisers to restore healthy gut flora, aid in digestion, nutrient absorption and boost immunity by balancing the gut microbiome.</p>
-      <div class="pc-comp">
-        <div class="pc-comp-title">Active Composition</div>
-        <div class="pc-comp-items">
-          <div class="pc-ci">Probiotic: Enterococcus faecium (TFH–1904)</div>
-          <div class="pc-ci">Prebiotic: Oligofructose (Beta-glucan) · Psyllium husk · Pectin</div>
-          <div class="pc-ci">Gut Flora Stabiliser: Bentonite montmorillonite 170,000mg/kg</div>
-          <div class="pc-ci">Technology additives: Acacia gum arabic · Kaolin</div>
-          <div class="pc-ci">Excipients: Refined soyabean oil · Dextrose</div>
+    <!-- HERO -->
+    <section class="vet-hero">
+      <img
+        class="prod-hero-bg"
+        src="assets/images/vet-care-hero.jpg"
+        alt="Vetcare"
+      />
+      <div class="vet-hero-inner">
+        <div class="breadcrumb" style="margin-bottom: 24px">
+          <a href="index.html">Home</a><span class="breadcrumb-sep">/</span
+          ><a href="products.html">Products</a
+          ><span class="breadcrumb-sep">/</span><span>Veterinary Care</span>
+        </div>
+        <div class="eyebrow light">Veterinary &amp; Companion Animal Care</div>
+        <h1
+          style="
+            font-family: &quot;Playfair Display&quot;, serif;
+            font-size: clamp(2.6rem, 6vw, 5rem);
+            font-weight: 400;
+            color: #fff;
+            line-height: 1.05;
+            margin: 18px 0 22px;
+            max-width: 700px;
+          "
+        >
+          Trusted Care for<br /><em style="color: var(--gold-light)"
+            >Your Companion Animals</em
+          >
+        </h1>
+        <p
+          style="
+            font-size: 1rem;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.65);
+            max-width: 560px;
+            margin-bottom: 32px;
+          "
+        >
+          Three specialist veterinary products — gut health, antifungal and
+          antibacterial solutions — for dogs and companion animals. Clinically
+          formulated, vet-recommended.
+        </p>
+        <div style="display: flex; flex-wrap: wrap; gap: 12px">
+          <a
+            href="#probioxin"
+            class="btn btn-gold"
+            style="min-width: max-content"
+            >Probioxin</a
+          >
+          <a
+            href="#kezopet"
+            class="btn btn-ghost"
+            style="min-width: max-content"
+            >Kezopet</a
+          >
+          <a
+            href="#micohex"
+            class="btn btn-ghost"
+            style="min-width: max-content"
+            >Micohex</a
+          >
+          <a
+            href="contact.html"
+            class="btn btn-sage btn-arrow"
+            style="min-width: max-content"
+            >Enquire Now</a
+          >
         </div>
       </div>
-      <div class="pc-features">
-        <span class="pc-feat">Probiotics</span><span class="pc-feat">Prebiotics</span>
-        <span class="pc-feat">Gut Flora Balance</span><span class="pc-feat">Oral Paste</span>
-      </div>
-      <div class="pc-comp-title" style="margin-bottom:8px;font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--gold)">Dosage by Dog Weight</div>
-      <table class="dosage-table">
-        <thead><tr><th>Weight</th><th>Volume</th><th>Frequency</th></tr></thead>
-        <tbody>
-          <tr><td>&lt; 5kg</td><td>2ml</td><td>Twice daily</td></tr>
-          <tr><td>5–15kg</td><td>3ml</td><td>Twice daily</td></tr>
-          <tr><td>15–30kg</td><td>5ml</td><td>Twice daily</td></tr>
-          <tr><td>&gt; 30kg</td><td>7ml</td><td>Twice daily</td></tr>
-        </tbody>
-      </table>
-      <p style="font-size:.76rem;color:var(--grey-3);margin-top:10px;line-height:1.6">Give orally for as long as considered necessary or as advised by your veterinarian. Simultaneous administration of oral macrolides should be avoided. Store in a cool, dry place out of direct sunlight.</p>
-      <div style="margin-top:24px"><a href="contact.html" class="btn btn-sage btn-arrow">Enquire About Probioxin</a></div>
-    </div>
-  </div>
-</div>
+    </section>
 
-<!-- KEZOPET -->
-<div id="kezopet" class="product-section" style="background:var(--cream);padding:0 0 40px">
-  <div class="prod-card reverse">
-    <div class="pc-img" style="background:linear-gradient(135deg,#e8eaf6,#c5cae9)">
-      <span>🛁</span>
+    <div class="marquee-wrap" aria-hidden="true">
+      <div class="marquee-track">
+        <span class="marquee-item"
+          ><span class="marquee-dot"></span>Probioxin · Gut Health Paste</span
+        >
+        <span class="marquee-item"
+          ><span class="marquee-dot"></span>Kezopet · Anti-fungal Shampoo</span
+        >
+        <span class="marquee-item"
+          ><span class="marquee-dot"></span>Micohex · Antibacterial
+          Shampoo</span
+        >
+        <span class="marquee-item"
+          ><span class="marquee-dot"></span>Enterococcus faecium Probiotic</span
+        >
+        <span class="marquee-item"
+          ><span class="marquee-dot"></span>Ketoconazole 2%</span
+        >
+        <span class="marquee-item"
+          ><span class="marquee-dot"></span>Chlorhexidine Gluconate</span
+        >
+        <span class="marquee-item"
+          ><span class="marquee-dot"></span>Companion Animal Care</span
+        >
+        <span class="marquee-item"
+          ><span class="marquee-dot"></span>Vet Recommended</span
+        >
+        <span class="marquee-item"
+          ><span class="marquee-dot"></span>Probioxin · Gut Health Paste</span
+        >
+        <span class="marquee-item"
+          ><span class="marquee-dot"></span>Kezopet · Anti-fungal Shampoo</span
+        >
+        <span class="marquee-item"
+          ><span class="marquee-dot"></span>Micohex · Antibacterial
+          Shampoo</span
+        >
+        <span class="marquee-item"
+          ><span class="marquee-dot"></span>Enterococcus faecium Probiotic</span
+        >
+        <span class="marquee-item"
+          ><span class="marquee-dot"></span>Ketoconazole 2%</span
+        >
+      </div>
     </div>
-    <div class="pc-text">
-      <span class="pc-badge badge-purple">Anti-fungal · Shampoo</span>
-      <div class="pc-title">Kezopet</div>
-      <div class="pc-sub">Ketoconazole, Chlorhexidine Gluconate &amp; Cetrimide Shampoo</div>
-      <p class="pc-desc">Kezopet is an anti-fungal shampoo providing comprehensive cover to companion animals. It is a triple-action combination of Ketoconazole, Chlorhexidine and Cetrimide — each contributing a distinct therapeutic role for complete skin and coat care.</p>
-      <div class="pc-comp">
-        <div class="pc-comp-title">Active Composition</div>
-        <div class="pc-comp-items">
-          <div class="pc-ci">Ketoconazole 2% w/v — broad-spectrum antifungal; controls flaking, scaling, itching</div>
-          <div class="pc-ci">Chlorhexidine Gluconate 2% w/v — broad-spectrum bactericidal; kills fungi and yeast; cleanses skin; makes coat shiny and healthy</div>
-          <div class="pc-ci">Cetrimide 0.1% w/v — antiseptic; kills bacteria and fungi; treats flaky and itchy scalp; useful in scabies and seborrheic dermatitis</div>
+
+    <!-- PRODUCTS -->
+    <section class="section" style="background: var(--cream)">
+      <div class="eyebrow reveal">Three Specialist Products</div>
+      <h2
+        class="display reveal rv1"
+        style="font-size: clamp(2rem, 3.5vw, 3rem); margin-top: 14px"
+      >
+        Our <em>Veterinary</em> Range
+      </h2>
+      <p
+        class="reveal rv2"
+        style="
+          font-size: 0.92rem;
+          color: var(--grey-3);
+          line-height: 1.85;
+          max-width: 600px;
+          margin-top: 14px;
+        "
+      >
+        From gut health support to skin and coat care, our veterinary range
+        addresses common health challenges faced by dogs and companion animals.
+      </p>
+    </section>
+
+    <!-- PROBIOXIN -->
+    <div id="probioxin" class="product-section">
+      <div class="prod-card">
+        <div
+          class="pc-img"
+          style="background: linear-gradient(135deg, #e8f5e9, #c8e6c9)"
+        >
+          <!-- <span>🦴</span> -->
+          <img src="assets/images/probioxin-bgremoved.png" alt="Probioxin" />
+        </div>
+        <div class="pc-text">
+          <span class="pc-badge badge-teal">Gut Health · Oral Paste</span>
+          <div class="pc-title">Probioxin</div>
+          <div class="pc-sub">Pro-Kolin Advanced for Dogs</div>
+          <p class="pc-desc">
+            A paste to support gut health, soothe the gut lining, and firm up
+            faeces. Probioxin combines probiotics, prebiotics and gut flora
+            stabilisers to restore healthy gut flora, aid in digestion, nutrient
+            absorption and boost immunity by balancing the gut microbiome.
+          </p>
+          <div class="pc-comp">
+            <div class="pc-comp-title">Active Composition</div>
+            <div class="pc-comp-items">
+              <div class="pc-ci">
+                Probiotic: Enterococcus faecium (TFH–1904)
+              </div>
+              <div class="pc-ci">
+                Prebiotic: Oligofructose (Beta-glucan) · Psyllium husk · Pectin
+              </div>
+              <div class="pc-ci">
+                Gut Flora Stabiliser: Bentonite montmorillonite 170,000mg/kg
+              </div>
+              <div class="pc-ci">
+                Technology additives: Acacia gum arabic · Kaolin
+              </div>
+              <div class="pc-ci">
+                Excipients: Refined soyabean oil · Dextrose
+              </div>
+            </div>
+          </div>
+          <div class="pc-features">
+            <span class="pc-feat">Probiotics</span
+            ><span class="pc-feat">Prebiotics</span>
+            <span class="pc-feat">Gut Flora Balance</span
+            ><span class="pc-feat">Oral Paste</span>
+          </div>
+          <div
+            class="pc-comp-title"
+            style="
+              margin-bottom: 8px;
+              font-size: 0.65rem;
+              letter-spacing: 0.18em;
+              text-transform: uppercase;
+              font-weight: 700;
+              color: var(--gold);
+            "
+          >
+            Dosage by Dog Weight
+          </div>
+          <table class="dosage-table">
+            <thead>
+              <tr>
+                <th>Weight</th>
+                <th>Volume</th>
+                <th>Frequency</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>&lt; 5kg</td>
+                <td>2ml</td>
+                <td>Twice daily</td>
+              </tr>
+              <tr>
+                <td>5–15kg</td>
+                <td>3ml</td>
+                <td>Twice daily</td>
+              </tr>
+              <tr>
+                <td>15–30kg</td>
+                <td>5ml</td>
+                <td>Twice daily</td>
+              </tr>
+              <tr>
+                <td>&gt; 30kg</td>
+                <td>7ml</td>
+                <td>Twice daily</td>
+              </tr>
+            </tbody>
+          </table>
+          <p
+            style="
+              font-size: 0.76rem;
+              color: var(--grey-3);
+              margin-top: 10px;
+              line-height: 1.6;
+            "
+          >
+            Give orally for as long as considered necessary or as advised by
+            your veterinarian. Simultaneous administration of oral macrolides
+            should be avoided. Store in a cool, dry place out of direct
+            sunlight.
+          </p>
+          <div style="margin-top: 24px">
+            <a href="contact.html" class="btn btn-sage btn-arrow"
+              >Enquire About Probioxin</a
+            >
+          </div>
         </div>
       </div>
-      <div class="pc-features">
-        <span class="pc-feat">Anti-fungal</span><span class="pc-feat">Anti-septic</span>
-        <span class="pc-feat">Anti-yeast</span><span class="pc-feat">pH Balanced</span>
-      </div>
-      <div class="pc-comp">
-        <div class="pc-comp-title">Key Benefits</div>
-        <div class="pc-comp-items">
-          <div class="pc-ci">Inhibits yeast &amp; fungal species effectively</div>
-          <div class="pc-ci">Effective in ringworm infections</div>
-          <div class="pc-ci">Improves hair coat and skin health</div>
-          <div class="pc-ci">Balanced pH formula reduces skin irritation</div>
+    </div>
+
+    <!-- KEZOPET -->
+    <div
+      id="kezopet"
+      class="product-section"
+      style="background: var(--cream); padding: 0 0 40px"
+    >
+      <div class="prod-card reverse">
+        <div
+          class="pc-img"
+          style="background: linear-gradient(135deg, #e8eaf6, #c5cae9)"
+        >
+          <!-- <span>🛁</span> -->
+          <img src="assets/images/kezopet-bgremoved.png" alt="Kezopet" />
+        </div>
+        <div class="pc-text">
+          <span class="pc-badge badge-purple">Anti-fungal · Shampoo</span>
+          <div class="pc-title">Kezopet</div>
+          <div class="pc-sub">
+            Ketoconazole, Chlorhexidine Gluconate &amp; Cetrimide Shampoo
+          </div>
+          <p class="pc-desc">
+            Kezopet is an anti-fungal shampoo providing comprehensive cover to
+            companion animals. It is a triple-action combination of
+            Ketoconazole, Chlorhexidine and Cetrimide — each contributing a
+            distinct therapeutic role for complete skin and coat care.
+          </p>
+          <div class="pc-comp">
+            <div class="pc-comp-title">Active Composition</div>
+            <div class="pc-comp-items">
+              <div class="pc-ci">
+                Ketoconazole 2% w/v — broad-spectrum antifungal; controls
+                flaking, scaling, itching
+              </div>
+              <div class="pc-ci">
+                Chlorhexidine Gluconate 2% w/v — broad-spectrum bactericidal;
+                kills fungi and yeast; cleanses skin; makes coat shiny and
+                healthy
+              </div>
+              <div class="pc-ci">
+                Cetrimide 0.1% w/v — antiseptic; kills bacteria and fungi;
+                treats flaky and itchy scalp; useful in scabies and seborrheic
+                dermatitis
+              </div>
+            </div>
+          </div>
+          <div class="pc-features">
+            <span class="pc-feat">Anti-fungal</span
+            ><span class="pc-feat">Anti-septic</span>
+            <span class="pc-feat">Anti-yeast</span
+            ><span class="pc-feat">pH Balanced</span>
+          </div>
+          <div class="pc-comp">
+            <div class="pc-comp-title">Key Benefits</div>
+            <div class="pc-comp-items">
+              <div class="pc-ci">
+                Inhibits yeast &amp; fungal species effectively
+              </div>
+              <div class="pc-ci">Effective in ringworm infections</div>
+              <div class="pc-ci">Improves hair coat and skin health</div>
+              <div class="pc-ci">
+                Balanced pH formula reduces skin irritation
+              </div>
+            </div>
+          </div>
+          <div style="margin-top: 24px">
+            <a href="contact.html" class="btn btn-sage btn-arrow"
+              >Enquire About Kezopet</a
+            >
+          </div>
         </div>
       </div>
-      <div style="margin-top:24px"><a href="contact.html" class="btn btn-sage btn-arrow">Enquire About Kezopet</a></div>
     </div>
-  </div>
-</div>
 
-<!-- MICOHEX -->
-<div id="micohex" class="product-section">
-  <div class="prod-card">
-    <div class="pc-img" style="background:linear-gradient(135deg,#e3f2fd,#b3d9f5)">
-      <span>🧴</span>
-    </div>
-    <div class="pc-text">
-      <span class="pc-badge badge-blue">Antibacterial · Antifungal Shampoo</span>
-      <div class="pc-title">Micohex</div>
-      <div class="pc-sub">Medication Shampoo — Bacterial &amp; Fungal Skin Infections</div>
-      <p class="pc-desc">Micohex is a specialist medication shampoo for the treatment of common bacterial and fungal infections of the skin, and for the treatment of inflammatory forms of seborrhoea in companion animals.</p>
-      <div class="pc-comp">
-        <div class="pc-comp-title">Active Ingredients</div>
-        <div class="pc-comp-items">
-          <div class="pc-ci">Chlorhexidine gluconate 20g — broad-spectrum antibacterial and antifungal action</div>
-          <div class="pc-ci">Miconazole nitrate 20g — effective antifungal; targets dermatophytes and yeasts</div>
-          <div class="pc-ci">Aloe extract — soothes and conditions the skin; supports healing</div>
+    <!-- MICOHEX -->
+    <div id="micohex" class="product-section">
+      <div class="prod-card">
+        <div
+          class="pc-img"
+          style="background: linear-gradient(135deg, #e3f2fd, #b3d9f5)"
+        >
+          <!-- <span>🧴</span> -->
+          <img src="assets/images/micohex-bgremoved.png" alt="Micohex" />
+        </div>
+        <div class="pc-text">
+          <span class="pc-badge badge-blue"
+            >Antibacterial · Antifungal Shampoo</span
+          >
+          <div class="pc-title">Micohex</div>
+          <div class="pc-sub">
+            Medication Shampoo — Bacterial &amp; Fungal Skin Infections
+          </div>
+          <p class="pc-desc">
+            Micohex is a specialist medication shampoo for the treatment of
+            common bacterial and fungal infections of the skin, and for the
+            treatment of inflammatory forms of seborrhoea in companion animals.
+          </p>
+          <div class="pc-comp">
+            <div class="pc-comp-title">Active Ingredients</div>
+            <div class="pc-comp-items">
+              <div class="pc-ci">
+                Chlorhexidine gluconate 20g — broad-spectrum antibacterial and
+                antifungal action
+              </div>
+              <div class="pc-ci">
+                Miconazole nitrate 20g — effective antifungal; targets
+                dermatophytes and yeasts
+              </div>
+              <div class="pc-ci">
+                Aloe extract — soothes and conditions the skin; supports healing
+              </div>
+            </div>
+          </div>
+          <div class="pc-features">
+            <span class="pc-feat">Antibacterial</span
+            ><span class="pc-feat">Antifungal</span>
+            <span class="pc-feat">Anti-seborrhoea</span
+            ><span class="pc-feat">Aloe Soothing</span>
+          </div>
+          <div class="pc-comp">
+            <div class="pc-comp-title">Indications</div>
+            <div class="pc-comp-items">
+              <div class="pc-ci">Common bacterial infections of the skin</div>
+              <div class="pc-ci">
+                Fungal skin infections including dermatophytosis
+              </div>
+              <div class="pc-ci">Inflammatory forms of seborrhoea</div>
+              <div class="pc-ci">
+                Dual Chlorhexidine + Miconazole synergy for broader spectrum
+              </div>
+            </div>
+          </div>
+          <div style="margin-top: 24px">
+            <a href="contact.html" class="btn btn-sage btn-arrow"
+              >Enquire About Micohex</a
+            >
+          </div>
         </div>
       </div>
-      <div class="pc-features">
-        <span class="pc-feat">Antibacterial</span><span class="pc-feat">Antifungal</span>
-        <span class="pc-feat">Anti-seborrhoea</span><span class="pc-feat">Aloe Soothing</span>
-      </div>
-      <div class="pc-comp">
-        <div class="pc-comp-title">Indications</div>
-        <div class="pc-comp-items">
-          <div class="pc-ci">Common bacterial infections of the skin</div>
-          <div class="pc-ci">Fungal skin infections including dermatophytosis</div>
-          <div class="pc-ci">Inflammatory forms of seborrhoea</div>
-          <div class="pc-ci">Dual Chlorhexidine + Miconazole synergy for broader spectrum</div>
+    </div>
+
+    <!-- CONTACT CTA -->
+    <section class="section" style="background: var(--ink)">
+      <div style="text-align: center; max-width: 640px; margin: 0 auto">
+        <div class="eyebrow light reveal" style="justify-content: center">
+          Veterinary Enquiries
+        </div>
+        <h2
+          class="display reveal rv1"
+          style="
+            font-size: clamp(2rem, 3.5vw, 3rem);
+            color: #fff;
+            margin-top: 14px;
+          "
+        >
+          Looking for
+          <em style="color: var(--gold-light)">Veterinary Products?</em>
+        </h2>
+        <p
+          class="reveal rv2"
+          style="
+            font-size: 0.92rem;
+            line-height: 1.85;
+            color: rgba(255, 255, 255, 0.55);
+            margin: 20px 0 32px;
+          "
+        >
+          Contact our team for veterinary product enquiries, pricing,
+          distribution partnerships or clinical information. We serve veterinary
+          clinics, pet care professionals and distributors across Singapore.
+        </p>
+        <div
+          class="reveal rv3"
+          style="
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+          "
+        >
+          <a
+            href="contact.html"
+            class="btn btn-gold btn-arrow"
+            style="min-width: max-content"
+            >Get in Touch</a
+          >
+          <a
+            href="products.html"
+            class="btn btn-ghost"
+            style="min-width: max-content"
+            >All Products</a
+          >
         </div>
       </div>
-      <div style="margin-top:24px"><a href="contact.html" class="btn btn-sage btn-arrow">Enquire About Micohex</a></div>
-    </div>
-  </div>
-</div>
+    </section>
 
-<!-- CONTACT CTA -->
-<section class="section" style="background:var(--ink)">
-  <div style="text-align:center;max-width:640px;margin:0 auto">
-    <div class="eyebrow light reveal" style="justify-content:center">Veterinary Enquiries</div>
-    <h2 class="display reveal rv1" style="font-size:clamp(2rem,3.5vw,3rem);color:#fff;margin-top:14px">Looking for <em style="color:var(--gold-light)">Veterinary Products?</em></h2>
-    <p class="reveal rv2" style="font-size:.92rem;line-height:1.85;color:rgba(255,255,255,.55);margin:20px 0 32px">Contact our team for veterinary product enquiries, pricing, distribution partnerships or clinical information. We serve veterinary clinics, pet care professionals and distributors across Singapore.</p>
-    <div class="reveal rv3" style="display:flex;justify-content:center;flex-wrap:wrap;gap:12px">
-      <a href="contact.html" class="btn btn-gold btn-arrow" style="min-width:max-content">Get in Touch</a>
-      <a href="products.html" class="btn btn-ghost" style="min-width:max-content">All Products</a>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="footer-top">
-    <div>
-      <img src="assets/images/logo.png" alt="PHARMA-Connectiv Pte Ltd" class="f-logo-img"/>
-      <p class="f-brand-desc">Connecting healthcare professionals and patients with world-class pharmaceutical, nutraceutical and veterinary solutions across Singapore and Southeast Asia.</p>
-      <div class="f-certs"><span class="f-cert">FDA</span><span class="f-cert">GMP</span><span class="f-cert">CE</span><span class="f-cert">KFDA</span><span class="f-cert">DMF</span><span class="f-cert">ISO</span></div>
-    </div>
-    <div class="fcol"><h5>Navigation</h5><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="products.html">Products</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
-    <div class="fcol"><h5>Products</h5><ul>
-      <li><a href="pometate.html">Pometate</a></li><li><a href="prostamax.html">ProstaMax</a></li>
-      <li><a href="megacal.html">MegaCal K2</a></li><li><a href="megaflex.html">MegaFlex</a></li>
-      <li><a href="willfertil.html">Willfertil</a></li><li><a href="crystal-white.html">Crystal White</a></li>
-      <li><a href="vitaran.html">HP Cell Vitaran J</a></li><li><a href="vetcare.html">Veterinary Care</a></li>
-    </ul></div>
-    <div class="fcol"><h5>Contact</h5><ul>
-      <li><a href="tel:+6562828732">+65 6282 8732</a></li>
-      <li><a href="mailto:info@pharma-connectiv.com">info@pharma-connectiv.com</a></li>
-      <li><a href="contact.html">85 Playfair Road, L5<br>Singapore 368000</a></li>
-    </ul></div>
-  </div>
-  <div class="footer-bottom">
-    <p>&copy; 2024 PHARMA-Connectiv Pte Ltd &middot; Singapore 368000</p>
-    <p>Products are not intended to diagnose, treat, cure or prevent any disease.</p>
-  </div>
-</footer>
-<script src="js/main.js"></script>
-</body></html>
+    <footer>
+      <div class="footer-top">
+        <div>
+          <img
+            src="assets/images/logo.png"
+            alt="PHARMA-Connectiv Pte Ltd"
+            class="f-logo-img"
+          />
+          <p class="f-brand-desc">
+            Connecting healthcare professionals and patients with world-class
+            pharmaceutical, nutraceutical and veterinary solutions across
+            Singapore and Southeast Asia.
+          </p>
+          <div class="f-certs">
+            <span class="f-cert">FDA</span><span class="f-cert">GMP</span
+            ><span class="f-cert">CE</span><span class="f-cert">KFDA</span
+            ><span class="f-cert">DMF</span><span class="f-cert">ISO</span>
+          </div>
+        </div>
+        <div class="fcol">
+          <h5>Navigation</h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="fcol">
+          <h5>Products</h5>
+          <ul>
+            <li><a href="pometate.html">Pometate</a></li>
+            <li><a href="prostamax.html">ProstaMax</a></li>
+            <li><a href="megacal.html">MegaCal K2</a></li>
+            <li><a href="megaflex.html">MegaFlex Basic &amp; Forte</a></li>
+            <li><a href="willfertil.html">Willfertil</a></li>
+            <li><a href="crystal-white.html">Crystal White</a></li>
+            <li><a href="vitaran.html">HP Cell Vitaran J</a></li>
+            <li><a href="vetcare.html">Veterinary Care</a></li>
+          </ul>
+        </div>
+        <div class="fcol">
+          <h5>Contact</h5>
+          <ul>
+            <li><a href="tel:+6562828732">+65 6282 8732</a></li>
+            <li>
+              <a href="mailto:info@pharma-connectiv.com"
+                >info@pharma-connectiv.com</a
+              >
+            </li>
+            <li>
+              <a href="contact.html"
+                >85 Playfair Road, L5<br />Singapore 368000</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom nav-links">
+        <p>&copy; 2024 PHARMA-Connectiv Pte Ltd &middot; Singapore 368000</p>
+        <p>
+          Products are not intended to diagnose, treat, cure or prevent any
+          disease.
+        </p>
+        <p>
+          Web Solutions by
+          <a href="https://www.renderinfotech.com/" target="_blank"
+            >Render Infotech</a
+          >
+        </p>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>

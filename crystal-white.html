@@ -1,264 +1,911 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Crystal White — Skin Brightening Supplement | PHARMA-Connectiv</title>
-  <meta name="description" content="Crystal White — skin brightening and anti-aging supplement with Curcumin and Polypodium. Patented Microgranule technology. Made in France. GMO-free, vegetarian."/>
-  <link rel="stylesheet" href="css/styles.css"/>
-  <style>
-    .prod-hero{padding-top:72px;position:relative;min-height:92vh;display:flex;align-items:flex-end;overflow:hidden}
-    .prod-hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.04);animation:hzoom 12s ease-out forwards}
-    @keyframes hzoom{to{transform:scale(1)}}
-    .prod-hero-overlay{position:absolute;inset:0}
-    .prod-hero-content{position:relative;z-index:2;padding:0 6% 64px;width:100%;display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:end}
-    .phc-left h1{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,6vw,5rem);font-weight:400;color:#fff;line-height:1.05;margin:18px 0}
-    .tagline{font-size:1rem;color:rgba(255,255,255,.65);line-height:1.8;max-width:480px;margin-bottom:28px}
-    .phc-pills{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:28px}
-    .phc-pill{padding:5px 14px;border-radius:100px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);backdrop-filter:blur(8px);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600;color:rgba(255,255,255,.85)}
-    .phc-pill.gold{background:rgba(184,151,90,.2);border-color:rgba(184,151,90,.4);color:var(--gold-light)}
-    .phc-right{display:flex;justify-content:center;align-items:flex-end}
-    .product-box-img{width:100%;max-width:340px;border-radius:12px;box-shadow:0 32px 80px rgba(0,0,0,.4);animation:floatup 1s .4s both}
-    @keyframes floatup{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
-    .phc-cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
-    .phc-cta-row .btn{flex-shrink:0;min-width:max-content}
-    .ingr-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:48px}
-    .ingr-card{background:var(--white);border-radius:var(--r);padding:28px;border:1px solid var(--border);box-shadow:var(--shadow-sm);transition:transform .3s,box-shadow .3s}
-    .ingr-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
-    .ingr-icon{font-size:2rem;margin-bottom:12px}
-    .ingr-compound{font-size:.63rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--gold);margin-bottom:7px}
-    .ingr-name{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:400;color:var(--ink);margin-bottom:10px}
-    .ingr-desc{font-size:.83rem;line-height:1.75;color:var(--grey-4)}
-    .ingr-benefit{margin-top:12px;font-size:.8rem;color:var(--grey-3);line-height:1.6;display:flex;align-items:flex-start;gap:7px}
-    .ingr-benefit::before{content:'✓';color:var(--sage);font-weight:700;flex-shrink:0}
-    .split-sec{display:grid;grid-template-columns:1fr 1fr;min-height:480px}
-    .split-img{overflow:hidden;position:relative}.split-img img{width:100%;height:100%;object-fit:cover}
-    .split-text{padding:72px 56px;display:flex;flex-direction:column;justify-content:center}
-    .split-text p{font-size:.92rem;line-height:1.9;color:var(--grey-4);margin-bottom:14px}
-    .specs-table{width:100%;border-collapse:collapse;margin-top:28px}
-    .specs-table tr{border-bottom:1px solid var(--grey-2)}.specs-table tr:last-child{border-bottom:none}
-    .specs-table td{padding:16px 0;font-size:.88rem}
-    .specs-table td:first-child{font-weight:600;color:var(--ink);width:180px}
-    .specs-table td:last-child{color:var(--grey-4);line-height:1.65}
-    .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:36px}
-    .hiw-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:44px}
-    .hiw-card{padding:32px 24px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(--r);text-align:center}
-    .hiw-num{font-family:'Playfair Display',serif;font-size:2.8rem;font-weight:400;color:var(--gold);margin-bottom:12px}
-    .hiw-title{font-size:.82rem;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}
-    .hiw-desc{font-size:.8rem;line-height:1.7;color:rgba(255,255,255,.5)}
-    @media(max-width:900px){.prod-hero-content{grid-template-columns:1fr;padding-bottom:48px}.phc-right{display:none}.ingr-grid{grid-template-columns:1fr}.split-sec{grid-template-columns:1fr}.split-img{min-height:300px}.split-text{padding:48px 28px}.related-grid{grid-template-columns:1fr 1fr}.hiw-grid{grid-template-columns:1fr}}
-    @media(max-width:600px){.related-grid{grid-template-columns:1fr}.phc-left h1{font-size:2.4rem}.phc-cta-row{flex-direction:column}.phc-cta-row .btn{width:100%;justify-content:center}}
-    .prod-hero-overlay{background:linear-gradient(to bottom,rgba(13,17,23,.75) 0%,rgba(13,17,23,.92) 70%,rgba(13,17,23,.98) 100%)}
-    .benefit-chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
-    .benefit-chip{display:flex;align-items:center;gap:8px;padding:10px 18px;background:var(--white);border:1px solid var(--border);border-radius:var(--r);box-shadow:var(--shadow-sm)}
-    .benefit-chip-icon{font-size:1.2rem}
-    .benefit-chip-text{font-size:.82rem;font-weight:600;color:var(--ink)}
-    .mgranule-box{background:var(--ink);border-radius:12px;padding:40px;border:1px solid rgba(255,255,255,.1)}
-    .mgranule-box h4{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:400;color:#fff;margin-bottom:16px}
-    .mgranule-items{display:flex;flex-direction:column;gap:12px}
-    .mi{display:flex;align-items:flex-start;gap:10px;font-size:.85rem;color:rgba(255,255,255,.65);line-height:1.6}
-    .mi::before{content:'→';color:var(--gold);font-weight:700;flex-shrink:0}
-  </style>
-</head>
-<body>
-<nav id="navbar">
-  <a href="index.html" class="nav-logo" aria-label="PHARMA-Connectiv Pte Ltd">
-    <img src="assets/images/logo.png" alt="PHARMA-Connectiv Pte Ltd" height="36"/>
-  </a>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About Us</a></li>
-    <li class="nav-has-drop"><a href="products.html" class='active'>Products ▾</a>
-      <div class="nav-drop">
-        <a href="products.html"><span class="nav-drop-icon">💊</span>All Products</a>
-        <a href="pometate.html"><span class="nav-drop-icon">🌿</span>Pometate</a>
-        <a href="prostamax.html"><span class="nav-drop-icon">🛡️</span>ProstaMax</a>
-        <a href="megacal.html"><span class="nav-drop-icon">🦴</span>MegaCal K2</a>
-        <a href="megaflex.html"><span class="nav-drop-icon">🔩</span>MegaFlex Basic &amp; Forte</a>
-        <a href="willfertil.html"><span class="nav-drop-icon">👫</span>Willfertil</a>
-        <a href="crystal-white.html"><span class="nav-drop-icon">✨</span>Crystal White</a>
-        <a href="vitaran.html"><span class="nav-drop-icon">💉</span>HP Cell Vitaran J</a>
-        <a href="vetcare.html"><span class="nav-drop-icon">🐾</span>Veterinary Care</a>
-      </div>
-    </li>
-    <li><a href="contact.html" class='nav-cta'>Contact Us</a></li>
-  </ul>
-  <button class="nav-toggle" id="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
-</nav>
-<div class="nav-drawer" id="nav-drawer">
-  <a href="index.html">Home</a><a href="about.html">About Us</a><a href="products.html">All Products</a>
-  <a href="pometate.html">Pometate</a><a href="prostamax.html">ProstaMax</a><a href="megacal.html">MegaCal K2</a>
-  <a href="megaflex.html">MegaFlex</a><a href="willfertil.html">Willfertil</a>
-  <a href="crystal-white.html">Crystal White</a><a href="vitaran.html">HP Cell Vitaran J</a>
-  <a href="vetcare.html">Veterinary Care</a>
-  <a href="contact.html" class="drawer-cta">Contact Us</a>
-</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>
+      Crystal White — Skin Brightening Supplement | PHARMA-Connectiv
+    </title>
+    <meta
+      name="description"
+      content="Crystal White — skin brightening and anti-aging supplement with Curcumin and Polypodium. Patented Microgranule technology. Made in France. GMO-free, vegetarian."
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <style>
+      .prod-hero {
+        padding-top: 72px;
+        position: relative;
+        min-height: 92vh;
+        display: flex;
+        align-items: flex-end;
+        overflow: hidden;
+      }
+      .prod-hero-bg {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: scale(1.04);
+        animation: hzoom 12s ease-out forwards;
+      }
+      @keyframes hzoom {
+        to {
+          transform: scale(1);
+        }
+      }
+      .prod-hero-overlay {
+        position: absolute;
+        inset: 0;
+      }
+      .prod-hero-content {
+        position: relative;
+        z-index: 2;
+        padding: 0 6% 64px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 48px;
+        align-items: end;
+      }
+      .phc-left h1 {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(2.8rem, 6vw, 5rem);
+        font-weight: 400;
+        color: #fff;
+        line-height: 1.05;
+        margin: 18px 0;
+      }
+      .tagline {
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.65);
+        line-height: 1.8;
+        max-width: 480px;
+        margin-bottom: 28px;
+      }
+      .phc-pills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 7px;
+        margin-bottom: 28px;
+      }
+      .phc-pill {
+        padding: 5px 14px;
+        border-radius: 100px;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(8px);
+        font-size: 0.68rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.85);
+      }
+      .phc-pill.gold {
+        background: rgba(184, 151, 90, 0.2);
+        border-color: rgba(184, 151, 90, 0.4);
+        color: var(--gold-light);
+      }
+      .phc-right {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+      }
+      .product-box-img {
+        width: 100%;
+        max-width: 340px;
+        border-radius: 12px;
+        box-shadow: 0 32px 80px rgba(0, 0, 0, 0.4);
+        animation: floatup 1s 0.4s both;
+      }
+      @keyframes floatup {
+        from {
+          opacity: 0;
+          transform: translateY(24px);
+        }
+        to {
+          opacity: 1;
+          transform: none;
+        }
+      }
+      .phc-cta-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 24px;
+      }
+      .phc-cta-row .btn {
+        flex-shrink: 0;
+        min-width: max-content;
+      }
+      .ingr-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 22px;
+        margin-top: 48px;
+      }
+      .ingr-card {
+        background: var(--white);
+        border-radius: var(--r);
+        padding: 28px;
+        border: 1px solid var(--border);
+        box-shadow: var(--shadow-sm);
+        transition:
+          transform 0.3s,
+          box-shadow 0.3s;
+      }
+      .ingr-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-md);
+      }
+      .ingr-icon {
+        font-size: 2rem;
+        margin-bottom: 12px;
+      }
+      .ingr-compound {
+        font-size: 0.63rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: var(--gold);
+        margin-bottom: 7px;
+      }
+      .ingr-name {
+        font-family: "Playfair Display", serif;
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: var(--ink);
+        margin-bottom: 10px;
+      }
+      .ingr-desc {
+        font-size: 0.83rem;
+        line-height: 1.75;
+        color: var(--grey-4);
+      }
+      .ingr-benefit {
+        margin-top: 12px;
+        font-size: 0.8rem;
+        color: var(--grey-3);
+        line-height: 1.6;
+        display: flex;
+        align-items: flex-start;
+        gap: 7px;
+      }
+      .ingr-benefit::before {
+        content: "✓";
+        color: var(--sage);
+        font-weight: 700;
+        flex-shrink: 0;
+      }
+      .split-sec {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        min-height: 480px;
+      }
+      .split-img {
+        overflow: hidden;
+        position: relative;
+      }
+      .split-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .split-text {
+        padding: 72px 56px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .split-text p {
+        font-size: 0.92rem;
+        line-height: 1.9;
+        color: var(--grey-4);
+        margin-bottom: 14px;
+      }
+      .specs-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 28px;
+      }
+      .specs-table tr {
+        border-bottom: 1px solid var(--grey-2);
+      }
+      .specs-table tr:last-child {
+        border-bottom: none;
+      }
+      .specs-table td {
+        padding: 16px 0;
+        font-size: 0.88rem;
+      }
+      .specs-table td:first-child {
+        font-weight: 600;
+        color: var(--ink);
+        width: 180px;
+      }
+      .specs-table td:last-child {
+        color: var(--grey-4);
+        line-height: 1.65;
+      }
+      .related-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+        margin-top: 36px;
+      }
+      .hiw-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin-top: 44px;
+      }
+      .hiw-card {
+        padding: 32px 24px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: var(--r);
+        text-align: center;
+      }
+      .hiw-num {
+        font-family: "Playfair Display", serif;
+        font-size: 2.8rem;
+        font-weight: 400;
+        color: var(--gold);
+        margin-bottom: 12px;
+      }
+      .hiw-title {
+        font-size: 0.82rem;
+        font-weight: 700;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-bottom: 8px;
+      }
+      .hiw-desc {
+        font-size: 0.8rem;
+        line-height: 1.7;
+        color: rgba(255, 255, 255, 0.5);
+      }
+      @media (max-width: 900px) {
+        .prod-hero-content {
+          grid-template-columns: 1fr;
+          padding-bottom: 48px;
+        }
+        .phc-right {
+          display: none;
+        }
+        .ingr-grid {
+          grid-template-columns: 1fr;
+        }
+        .split-sec {
+          grid-template-columns: 1fr;
+        }
+        .split-img {
+          min-height: 300px;
+        }
+        .split-text {
+          padding: 48px 28px;
+        }
+        .related-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .hiw-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (max-width: 600px) {
+        .related-grid {
+          grid-template-columns: 1fr;
+        }
+        .phc-left h1 {
+          font-size: 2.4rem;
+        }
+        .phc-cta-row {
+          flex-direction: column;
+        }
+        .phc-cta-row .btn {
+          width: 100%;
+          justify-content: center;
+        }
+      }
+      .prod-hero-overlay {
+        background: linear-gradient(
+          to bottom,
+          rgba(13, 17, 23, 0.75) 0%,
+          rgba(13, 17, 23, 0.92) 70%,
+          rgba(13, 17, 23, 0.98) 100%
+        );
+      }
+      .benefit-chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 24px;
+      }
+      .benefit-chip {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 18px;
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: var(--r);
+        box-shadow: var(--shadow-sm);
+      }
+      .benefit-chip-icon {
+        font-size: 1.2rem;
+      }
+      .benefit-chip-text {
+        font-size: 0.82rem;
+        font-weight: 600;
+        color: var(--ink);
+      }
+      .mgranule-box {
+        background: var(--ink);
+        border-radius: 12px;
+        padding: 40px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .mgranule-box h4 {
+        font-family: "Playfair Display", serif;
+        font-size: 1.3rem;
+        font-weight: 400;
+        color: #fff;
+        margin-bottom: 16px;
+      }
+      .mgranule-items {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .mi {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        font-size: 0.85rem;
+        color: rgba(255, 255, 255, 0.65);
+        line-height: 1.6;
+      }
+      .mi::before {
+        content: "→";
+        color: var(--gold);
+        font-weight: 700;
+        flex-shrink: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <nav id="navbar">
+      <a
+        href="index.html"
+        class="nav-logo"
+        aria-label="PHARMA-Connectiv Pte Ltd"
+      >
+        <img
+          src="assets/images/logo.png"
+          alt="PHARMA-Connectiv Pte Ltd"
+          height="36"
+        />
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li class="nav-has-drop">
+          <a href="products.html" class="active">Products ▾</a>
+          <div class="nav-drop">
+            <a href="products.html"
+              ><span class="nav-drop-icon">💊</span>All Products</a
+            >
+            <a href="pometate.html"
+              ><span class="nav-drop-icon">🌿</span>Pometate</a
+            >
+            <a href="prostamax.html"
+              ><span class="nav-drop-icon">🛡️</span>ProstaMax</a
+            >
+            <a href="megacal.html"
+              ><span class="nav-drop-icon">🦴</span>MegaCal K2</a
+            >
+            <a href="megaflex.html"
+              ><span class="nav-drop-icon">🔩</span>MegaFlex Basic &amp;
+              Forte</a
+            >
+            <a href="willfertil.html"
+              ><span class="nav-drop-icon">👫</span>Willfertil</a
+            >
+            <a href="crystal-white.html"
+              ><span class="nav-drop-icon">✨</span>Crystal White</a
+            >
+            <a href="vitaran.html"
+              ><span class="nav-drop-icon">💉</span>HP Cell Vitaran J</a
+            >
+            <a href="vetcare.html"
+              ><span class="nav-drop-icon">🐾</span>Veterinary Care</a
+            >
+          </div>
+        </li>
+        <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+      </ul>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <div class="nav-drawer" id="nav-drawer">
+      <a href="index.html">Home</a><a href="about.html">About Us</a
+      ><a href="products.html">All Products</a>
+      <a href="pometate.html">Pometate</a><a href="prostamax.html">ProstaMax</a
+      ><a href="megacal.html">MegaCal K2</a> <a href="megaflex.html">MegaFlex</a
+      ><a href="willfertil.html">Willfertil</a>
+      <a href="crystal-white.html">Crystal White</a
+      ><a href="vitaran.html">HP Cell Vitaran J</a>
+      <a href="vetcare.html">Veterinary Care</a>
+      <a href="contact.html" class="drawer-cta">Contact Us</a>
+    </div>
 
-<section class="prod-hero">
-  <img class="prod-hero-bg" src="assets/images/crystal-white-hero.jpg" alt="Crystal White — skin brightening supplement with Curcumin and Polypodium" style="object-position:center 20%"/>
-  <div class="prod-hero-overlay"></div>
-  <div class="prod-hero-content">
-    <div class="phc-left">
-      <div class="breadcrumb" style="margin-bottom:20px"><a href="index.html">Home</a><span class="breadcrumb-sep">/</span><a href="products.html">Products</a><span class="breadcrumb-sep">/</span><span>Crystal White</span></div>
-      <div class="eyebrow light">Beauty &amp; Skin · Microgranule Technology · Made in France</div>
-      <h1>Crystal White</h1>
-      <p class="tagline">For brighter, healthier skin — with Curcumin and Polypodium. A proprietary supplement using patented Microgranule technology for direct, high-efficacy delivery of skin-brightening actives.</p>
-      <div class="phc-pills">
-        <span class="phc-pill gold">Curcumin + Polypodium</span>
-        <span class="phc-pill">Made in France</span>
-        <span class="phc-pill">100% Natural</span>
-        <span class="phc-pill">GMO-free</span>
-        <span class="phc-pill">Vegetarian</span>
-        <span class="phc-pill">Microgranule Tech</span>
-      </div>
-      <div style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:var(--r);padding:12px 18px;margin-bottom:24px">
-        <div style="font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;font-weight:700;color:var(--gold-light);margin-bottom:5px">Dosage</div>
-        <div style="font-size:.9rem;font-weight:600;color:#fff">One veggie capsule per day · Suitable for vegetarians</div>
-      </div>
-      <div class="phc-cta-row">
-        <a href="contact.html" class="btn btn-sage btn-arrow">Enquire Now</a>
-        <a href="products.html" class="btn btn-ghost">All Products</a>
-      </div>
-    </div>
-    <div class="phc-right">
-      <img class="product-box-img" src="assets/images/crystal-white-1.jpg" alt="Crystal White — skin brightening supplement box"/>
-    </div>
-  </div>
-</section>
-
-<div class="marquee-wrap" aria-hidden="true"><div class="marquee-track">
-  <span class="marquee-item"><span class="marquee-dot"></span>Skin Brightening</span>
-  <span class="marquee-item"><span class="marquee-dot"></span>Curcumin</span>
-  <span class="marquee-item"><span class="marquee-dot"></span>Polypodium</span>
-  <span class="marquee-item"><span class="marquee-dot"></span>UV Protection</span>
-  <span class="marquee-item"><span class="marquee-dot"></span>Anti-Inflammatory</span>
-  <span class="marquee-item"><span class="marquee-dot"></span>Anti-Aging</span>
-  <span class="marquee-item"><span class="marquee-dot"></span>Hyperpigmentation</span>
-  <span class="marquee-item"><span class="marquee-dot"></span>Microgranule Tech</span>
-  <span class="marquee-item"><span class="marquee-dot"></span>Made in France</span>
-  <span class="marquee-item"><span class="marquee-dot"></span>GMO-free</span>
-  <span class="marquee-item"><span class="marquee-dot"></span>Skin Brightening</span>
-  <span class="marquee-item"><span class="marquee-dot"></span>Curcumin</span>
-  <span class="marquee-item"><span class="marquee-dot"></span>Polypodium</span>
-  <span class="marquee-item"><span class="marquee-dot"></span>UV Protection</span>
-  <span class="marquee-item"><span class="marquee-dot"></span>Anti-Inflammatory</span>
-</div></div>
-
-<!-- BENEFITS -->
-<section class="section" style="background:var(--white)">
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center">
-    <div>
-      <div class="eyebrow reveal">What is Crystal White?</div>
-      <h2 class="display reveal rv1" style="font-size:clamp(2rem,3.5vw,3rem);margin:16px 0 22px">Radiant Skin<br><em>From Within</em></h2>
-      <p class="reveal rv2" style="font-size:.92rem;line-height:1.9;color:var(--grey-4);margin-bottom:14px">Crystal White is a proprietary product with microgranules that contains active ingredients promoting healthy and radiant skin. It is colorless, has 100% natural ingredients, and is GMO-free.</p>
-      <p class="reveal rv2" style="font-size:.92rem;line-height:1.9;color:var(--grey-4);margin-bottom:24px">Crystal White helps with brightening, natural UV damage protection, anti-inflammatory, anti-aging and antioxidant properties — all delivered through patented Microgranule technology for direct, superior action.</p>
-      <div class="benefit-chips reveal rv3">
-        <div class="benefit-chip"><div class="benefit-chip-icon">✨</div><div class="benefit-chip-text">Lightens &amp; Illuminates</div></div>
-        <div class="benefit-chip"><div class="benefit-chip-icon">🌈</div><div class="benefit-chip-text">Evens Skin Complexion</div></div>
-        <div class="benefit-chip"><div class="benefit-chip-icon">☀️</div><div class="benefit-chip-text">UVA &amp; UVB Protection</div></div>
-        <div class="benefit-chip"><div class="benefit-chip-icon">🔬</div><div class="benefit-chip-text">Anti-Inflammatory</div></div>
-        <div class="benefit-chip"><div class="benefit-chip-icon">⏰</div><div class="benefit-chip-text">Anti-Aging</div></div>
-        <div class="benefit-chip"><div class="benefit-chip-icon">🎯</div><div class="benefit-chip-text">Reduces Hyperpigmentation</div></div>
-      </div>
-    </div>
-    <div class="reveal rv2">
-      <img src="assets/images/crystal-white-detail.jpg" alt="Crystal White — benefits and microgranule technology details" style="border-radius:12px;box-shadow:var(--shadow-xl);width:100%"/>
-    </div>
-  </div>
-</section>
-
-<!-- INGREDIENTS -->
-<section class="section" style="background:var(--cream)">
-  <div class="eyebrow reveal">Active Ingredients</div>
-  <h2 class="display reveal rv1" style="font-size:clamp(2rem,3.5vw,3rem);margin-top:14px">Two Powerful<br><em>Skin Actives</em></h2>
-  <div class="ingr-grid">
-    <div class="ingr-card reveal">
-      <div class="ingr-icon">🌿</div>
-      <div class="ingr-compound">From Turmeric · Anti-pigmentation</div>
-      <div class="ingr-name">Curcumin</div>
-      <p class="ingr-desc">Curcumin is obtained from Turmeric. It decreases excess melanin production and lightens skin tone. It also aids in collagen deposition on the skin, supporting a firmer and more youthful appearance.</p>
-      <div class="ingr-benefit">Decreases excess melanin production for a lighter complexion</div>
-      <div class="ingr-benefit">Aids collagen deposition for firmer, younger-looking skin</div>
-      <div class="ingr-benefit">Anti-inflammatory properties reduce skin redness and irritation</div>
-    </div>
-    <div class="ingr-card reveal rv1">
-      <div class="ingr-icon">🌊</div>
-      <div class="ingr-compound">PhytoflORAL® · UV Protection + PhytoflORAL Carotenoids</div>
-      <div class="ingr-name">Polypodium &amp; PhytoflORAL®</div>
-      <p class="ingr-desc">Polypodium includes antioxidants that protect the skin from inflammatory diseases and UV damage. PhytoflORAL® contains phytoene and phytofluene — colorless carotenoids that lighten and level skin tone, aiding anti-aging and a more youthful appearance.</p>
-      <div class="ingr-benefit">Immunoprotection against UVA and UVB radiation</div>
-      <div class="ingr-benefit">Phytoene and phytofluene lighten and even skin texture</div>
-      <div class="ingr-benefit">Anti-aging benefits for a more youthful skin appearance</div>
-    </div>
-  </div>
-</section>
-
-<!-- MICROGRANULE TECH (dark) -->
-<section class="section" style="background:var(--ink)">
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center">
-    <div>
-      <div class="eyebrow light reveal">Patented Technology</div>
-      <h2 class="display reveal rv1" style="font-size:clamp(2rem,3.5vw,3rem);color:#fff;margin:16px 0 22px">The <span class="gold-em">Microgranule</span><br>Advantage</h2>
-      <p class="reveal rv2" style="font-size:.92rem;line-height:1.9;color:rgba(255,255,255,.6);margin-bottom:24px">Crystal White uses a patented microgranule that delivers the active ingredients directly to the target — this is not conventional powder technology. The microgranule system provides far superior delivery and efficacy.</p>
-      <div class="mgranule-box reveal rv3">
-        <h4>The Microgranule Technology</h4>
-        <div class="mgranule-items">
-          <div class="mi">100% Natural ingredients — no artificial additives</div>
-          <div class="mi">1 microgranule = 5 conventional powder capsules in efficacy</div>
-          <div class="mi">Confers high stability and faster action</div>
-          <div class="mi">Gastroprotective microgranules pass quickly through the bowel</div>
-          <div class="mi">Direct delivery of active ingredients to the target site</div>
+    <section class="prod-hero">
+      <img
+        class="prod-hero-bg"
+        src="assets/images/crystal-white-hero.jpg"
+        alt="Crystal White — skin brightening supplement with Curcumin and Polypodium"
+        style="object-position: center 20%"
+      />
+      <div class="prod-hero-overlay"></div>
+      <div class="prod-hero-content">
+        <div class="phc-left">
+          <div class="breadcrumb" style="margin-bottom: 20px">
+            <a href="index.html">Home</a><span class="breadcrumb-sep">/</span
+            ><a href="products.html">Products</a
+            ><span class="breadcrumb-sep">/</span><span>Crystal White</span>
+          </div>
+          <div class="eyebrow light">
+            Beauty &amp; Skin · Microgranule Technology · Made in France
+          </div>
+          <h1>Crystal White</h1>
+          <p class="tagline">
+            For brighter, healthier skin — with Curcumin and Polypodium. A
+            proprietary supplement using patented Microgranule technology for
+            direct, high-efficacy delivery of skin-brightening actives.
+          </p>
+          <div class="phc-pills">
+            <span class="phc-pill gold">Curcumin + Polypodium</span>
+            <span class="phc-pill">Made in France</span>
+            <span class="phc-pill">100% Natural</span>
+            <span class="phc-pill">GMO-free</span>
+            <span class="phc-pill">Vegetarian</span>
+            <span class="phc-pill">Microgranule Tech</span>
+          </div>
+          <div
+            style="
+              background: rgba(255, 255, 255, 0.08);
+              border: 1px solid rgba(255, 255, 255, 0.15);
+              border-radius: var(--r);
+              padding: 12px 18px;
+              margin-bottom: 24px;
+            "
+          >
+            <div
+              style="
+                font-size: 0.62rem;
+                letter-spacing: 0.15em;
+                text-transform: uppercase;
+                font-weight: 700;
+                color: var(--gold-light);
+                margin-bottom: 5px;
+              "
+            >
+              Dosage
+            </div>
+            <div style="font-size: 0.9rem; font-weight: 600; color: #fff">
+              One veggie capsule per day · Suitable for vegetarians
+            </div>
+          </div>
+          <div class="phc-cta-row">
+            <a href="contact.html" class="btn btn-sage btn-arrow"
+              >Enquire Now</a
+            >
+            <a href="products.html" class="btn btn-ghost">All Products</a>
+          </div>
+        </div>
+        <div class="phc-right">
+          <img
+            class="product-box-img"
+            src="assets/images/crystal-white-1.jpg"
+            alt="Crystal White — skin brightening supplement box"
+          />
         </div>
       </div>
-    </div>
-    <div class="reveal rv2">
-      <img src="assets/images/crystal-white-1.jpg" alt="Crystal White — microgranule technology and product packaging" style="border-radius:12px;box-shadow:0 24px 60px rgba(0,0,0,.4);width:100%"/>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- SPECS -->
-<section class="section" style="background:var(--cream)">
-  <div class="eyebrow reveal">Product Specifications</div>
-  <h2 class="display reveal rv1" style="font-size:clamp(1.9rem,3vw,2.6rem);margin-top:14px">Full Product <em>Details</em></h2>
-  <table class="specs-table reveal rv2" style="margin-top:36px">
-    <tr><td>Product</td><td>Crystal White — Skin Brightening Supplement</td></tr>
-    <tr><td>Key Ingredients</td><td>Curcumin (from Turmeric) + Polypodium (PhytoflORAL®)</td></tr>
-    <tr><td>Technology</td><td>Patented Microgranule delivery system</td></tr>
-    <tr><td>Dosage</td><td>One veggie capsule per day</td></tr>
-    <tr><td>Suitable For</td><td>Vegetarians · GMO-free · 100% Natural ingredients</td></tr>
-    <tr><td>Benefits</td><td>Skin brightening · UV protection · Anti-inflammatory · Anti-aging · Reduces hyperpigmentation</td></tr>
-    <tr><td>Made In</td><td>France</td></tr>
-    <tr><td>For</td><td>PHARMA-Connectiv Pte Ltd, 85 Playfair Road, L5, Singapore 368000</td></tr>
-  </table>
-  <div class="reveal rv3" style="margin-top:32px;display:flex;gap:12px;flex-wrap:wrap">
-    <a href="contact.html" class="btn btn-sage btn-arrow">Enquire Now</a>
-    <a href="products.html" class="btn btn-outline">All Products</a>
-  </div>
-</section>
-
-<footer>
-  <div class="footer-top">
-    <div><img src="assets/images/logo.png" alt="PHARMA-Connectiv Pte Ltd" class="f-logo-img"/>
-      <p class="f-brand-desc">Connecting healthcare professionals and patients with world-class pharmaceutical, nutraceutical and veterinary solutions across Singapore and Southeast Asia.</p>
-      <div class="f-certs"><span class="f-cert">FDA</span><span class="f-cert">GMP</span><span class="f-cert">CE</span><span class="f-cert">KFDA</span><span class="f-cert">DMF</span><span class="f-cert">ISO</span></div>
+    <div class="marquee-wrap" aria-hidden="true">
+      <div class="marquee-track">
+        <span class="marquee-item"
+          ><span class="marquee-dot"></span>Skin Brightening</span
+        >
+        <span class="marquee-item"
+          ><span class="marquee-dot"></span>Curcumin</span
+        >
+        <span class="marquee-item"
+          ><span class="marquee-dot"></span>Polypodium</span
+        >
+        <span class="marquee-item"
+          ><span class="marquee-dot"></span>UV Protection</span
+        >
+        <span class="marquee-item"
+          ><span class="marquee-dot"></span>Anti-Inflammatory</span
+        >
+        <span class="marquee-item"
+          ><span class="marquee-dot"></span>Anti-Aging</span
+        >
+        <span class="marquee-item"
+          ><span class="marquee-dot"></span>Hyperpigmentation</span
+        >
+        <span class="marquee-item"
+          ><span class="marquee-dot"></span>Microgranule Tech</span
+        >
+        <span class="marquee-item"
+          ><span class="marquee-dot"></span>Made in France</span
+        >
+        <span class="marquee-item"
+          ><span class="marquee-dot"></span>GMO-free</span
+        >
+        <span class="marquee-item"
+          ><span class="marquee-dot"></span>Skin Brightening</span
+        >
+        <span class="marquee-item"
+          ><span class="marquee-dot"></span>Curcumin</span
+        >
+        <span class="marquee-item"
+          ><span class="marquee-dot"></span>Polypodium</span
+        >
+        <span class="marquee-item"
+          ><span class="marquee-dot"></span>UV Protection</span
+        >
+        <span class="marquee-item"
+          ><span class="marquee-dot"></span>Anti-Inflammatory</span
+        >
+      </div>
     </div>
-    <div class="fcol"><h5>Navigation</h5><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="products.html">Products</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
-    <div class="fcol"><h5>Products</h5><ul>
-      <li><a href="pometate.html">Pometate</a></li><li><a href="prostamax.html">ProstaMax</a></li>
-      <li><a href="megacal.html">MegaCal K2</a></li><li><a href="megaflex.html">MegaFlex</a></li>
-      <li><a href="willfertil.html">Willfertil</a></li><li><a href="crystal-white.html">Crystal White</a></li>
-      <li><a href="vitaran.html">HP Cell Vitaran J</a></li><li><a href="vetcare.html">Veterinary Care</a></li>
-    </ul></div>
-    <div class="fcol"><h5>Contact</h5><ul>
-      <li><a href="tel:+6562828732">+65 6282 8732</a></li>
-      <li><a href="mailto:info@pharma-connectiv.com">info@pharma-connectiv.com</a></li>
-      <li><a href="contact.html">85 Playfair Road, L5<br>Singapore 368000</a></li>
-    </ul></div>
-  </div>
-  <div class="footer-bottom">
-    <p>&copy; 2024 PHARMA-Connectiv Pte Ltd &middot; Singapore 368000</p>
-    <p>Products are not intended to diagnose, treat, cure or prevent any disease.</p>
-  </div>
-</footer>
-<script src="js/main.js"></script>
-</body></html>
+
+    <!-- BENEFITS -->
+    <section class="section" style="background: var(--white)">
+      <div
+        style="
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 64px;
+          align-items: center;
+        "
+      >
+        <div>
+          <div class="eyebrow reveal">What is Crystal White?</div>
+          <h2
+            class="display reveal rv1"
+            style="font-size: clamp(2rem, 3.5vw, 3rem); margin: 16px 0 22px"
+          >
+            Radiant Skin<br /><em>From Within</em>
+          </h2>
+          <p
+            class="reveal rv2"
+            style="
+              font-size: 0.92rem;
+              line-height: 1.9;
+              color: var(--grey-4);
+              margin-bottom: 14px;
+            "
+          >
+            Crystal White is a proprietary product with microgranules that
+            contains active ingredients promoting healthy and radiant skin. It
+            is colorless, has 100% natural ingredients, and is GMO-free.
+          </p>
+          <p
+            class="reveal rv2"
+            style="
+              font-size: 0.92rem;
+              line-height: 1.9;
+              color: var(--grey-4);
+              margin-bottom: 24px;
+            "
+          >
+            Crystal White helps with brightening, natural UV damage protection,
+            anti-inflammatory, anti-aging and antioxidant properties — all
+            delivered through patented Microgranule technology for direct,
+            superior action.
+          </p>
+          <div class="benefit-chips reveal rv3">
+            <div class="benefit-chip">
+              <div class="benefit-chip-icon">✨</div>
+              <div class="benefit-chip-text">Lightens &amp; Illuminates</div>
+            </div>
+            <div class="benefit-chip">
+              <div class="benefit-chip-icon">🌈</div>
+              <div class="benefit-chip-text">Evens Skin Complexion</div>
+            </div>
+            <div class="benefit-chip">
+              <div class="benefit-chip-icon">☀️</div>
+              <div class="benefit-chip-text">UVA &amp; UVB Protection</div>
+            </div>
+            <div class="benefit-chip">
+              <div class="benefit-chip-icon">🔬</div>
+              <div class="benefit-chip-text">Anti-Inflammatory</div>
+            </div>
+            <div class="benefit-chip">
+              <div class="benefit-chip-icon">⏰</div>
+              <div class="benefit-chip-text">Anti-Aging</div>
+            </div>
+            <div class="benefit-chip">
+              <div class="benefit-chip-icon">🎯</div>
+              <div class="benefit-chip-text">Reduces Hyperpigmentation</div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-product-wrap">
+          <div class="reveal rv2">
+            <img
+              src="assets/images/crystalwhite-bgremoved.jpeg"
+              alt="Crystal White — benefits and microgranule technology details"
+              style="
+                border-radius: 12px;
+                box-shadow: var(--shadow-xl);
+                width: 100%;
+              "
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INGREDIENTS -->
+    <section class="section" style="background: var(--cream)">
+      <div class="eyebrow reveal">Active Ingredients</div>
+      <h2
+        class="display reveal rv1"
+        style="font-size: clamp(2rem, 3.5vw, 3rem); margin-top: 14px"
+      >
+        Two Powerful<br /><em>Skin Actives</em>
+      </h2>
+      <div class="ingr-grid">
+        <div class="ingr-card reveal">
+          <div class="ingr-icon">🌿</div>
+          <div class="ingr-compound">From Turmeric · Anti-pigmentation</div>
+          <div class="ingr-name">Curcumin</div>
+          <p class="ingr-desc">
+            Curcumin is obtained from Turmeric. It decreases excess melanin
+            production and lightens skin tone. It also aids in collagen
+            deposition on the skin, supporting a firmer and more youthful
+            appearance.
+          </p>
+          <div class="ingr-benefit">
+            Decreases excess melanin production for a lighter complexion
+          </div>
+          <div class="ingr-benefit">
+            Aids collagen deposition for firmer, younger-looking skin
+          </div>
+          <div class="ingr-benefit">
+            Anti-inflammatory properties reduce skin redness and irritation
+          </div>
+        </div>
+        <div class="ingr-card reveal rv1">
+          <div class="ingr-icon">🌊</div>
+          <div class="ingr-compound">
+            PhytoflORAL® · UV Protection + PhytoflORAL Carotenoids
+          </div>
+          <div class="ingr-name">Polypodium &amp; PhytoflORAL®</div>
+          <p class="ingr-desc">
+            Polypodium includes antioxidants that protect the skin from
+            inflammatory diseases and UV damage. PhytoflORAL® contains phytoene
+            and phytofluene — colorless carotenoids that lighten and level skin
+            tone, aiding anti-aging and a more youthful appearance.
+          </p>
+          <div class="ingr-benefit">
+            Immunoprotection against UVA and UVB radiation
+          </div>
+          <div class="ingr-benefit">
+            Phytoene and phytofluene lighten and even skin texture
+          </div>
+          <div class="ingr-benefit">
+            Anti-aging benefits for a more youthful skin appearance
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MICROGRANULE TECH (dark) -->
+    <section class="section" style="background: var(--ink)">
+      <div
+        style="
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 64px;
+          align-items: center;
+        "
+      >
+        <div>
+          <div class="eyebrow light reveal">Patented Technology</div>
+          <h2
+            class="display reveal rv1"
+            style="
+              font-size: clamp(2rem, 3.5vw, 3rem);
+              color: #fff;
+              margin: 16px 0 22px;
+            "
+          >
+            The <span class="gold-em">Microgranule</span><br />Advantage
+          </h2>
+          <p
+            class="reveal rv2"
+            style="
+              font-size: 0.92rem;
+              line-height: 1.9;
+              color: rgba(255, 255, 255, 0.6);
+              margin-bottom: 24px;
+            "
+          >
+            Crystal White uses a patented microgranule that delivers the active
+            ingredients directly to the target — this is not conventional powder
+            technology. The microgranule system provides far superior delivery
+            and efficacy.
+          </p>
+          <div class="mgranule-box reveal rv3">
+            <h4>The Microgranule Technology</h4>
+            <div class="mgranule-items">
+              <div class="mi">
+                100% Natural ingredients — no artificial additives
+              </div>
+              <div class="mi">
+                1 microgranule = 5 conventional powder capsules in efficacy
+              </div>
+              <div class="mi">Confers high stability and faster action</div>
+              <div class="mi">
+                Gastroprotective microgranules pass quickly through the bowel
+              </div>
+              <div class="mi">
+                Direct delivery of active ingredients to the target site
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="reveal rv2">
+          <img
+            src="assets/images/crystal-white-1.jpg"
+            alt="Crystal White — microgranule technology and product packaging"
+            style="
+              border-radius: 12px;
+              box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
+              width: 100%;
+            "
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- SPECS -->
+    <section class="section" style="background: var(--cream)">
+      <div class="eyebrow reveal">Product Specifications</div>
+      <h2
+        class="display reveal rv1"
+        style="font-size: clamp(1.9rem, 3vw, 2.6rem); margin-top: 14px"
+      >
+        Full Product <em>Details</em>
+      </h2>
+      <table class="specs-table reveal rv2" style="margin-top: 36px">
+        <tr>
+          <td>Product</td>
+          <td>Crystal White — Skin Brightening Supplement</td>
+        </tr>
+        <tr>
+          <td>Key Ingredients</td>
+          <td>Curcumin (from Turmeric) + Polypodium (PhytoflORAL®)</td>
+        </tr>
+        <tr>
+          <td>Technology</td>
+          <td>Patented Microgranule delivery system</td>
+        </tr>
+        <tr>
+          <td>Dosage</td>
+          <td>One veggie capsule per day</td>
+        </tr>
+        <tr>
+          <td>Suitable For</td>
+          <td>Vegetarians · GMO-free · 100% Natural ingredients</td>
+        </tr>
+        <tr>
+          <td>Benefits</td>
+          <td>
+            Skin brightening · UV protection · Anti-inflammatory · Anti-aging ·
+            Reduces hyperpigmentation
+          </td>
+        </tr>
+        <tr>
+          <td>Made In</td>
+          <td>France</td>
+        </tr>
+        <tr>
+          <td>For</td>
+          <td>
+            PHARMA-Connectiv Pte Ltd, 85 Playfair Road, L5, Singapore 368000
+          </td>
+        </tr>
+      </table>
+      <div
+        class="reveal rv3"
+        style="margin-top: 32px; display: flex; gap: 12px; flex-wrap: wrap"
+      >
+        <a href="contact.html" class="btn btn-sage btn-arrow">Enquire Now</a>
+        <a href="products.html" class="btn btn-outline">All Products</a>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-top">
+        <div>
+          <img
+            src="assets/images/logo.png"
+            alt="PHARMA-Connectiv Pte Ltd"
+            class="f-logo-img"
+          />
+          <p class="f-brand-desc">
+            Connecting healthcare professionals and patients with world-class
+            pharmaceutical, nutraceutical and veterinary solutions across
+            Singapore and Southeast Asia.
+          </p>
+          <div class="f-certs">
+            <span class="f-cert">FDA</span><span class="f-cert">GMP</span
+            ><span class="f-cert">CE</span><span class="f-cert">KFDA</span
+            ><span class="f-cert">DMF</span><span class="f-cert">ISO</span>
+          </div>
+        </div>
+        <div class="fcol">
+          <h5>Navigation</h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="fcol">
+          <h5>Products</h5>
+          <ul>
+            <li><a href="pometate.html">Pometate</a></li>
+            <li><a href="prostamax.html">ProstaMax</a></li>
+            <li><a href="megacal.html">MegaCal K2</a></li>
+            <li><a href="megaflex.html">MegaFlex Basic &amp; Forte</a></li>
+            <li><a href="willfertil.html">Willfertil</a></li>
+            <li><a href="crystal-white.html">Crystal White</a></li>
+            <li><a href="vitaran.html">HP Cell Vitaran J</a></li>
+            <li><a href="vetcare.html">Veterinary Care</a></li>
+          </ul>
+        </div>
+        <div class="fcol">
+          <h5>Contact</h5>
+          <ul>
+            <li><a href="tel:+6562828732">+65 6282 8732</a></li>
+            <li>
+              <a href="mailto:info@pharma-connectiv.com"
+                >info@pharma-connectiv.com</a
+              >
+            </li>
+            <li>
+              <a href="contact.html"
+                >85 Playfair Road, L5<br />Singapore 368000</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom nav-links">
+        <p>&copy; 2024 PHARMA-Connectiv Pte Ltd &middot; Singapore 368000</p>
+        <p>
+          Products are not intended to diagnose, treat, cure or prevent any
+          disease.
+        </p>
+        <p>
+          Web Solutions by
+          <a href="https://www.renderinfotech.com/" target="_blank"
+            >Render Infotech</a
+          >
+        </p>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>

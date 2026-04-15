@@ -38,7 +38,7 @@ Open `index.html` in any modern browser — no build step required.
 
 ## Adding a Product
 1. Add entry to `PRODUCTS` in `js/data.js`
-2. Add the corresponding `.pcard` HTML in the correct `.cat-row` in `index.html`
+2. Add the corresponding `.pcard` HTML in the correct `.cat-section` in `products.html`
 3. Optionally add to `BRANDS` array in `js/data.js`
 
 ## Replacing Unsplash Images with Local Assets

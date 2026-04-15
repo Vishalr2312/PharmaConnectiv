@@ -1,301 +1,1173 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Pometate — Dietary Supplement | PHARMA-Connectiv</title>
-  <link rel="stylesheet" href="css/styles.css"/>
-  <style>
-    /* ── PRODUCT HERO ── */
-    .prod-hero{padding-top:72px;position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden}
-    .prod-hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;transform:scale(1.04);animation:hzoom 12s ease-out forwards}
-    @keyframes hzoom{to{transform:scale(1)}}
-    .prod-hero-overlay{position:absolute;inset:0;background:linear-gradient(120deg,rgba(13,17,23,.92) 0%,rgba(13,17,23,.7) 50%,rgba(45,90,39,.2) 100%)}
-    .prod-hero-content{position:relative;z-index:2;padding:80px 6%;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;width:100%}
-    .phc-left .eyebrow{margin-bottom:22px}
-    .phc-left h1{font-family:'Playfair Display',serif;font-size:clamp(3.5rem,7vw,6rem);font-weight:400;color:#fff;line-height:1;margin-bottom:20px}
-    .phc-left .tagline{font-size:1.05rem;color:rgba(255,255,255,.65);line-height:1.8;max-width:480px;margin-bottom:36px}
-    .phc-pills{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:40px}
-    .phc-pill{padding:7px 18px;border-radius:100px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);backdrop-filter:blur(8px);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:rgba(255,255,255,.85)}
-    .phc-right{display:flex;justify-content:center;align-items:center}
-    .product-box-img{width:100%;max-width:380px;border-radius:12px;box-shadow:0 32px 80px rgba(0,0,0,.4);animation:floatup 1s .4s both}
-    @keyframes floatup{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
-    .hero-dosage{display:inline-flex;align-items:center;gap:14px;margin-top:8px;background:rgba(184,151,90,.15);border:1px solid rgba(184,151,90,.35);border-radius:var(--r);padding:14px 20px}
-    .hd-icon{font-size:1.5rem}
-    .hd-text-label{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--gold-light)}
-    .hd-text-value{font-size:.9rem;font-weight:600;color:#fff;margin-top:2px}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Pometate — Dietary Supplement | PHARMA-Connectiv</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <style>
+      /* ── PRODUCT HERO ── */
+      .prod-hero {
+        padding-top: 72px;
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+      }
+      .prod-hero-bg {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+        transform: scale(1.04);
+        animation: hzoom 12s ease-out forwards;
+      }
+      @keyframes hzoom {
+        to {
+          transform: scale(1);
+        }
+      }
+      .prod-hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          120deg,
+          rgba(13, 17, 23, 0.92) 0%,
+          rgba(13, 17, 23, 0.7) 50%,
+          rgba(45, 90, 39, 0.2) 100%
+        );
+      }
+      .prod-hero-content {
+        position: relative;
+        z-index: 2;
+        padding: 80px 6%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: center;
+        width: 100%;
+      }
+      .phc-left .eyebrow {
+        margin-bottom: 22px;
+      }
+      .phc-left h1 {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(3.5rem, 7vw, 6rem);
+        font-weight: 400;
+        color: #fff;
+        line-height: 1;
+        margin-bottom: 20px;
+      }
+      .phc-left .tagline {
+        font-size: 1.05rem;
+        color: rgba(255, 255, 255, 0.65);
+        line-height: 1.8;
+        max-width: 480px;
+        margin-bottom: 36px;
+      }
+      .phc-pills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 40px;
+      }
+      .phc-pill {
+        padding: 7px 18px;
+        border-radius: 100px;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(8px);
+        font-size: 0.72rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.85);
+      }
+      .phc-right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .product-box-img {
+        width: 100%;
+        max-width: 380px;
+        border-radius: 12px;
+        box-shadow: 0 32px 80px rgba(0, 0, 0, 0.4);
+        animation: floatup 1s 0.4s both;
+      }
+      @keyframes floatup {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: none;
+        }
+      }
+      .hero-dosage {
+        display: inline-flex;
+        align-items: center;
+        gap: 14px;
+        margin-top: 8px;
+        background: rgba(184, 151, 90, 0.15);
+        border: 1px solid rgba(184, 151, 90, 0.35);
+        border-radius: var(--r);
+        padding: 14px 20px;
+      }
+      .hd-icon {
+        font-size: 1.5rem;
+      }
+      .hd-text-label {
+        font-size: 0.62rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: var(--gold-light);
+      }
+      .hd-text-value {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: #fff;
+        margin-top: 2px;
+      }
 
-    /* ── INGREDIENTS DEEP DIVE ── */
-    .ingredient-showcase{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
-    .ingr-card{border-radius:12px;overflow:hidden;background:var(--white);box-shadow:var(--shadow-sm);border:1px solid var(--border);transition:transform .3s,box-shadow .3s}
-    .ingr-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-md)}
-    .ingr-img{height:200px;position:relative;overflow:hidden}
-    .ingr-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
-    .ingr-card:hover .ingr-img img{transform:scale(1.05)}
-    .ingr-body{padding:24px}
-    .ingr-name{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:400;color:var(--ink);margin-bottom:6px}
-    .ingr-compound{font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;font-weight:700;color:var(--sage);margin-bottom:12px}
-    .ingr-desc{font-size:.85rem;line-height:1.78;color:var(--grey-4)}
-    .ingr-benefit{margin-top:14px;display:flex;align-items:flex-start;gap:8px;font-size:.82rem;color:var(--grey-3);line-height:1.6}
-    .ingr-benefit::before{content:'✓';color:var(--sage);font-weight:700;flex-shrink:0;margin-top:1px}
+      /* ── INGREDIENTS DEEP DIVE ── */
+      .ingredient-showcase {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 28px;
+      }
+      .ingr-card {
+        border-radius: 12px;
+        overflow: hidden;
+        background: var(--white);
+        box-shadow: var(--shadow-sm);
+        border: 1px solid var(--border);
+        transition:
+          transform 0.3s,
+          box-shadow 0.3s;
+      }
+      .ingr-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-md);
+      }
+      .ingr-img {
+        height: 200px;
+        position: relative;
+        overflow: hidden;
+      }
+      .ingr-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s;
+      }
+      .ingr-card:hover .ingr-img img {
+        transform: scale(1.05);
+      }
+      .ingr-body {
+        padding: 24px;
+      }
+      .ingr-name {
+        font-family: "Playfair Display", serif;
+        font-size: 1.3rem;
+        font-weight: 400;
+        color: var(--ink);
+        margin-bottom: 6px;
+      }
+      .ingr-compound {
+        font-size: 0.68rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: var(--sage);
+        margin-bottom: 12px;
+      }
+      .ingr-desc {
+        font-size: 0.85rem;
+        line-height: 1.78;
+        color: var(--grey-4);
+      }
+      .ingr-benefit {
+        margin-top: 14px;
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+        font-size: 0.82rem;
+        color: var(--grey-3);
+        line-height: 1.6;
+      }
+      .ingr-benefit::before {
+        content: "✓";
+        color: var(--sage);
+        font-weight: 700;
+        flex-shrink: 0;
+        margin-top: 1px;
+      }
 
-    /* ── HOW IT WORKS ── */
-    .hiw-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:52px}
-    .hiw-step{text-align:center;padding:36px 24px;background:var(--white);border-radius:12px;border:1px solid var(--border)}
-    .hiw-num{font-family:'Playfair Display',serif;font-size:3.5rem;font-weight:400;color:var(--grey-2);line-height:1;margin-bottom:14px}
-    .hiw-title{font-size:.88rem;font-weight:700;color:var(--ink);letter-spacing:.06em;margin-bottom:10px;text-transform:uppercase}
-    .hiw-desc{font-size:.83rem;line-height:1.75;color:var(--grey-3)}
+      /* ── HOW IT WORKS ── */
+      .hiw-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        margin-top: 52px;
+      }
+      .hiw-step {
+        text-align: center;
+        padding: 36px 24px;
+        background: var(--white);
+        border-radius: 12px;
+        border: 1px solid var(--border);
+      }
+      .hiw-num {
+        font-family: "Playfair Display", serif;
+        font-size: 3.5rem;
+        font-weight: 400;
+        color: var(--grey-2);
+        line-height: 1;
+        margin-bottom: 14px;
+      }
+      .hiw-title {
+        font-size: 0.88rem;
+        font-weight: 700;
+        color: var(--ink);
+        letter-spacing: 0.06em;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+      }
+      .hiw-desc {
+        font-size: 0.83rem;
+        line-height: 1.75;
+        color: var(--grey-3);
+      }
 
-    /* ── SPECS TABLE ── */
-    .specs-table{width:100%;border-collapse:collapse;margin-top:40px}
-    .specs-table tr{border-bottom:1px solid var(--grey-2)}
-    .specs-table tr:last-child{border-bottom:none}
-    .specs-table td{padding:18px 0;font-size:.9rem}
-    .specs-table td:first-child{font-weight:600;color:var(--ink);width:180px;letter-spacing:.05em}
-    .specs-table td:last-child{color:var(--grey-4);line-height:1.65}
+      /* ── SPECS TABLE ── */
+      .specs-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 40px;
+      }
+      .specs-table tr {
+        border-bottom: 1px solid var(--grey-2);
+      }
+      .specs-table tr:last-child {
+        border-bottom: none;
+      }
+      .specs-table td {
+        padding: 18px 0;
+        font-size: 0.9rem;
+      }
+      .specs-table td:first-child {
+        font-weight: 600;
+        color: var(--ink);
+        width: 180px;
+        letter-spacing: 0.05em;
+      }
+      .specs-table td:last-child {
+        color: var(--grey-4);
+        line-height: 1.65;
+      }
 
-    /* ── SPLIT VISUAL ── */
-    .split-section{display:grid;grid-template-columns:1fr 1fr;gap:0;min-height:500px}
-    .split-img{position:relative;overflow:hidden}
-    .split-img img{width:100%;height:100%;object-fit:cover}
-    .split-text{padding:80px 64px;display:flex;flex-direction:column;justify-content:center}
-    .split-text h2{font-size:clamp(1.9rem,3vw,2.7rem);margin:14px 0 24px}
-    .split-text p{font-size:.93rem;line-height:1.9;color:var(--grey-4);margin-bottom:16px}
+      /* ── SPLIT VISUAL ── */
+      .split-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+        min-height: 500px;
+      }
+      .split-img {
+        position: relative;
+        overflow: hidden;
+      }
+      .split-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .split-text {
+        padding: 80px 64px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .split-text h2 {
+        font-size: clamp(1.9rem, 3vw, 2.7rem);
+        margin: 14px 0 24px;
+      }
+      .split-text p {
+        font-size: 0.93rem;
+        line-height: 1.9;
+        color: var(--grey-4);
+        margin-bottom: 16px;
+      }
 
-    /* ── RELATED ── */
-    .related-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:40px}
+      /* ── RELATED ── */
+      .related-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        margin-top: 40px;
+      }
 
-    @media(max-width:900px){
-      .prod-hero-content{grid-template-columns:1fr}
-      .phc-right{display:none}
-      .ingredient-showcase{grid-template-columns:1fr}
-      .hiw-grid{grid-template-columns:1fr}
-      .split-section{grid-template-columns:1fr}
-      .split-img{min-height:320px}
-      .split-text{padding:52px 32px}
-      .related-grid{grid-template-columns:1fr}
-    }
-    @media(max-width:600px){
-      .phc-left h1{font-size:2.4rem}
-      .prod-hero-content{padding:60px 5% 40px}
-      .split-text{padding:40px 20px}
-    }
-  </style>
-</head>
-<body>
-<nav id="navbar">
-  <a href="index.html" class="nav-logo"><div class="nav-logo-main">PHARMA<span>-Connectiv</span></div><div class="nav-logo-sub">Pte Ltd · Singapore</div></a>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li>
-    <li class="nav-has-drop"><a href="products.html" class="active">Products ▾</a>
-      <div class="nav-drop"><a href="products.html"><span class="nav-drop-icon">💊</span>All Products</a><a href="pometate.html"><span class="nav-drop-icon">🌿</span>Pometate</a><a href="prostamax.html"><span class="nav-drop-icon">🛡️</span>ProstaMax</a><a href="vitaran.html"><span class="nav-drop-icon">💉</span>HP Cell Vitaran J</a></div>
-    </li>
-    <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
-  </ul>
-  <button class="nav-toggle" id="nav-toggle"><span></span><span></span><span></span></button>
-</nav>
-<div class="nav-drawer" id="nav-drawer">
-  <a href="index.html">Home</a><a href="about.html">About Us</a><a href="products.html">All Products</a><a href="pometate.html">Pometate</a><a href="prostamax.html">ProstaMax</a><a href="vitaran.html">HP Cell Vitaran J</a>
-  <a href="contact.html" class="drawer-cta">Contact Us</a>
-</div>
+      @media (max-width: 900px) {
+        .prod-hero-content {
+          grid-template-columns: 1fr;
+        }
+        .phc-right {
+          display: none;
+        }
+        .ingredient-showcase {
+          grid-template-columns: 1fr;
+        }
+        .hiw-grid {
+          grid-template-columns: 1fr;
+        }
+        .split-section {
+          grid-template-columns: 1fr;
+        }
+        .split-img {
+          min-height: 320px;
+        }
+        .split-text {
+          padding: 52px 32px;
+        }
+        .related-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (max-width: 600px) {
+        .phc-left h1 {
+          font-size: 2.4rem;
+        }
+        .prod-hero-content {
+          padding: 60px 5% 40px;
+        }
+        .split-text {
+          padding: 40px 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav id="navbar">
+      <a
+        href="index.html"
+        class="nav-logo"
+        aria-label="PHARMA-Connectiv Pte Ltd"
+      >
+        <img
+          src="assets/images/logo.png"
+          alt="PHARMA-Connectiv Pte Ltd"
+          height="36"
+        />
+        <!-- <div class="nav-logo-main">PHARMA<span>-Connectiv</span></div>
+        <div class="nav-logo-sub">Pte Ltd · Singapore</div> -->
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li class="nav-has-drop">
+          <a href="products.html" class="active">Products ▾</a>
+          <div class="nav-drop">
+            <a href="products.html"
+              ><span class="nav-drop-icon">💊</span>All Products</a
+            ><a href="pometate.html"
+              ><span class="nav-drop-icon">🌿</span>Pometate</a
+            ><a href="prostamax.html"
+              ><span class="nav-drop-icon">🛡️</span>ProstaMax</a
+            ><a href="megacal.html"
+              ><span class="nav-drop-icon">🦴</span>MegaCal K2</a
+            >
+            <a href="megaflex.html"
+              ><span class="nav-drop-icon">🔩</span>MegaFlex Basic &amp;
+              Forte</a
+            >
+            <a href="willfertil.html"
+              ><span class="nav-drop-icon">👫</span>Willfertil</a
+            >
+            <a href="crystal-white.html"
+              ><span class="nav-drop-icon">✨</span>Crystal White</a
+            >
+            <a href="vitaran.html"
+              ><span class="nav-drop-icon">💉</span>HP Cell Vitaran J</a
+            >
+            <a href="vetcare.html"
+              ><span class="nav-drop-icon">🐾</span>Veterinary Care</a
+            >
+          </div>
+        </li>
+        <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+      </ul>
+      <button class="nav-toggle" id="nav-toggle">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <div class="nav-drawer" id="nav-drawer">
+      <a href="index.html">Home</a><a href="about.html">About Us</a
+      ><a href="products.html">All Products</a
+      ><a href="pometate.html">Pometate</a><a href="prostamax.html">ProstaMax</a
+      ><a href="megacal.html">MegaCal K2</a>
+      <a href="megaflex.html">MegaFlex Basic &amp; Forte</a
+      ><a href="willfertil.html">Willfertil</a>
+      <a href="crystal-white.html">Crystal White</a>
+      <a href="vitaran.html">HP Cell Vitaran J</a>
+      <a href="vetcare.html">Veterinary Care</a>
+      <a href="contact.html" class="drawer-cta">Contact Us</a>
+    </div>
 
-<!-- PRODUCT HERO -->
-<section class="prod-hero">
-  <img class="prod-hero-bg" src="assets/images/pometate-hero.jpg" alt="Pometate — Your Daily Boost of Natural Goodness"/>
-  <div class="prod-hero-overlay"></div>
-  <div class="prod-hero-content">
-    <div class="phc-left">
-      <div class="breadcrumb" style="margin-bottom:24px"><a href="index.html">Home</a><span class="breadcrumb-sep">/</span><a href="products.html">Products</a><span class="breadcrumb-sep">/</span><span>Pometate</span></div>
-      <div class="eyebrow light">Dietary Supplement · Vegetarian</div>
-      <h1>Pometate</h1>
-      <p class="tagline">Your Daily Boost of Natural Goodness — a unique blend of purified herbs, spices, vegetables and fruits squeezed into a convenient daily capsule.</p>
-      <div class="phc-pills">
-        <span class="phc-pill">🌿 100% Natural</span>
-        <span class="phc-pill">🇺🇸 Made in USA</span>
-        <span class="phc-pill">✓ FDA Registered</span>
-        <span class="phc-pill">🌱 Vegetarian</span>
-        <span class="phc-pill">No Preservatives</span>
+    <!-- PRODUCT HERO -->
+    <section class="prod-hero">
+      <img
+        class="prod-hero-bg"
+        src="assets/images/pometate-hero.jpg"
+        alt="Pometate — Your Daily Boost of Natural Goodness"
+      />
+      <div class="prod-hero-overlay"></div>
+      <div class="prod-hero-content">
+        <div class="phc-left">
+          <div class="breadcrumb" style="margin-bottom: 24px">
+            <a href="index.html">Home</a><span class="breadcrumb-sep">/</span
+            ><a href="products.html">Products</a
+            ><span class="breadcrumb-sep">/</span><span>Pometate</span>
+          </div>
+          <div class="eyebrow light">Dietary Supplement · Vegetarian</div>
+          <h1>Pometate</h1>
+          <p class="tagline">
+            Your Daily Boost of Natural Goodness — a unique blend of purified
+            herbs, spices, vegetables and fruits squeezed into a convenient
+            daily capsule.
+          </p>
+          <div class="phc-pills">
+            <span class="phc-pill">🌿 100% Natural</span>
+            <span class="phc-pill">🇺🇸 Made in USA</span>
+            <span class="phc-pill">✓ FDA Registered</span>
+            <span class="phc-pill">🌱 Vegetarian</span>
+            <span class="phc-pill">No Preservatives</span>
+          </div>
+          <div class="hero-dosage">
+            <div class="hd-icon">💊</div>
+            <div>
+              <div class="hd-text-label">Recommended Daily Dose</div>
+              <div class="hd-text-value">
+                2 Capsules / Day with drink or food
+              </div>
+            </div>
+          </div>
+          <div
+            style="
+              margin-top: 32px;
+              display: flex;
+              flex-wrap: wrap;
+              gap: 12px;
+              align-items: center;
+            "
+          >
+            <a
+              href="contact.html"
+              class="btn btn-sage btn-arrow"
+              style="flex-shrink: 0; min-width: max-content"
+              >Enquire Now</a
+            >
+            <a
+              href="products.html"
+              class="btn btn-ghost"
+              style="flex-shrink: 0; min-width: max-content"
+              >View All Products</a
+            >
+          </div>
+        </div>
+        <div class="phc-right">
+          <img
+            class="product-box-img"
+            src="assets/images/pometate-hero.jpg"
+            alt="Pometate dietary supplement box — 60 vegetarian capsules"
+          />
+        </div>
       </div>
-      <div class="hero-dosage">
-        <div class="hd-icon">💊</div>
-        <div><div class="hd-text-label">Recommended Daily Dose</div><div class="hd-text-value">2 Capsules / Day with drink or food</div></div>
-      </div>
-      <div style="margin-top:32px;display:flex;flex-wrap:wrap;gap:12px;align-items:center">
-        <a href="contact.html" class="btn btn-sage btn-arrow" style="flex-shrink:0;min-width:max-content">Enquire Now</a>
-        <a href="products.html" class="btn btn-ghost" style="flex-shrink:0;min-width:max-content">View All Products</a>
-      </div>
-    </div>
-    <div class="phc-right">
-      <img class="product-box-img" src="assets/images/pometate-hero.jpg" alt="Pometate dietary supplement box — 60 vegetarian capsules"/>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- MARQUEE -->
-<div class="marquee-wrap" aria-hidden="true">
-  <div class="marquee-track">
-    <span class="marquee-item"><span class="marquee-dot"></span>Pomegranate Extract</span><span class="marquee-item"><span class="marquee-dot"></span>Green Tea EGCG</span><span class="marquee-item"><span class="marquee-dot"></span>Turmeric Curcumin</span><span class="marquee-item"><span class="marquee-dot"></span>Broccoli Sulforaphane</span><span class="marquee-item"><span class="marquee-dot"></span>FDA Registered</span><span class="marquee-item"><span class="marquee-dot"></span>60 Vegetarian Capsules</span><span class="marquee-item"><span class="marquee-dot"></span>Made in USA</span>
-    <span class="marquee-item"><span class="marquee-dot"></span>Pomegranate Extract</span><span class="marquee-item"><span class="marquee-dot"></span>Green Tea EGCG</span><span class="marquee-item"><span class="marquee-dot"></span>Turmeric Curcumin</span><span class="marquee-item"><span class="marquee-dot"></span>Broccoli Sulforaphane</span><span class="marquee-item"><span class="marquee-dot"></span>FDA Registered</span><span class="marquee-item"><span class="marquee-dot"></span>60 Vegetarian Capsules</span><span class="marquee-item"><span class="marquee-dot"></span>Made in USA</span>
-  </div>
-</div>
-
-<!-- OVERVIEW -->
-<section class="section" style="background:var(--white)">
-  <div style="display:grid;grid-template-columns:1.1fr .9fr;gap:72px;align-items:center">
-    <div>
-      <div class="eyebrow reveal">What is Pometate?</div>
-      <h2 class="display reveal rv1" style="font-size:clamp(2rem,3.5vw,3rem);margin:16px 0 24px">Nature's Best,<br><em>Captured in a Capsule</em></h2>
-      <p class="reveal rv2" style="font-size:.95rem;line-height:1.9;color:var(--grey-4);margin-bottom:16px">Pometate is a vegetarian supplement filled with many benefiting ingredients for the body. It contains a unique blend of purified herbs, spices, vegetables, and fruits — squeezed into a capsule for a convenient way to boost your well-being and dietary intake every single day.</p>
-      <p class="reveal rv2" style="font-size:.95rem;line-height:1.9;color:var(--grey-4);margin-bottom:32px">It is completely natural — containing no added colors, preservatives, flavouring, bulking, or chelating agents. Each ingredient is carefully purified to deliver maximum bioavailability, ensuring your body absorbs the full benefit of every capsule.</p>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px" class="reveal rv3">
-        <div style="padding:20px;background:var(--sage-pale);border-radius:var(--r);border-left:3px solid var(--sage)"><div style="font-size:.67rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--sage);margin-bottom:6px">Capsules</div><div style="font-size:1.5rem;font-family:'Playfair Display',serif;color:var(--ink);font-weight:400">60</div><div style="font-size:.78rem;color:var(--grey-3)">Vegetarian capsules per bottle</div></div>
-        <div style="padding:20px;background:var(--gold-pale);border-radius:var(--r);border-left:3px solid var(--gold)"><div style="font-size:.67rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--gold);margin-bottom:6px">Daily Dose</div><div style="font-size:1.5rem;font-family:'Playfair Display',serif;color:var(--ink);font-weight:400">2 caps</div><div style="font-size:.78rem;color:var(--grey-3)">With drink or food, daily</div></div>
-        <div style="padding:20px;background:var(--grey-1);border-radius:var(--r);border-left:3px solid var(--grey-3)"><div style="font-size:.67rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--grey-3);margin-bottom:6px">Origin</div><div style="font-size:1.5rem;font-family:'Playfair Display',serif;color:var(--ink);font-weight:400">USA</div><div style="font-size:.78rem;color:var(--grey-3)">FDA-registered facility</div></div>
-        <div style="padding:20px;background:var(--grey-1);border-radius:var(--r);border-left:3px solid var(--grey-3)"><div style="font-size:.67rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--grey-3);margin-bottom:6px">Formula</div><div style="font-size:1.5rem;font-family:'Playfair Display',serif;color:var(--ink);font-weight:400">Pure</div><div style="font-size:.78rem;color:var(--grey-3)">No additives or fillers</div></div>
+    <!-- MARQUEE -->
+    <div class="marquee-wrap" aria-hidden="true">
+      <div class="marquee-track">
+        <span class="marquee-item"
+          ><span class="marquee-dot"></span>Pomegranate Extract</span
+        ><span class="marquee-item"
+          ><span class="marquee-dot"></span>Green Tea EGCG</span
+        ><span class="marquee-item"
+          ><span class="marquee-dot"></span>Turmeric Curcumin</span
+        ><span class="marquee-item"
+          ><span class="marquee-dot"></span>Broccoli Sulforaphane</span
+        ><span class="marquee-item"
+          ><span class="marquee-dot"></span>FDA Registered</span
+        ><span class="marquee-item"
+          ><span class="marquee-dot"></span>60 Vegetarian Capsules</span
+        ><span class="marquee-item"
+          ><span class="marquee-dot"></span>Made in USA</span
+        >
+        <span class="marquee-item"
+          ><span class="marquee-dot"></span>Pomegranate Extract</span
+        ><span class="marquee-item"
+          ><span class="marquee-dot"></span>Green Tea EGCG</span
+        ><span class="marquee-item"
+          ><span class="marquee-dot"></span>Turmeric Curcumin</span
+        ><span class="marquee-item"
+          ><span class="marquee-dot"></span>Broccoli Sulforaphane</span
+        ><span class="marquee-item"
+          ><span class="marquee-dot"></span>FDA Registered</span
+        ><span class="marquee-item"
+          ><span class="marquee-dot"></span>60 Vegetarian Capsules</span
+        ><span class="marquee-item"
+          ><span class="marquee-dot"></span>Made in USA</span
+        >
       </div>
     </div>
-    <div class="reveal rv2" style="position:relative">
-      <img src="assets/images/pometate-detail.jpg" alt="Pometate supplement detail — ingredients and benefits" style="border-radius:12px;box-shadow:var(--shadow-xl);width:100%"/>
-      <div style="position:absolute;bottom:-20px;right:-20px;background:var(--sage);color:#fff;border-radius:var(--r);padding:18px 22px;box-shadow:var(--shadow-md)">
-        <div style="font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;opacity:.8">Manufacturer</div>
-        <div style="font-size:.88rem;font-weight:600;margin-top:4px">Made in USA</div>
-        <div style="font-size:.75rem;opacity:.75;margin-top:3px">For PHARMA-Connectiv</div>
+
+    <!-- OVERVIEW -->
+    <section class="section" style="background: var(--white)">
+      <div
+        style="
+          display: grid;
+          grid-template-columns: 1.1fr 0.9fr;
+          gap: 72px;
+          align-items: center;
+        "
+      >
+        <div>
+          <div class="eyebrow reveal">What is Pometate?</div>
+          <h2
+            class="display reveal rv1"
+            style="font-size: clamp(2rem, 3.5vw, 3rem); margin: 16px 0 24px"
+          >
+            Nature's Best,<br /><em>Captured in a Capsule</em>
+          </h2>
+          <p
+            class="reveal rv2"
+            style="
+              font-size: 0.95rem;
+              line-height: 1.9;
+              color: var(--grey-4);
+              margin-bottom: 16px;
+            "
+          >
+            Pometate is a vegetarian supplement filled with many benefiting
+            ingredients for the body. It contains a unique blend of purified
+            herbs, spices, vegetables, and fruits — squeezed into a capsule for
+            a convenient way to boost your well-being and dietary intake every
+            single day.
+          </p>
+          <p
+            class="reveal rv2"
+            style="
+              font-size: 0.95rem;
+              line-height: 1.9;
+              color: var(--grey-4);
+              margin-bottom: 32px;
+            "
+          >
+            It is completely natural — containing no added colors,
+            preservatives, flavouring, bulking, or chelating agents. Each
+            ingredient is carefully purified to deliver maximum bioavailability,
+            ensuring your body absorbs the full benefit of every capsule.
+          </p>
+          <div
+            style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px"
+            class="reveal rv3"
+          >
+            <div
+              style="
+                padding: 20px;
+                background: var(--sage-pale);
+                border-radius: var(--r);
+                border-left: 3px solid var(--sage);
+              "
+            >
+              <div
+                style="
+                  font-size: 0.67rem;
+                  letter-spacing: 0.18em;
+                  text-transform: uppercase;
+                  font-weight: 700;
+                  color: var(--sage);
+                  margin-bottom: 6px;
+                "
+              >
+                Capsules
+              </div>
+              <div
+                style="
+                  font-size: 1.5rem;
+                  font-family: &quot;Playfair Display&quot;, serif;
+                  color: var(--ink);
+                  font-weight: 400;
+                "
+              >
+                60
+              </div>
+              <div style="font-size: 0.78rem; color: var(--grey-3)">
+                Vegetarian capsules per bottle
+              </div>
+            </div>
+            <div
+              style="
+                padding: 20px;
+                background: var(--gold-pale);
+                border-radius: var(--r);
+                border-left: 3px solid var(--gold);
+              "
+            >
+              <div
+                style="
+                  font-size: 0.67rem;
+                  letter-spacing: 0.18em;
+                  text-transform: uppercase;
+                  font-weight: 700;
+                  color: var(--gold);
+                  margin-bottom: 6px;
+                "
+              >
+                Daily Dose
+              </div>
+              <div
+                style="
+                  font-size: 1.5rem;
+                  font-family: &quot;Playfair Display&quot;, serif;
+                  color: var(--ink);
+                  font-weight: 400;
+                "
+              >
+                2 caps
+              </div>
+              <div style="font-size: 0.78rem; color: var(--grey-3)">
+                With drink or food, daily
+              </div>
+            </div>
+            <div
+              style="
+                padding: 20px;
+                background: var(--grey-1);
+                border-radius: var(--r);
+                border-left: 3px solid var(--grey-3);
+              "
+            >
+              <div
+                style="
+                  font-size: 0.67rem;
+                  letter-spacing: 0.18em;
+                  text-transform: uppercase;
+                  font-weight: 700;
+                  color: var(--grey-3);
+                  margin-bottom: 6px;
+                "
+              >
+                Origin
+              </div>
+              <div
+                style="
+                  font-size: 1.5rem;
+                  font-family: &quot;Playfair Display&quot;, serif;
+                  color: var(--ink);
+                  font-weight: 400;
+                "
+              >
+                USA
+              </div>
+              <div style="font-size: 0.78rem; color: var(--grey-3)">
+                FDA-registered facility
+              </div>
+            </div>
+            <div
+              style="
+                padding: 20px;
+                background: var(--grey-1);
+                border-radius: var(--r);
+                border-left: 3px solid var(--grey-3);
+              "
+            >
+              <div
+                style="
+                  font-size: 0.67rem;
+                  letter-spacing: 0.18em;
+                  text-transform: uppercase;
+                  font-weight: 700;
+                  color: var(--grey-3);
+                  margin-bottom: 6px;
+                "
+              >
+                Formula
+              </div>
+              <div
+                style="
+                  font-size: 1.5rem;
+                  font-family: &quot;Playfair Display&quot;, serif;
+                  color: var(--ink);
+                  font-weight: 400;
+                "
+              >
+                Pure
+              </div>
+              <div style="font-size: 0.78rem; color: var(--grey-3)">
+                No additives or fillers
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-product-wrap">
+          <div class="reveal rv2" style="position: relative">
+            <img
+              src="assets/images/pometate-bgremoved.jpeg"
+              alt="Pometate supplement detail — ingredients and benefits"
+              style="
+                border-radius: 12px;
+                box-shadow: var(--shadow-xl);
+                width: 100%;
+              "
+            />
+            <div
+              style="
+                position: absolute;
+                bottom: -20px;
+                right: -20px;
+                background: var(--sage);
+                color: #fff;
+                border-radius: var(--r);
+                padding: 18px 22px;
+                box-shadow: var(--shadow-md);
+              "
+            >
+              <div
+                style="
+                  font-size: 0.65rem;
+                  letter-spacing: 0.2em;
+                  text-transform: uppercase;
+                  font-weight: 700;
+                  opacity: 0.8;
+                "
+              >
+                Manufacturer
+              </div>
+              <div
+                style="font-size: 0.88rem; font-weight: 600; margin-top: 4px"
+              >
+                Made in USA
+              </div>
+              <div style="font-size: 0.75rem; opacity: 0.75; margin-top: 3px">
+                For PHARMA-Connectiv
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KEY INGREDIENTS -->
+    <section class="section" style="background: var(--cream)">
+      <div class="eyebrow reveal">Active Ingredients</div>
+      <h2
+        class="display reveal rv1"
+        style="font-size: clamp(2rem, 3.5vw, 3rem); margin-top: 14px"
+      >
+        Four Powerful<br /><em>Natural Compounds</em>
+      </h2>
+      <p
+        class="reveal rv2"
+        style="
+          font-size: 0.93rem;
+          line-height: 1.85;
+          color: var(--grey-3);
+          max-width: 600px;
+          margin-top: 16px;
+          margin-bottom: 48px;
+        "
+      >
+        Each ingredient is scientifically selected for its unique bioactive
+        compounds and health-supporting properties.
+      </p>
+      <div class="ingredient-showcase">
+        <div class="ingr-card reveal">
+          <div class="ingr-img">
+            <img
+              src="assets/images/embedded/pometate-010.png"
+              alt="Pomegranate — source of ellagic acid"
+              loading="lazy"
+            />
+          </div>
+          <div class="ingr-body">
+            <div class="ingr-compound">Ellagic Acid · Natural Polyphenol</div>
+            <div class="ingr-name">Pomegranate</div>
+            <p class="ingr-desc">
+              Pomegranate skin and seeds contain ellagic acid — a natural
+              polyphenol with powerful antioxidant properties. Rich in
+              punicalagins, one of the most potent antioxidants known.
+            </p>
+            <div class="ingr-benefit">
+              Supports antioxidant defence against oxidative stress
+            </div>
+            <div class="ingr-benefit">
+              Natural polyphenol from pomegranate skin and seeds
+            </div>
+            <div class="ingr-benefit">
+              Rich in punicalagins and punicic acid
+            </div>
+          </div>
+        </div>
+        <div class="ingr-card reveal rv1">
+          <div class="ingr-img">
+            <img
+              src="assets/images/embedded/pometate-002.png"
+              alt="Green tea leaves — EGCG polyphenol extract"
+              loading="lazy"
+            />
+          </div>
+          <div class="ingr-body">
+            <div class="ingr-compound">EGCG · Epigallocatechin Gallate</div>
+            <div class="ingr-name">Green Tea</div>
+            <p class="ingr-desc">
+              Green tea leaves are used to extract polyphenols such as
+              epigallocatechin gallate (EGCG) — one of the most studied and
+              potent natural antioxidant compounds.
+            </p>
+            <div class="ingr-benefit">
+              EGCG is one of nature's most powerful antioxidants
+            </div>
+            <div class="ingr-benefit">
+              Supports metabolic and cellular health
+            </div>
+            <div class="ingr-benefit">
+              Standardised polyphenol extraction process
+            </div>
+          </div>
+        </div>
+        <div class="ingr-card reveal">
+          <div class="ingr-img">
+            <img
+              src="assets/images/embedded/pometate-012.png"
+              alt="Turmeric root — curcumin anti-inflammatory"
+              loading="lazy"
+            />
+          </div>
+          <div class="ingr-body">
+            <div class="ingr-compound">
+              Curcumin · Anti-Inflammatory Compound
+            </div>
+            <div class="ingr-name">Turmeric</div>
+            <p class="ingr-desc">
+              Turmeric's active compound curcumin has well-documented
+              anti-inflammatory and antioxidant properties. Centuries of
+              traditional use backed by modern clinical research.
+            </p>
+            <div class="ingr-benefit">
+              Clinically studied anti-inflammatory compound
+            </div>
+            <div class="ingr-benefit">
+              Powerful antioxidant — supports joint and cellular health
+            </div>
+            <div class="ingr-benefit">
+              Centuries of traditional use with modern validation
+            </div>
+          </div>
+        </div>
+        <div class="ingr-card reveal rv1">
+          <div class="ingr-img">
+            <img
+              src="assets/images/embedded/pometate-008.png"
+              alt="Broccoli — sulforaphane and isothiocyanate"
+              loading="lazy"
+            />
+          </div>
+          <div class="ingr-body">
+            <div class="ingr-compound">Sulforaphane · Isothiocyanate</div>
+            <div class="ingr-name">Broccoli</div>
+            <p class="ingr-desc">
+              Broccoli's green florets and stems contain isothiocyanate and
+              sulforaphane — bioactive compounds that support the body's natural
+              detoxification and cellular defence mechanisms.
+            </p>
+            <div class="ingr-benefit">
+              Sulforaphane activates the body's natural detox pathways
+            </div>
+            <div class="ingr-benefit">
+              Isothiocyanates support healthy cellular function
+            </div>
+            <div class="ingr-benefit">
+              Extracted from premium broccoli florets and stems
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section" style="background: var(--ink)">
+      <div class="eyebrow light reveal">Usage Guide</div>
+      <h2
+        class="display reveal rv1"
+        style="
+          font-size: clamp(2rem, 3.5vw, 3rem);
+          color: #fff;
+          margin-top: 14px;
+        "
+      >
+        How to Take <span class="gold-em">Pometate</span>
+      </h2>
+      <div class="hiw-grid">
+        <div
+          class="hiw-step reveal"
+          style="
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.1);
+          "
+        >
+          <div class="hiw-num" style="color: var(--gold)">01</div>
+          <div class="hiw-title" style="color: #fff">Take With Food</div>
+          <p class="hiw-desc" style="color: rgba(255, 255, 255, 0.5)">
+            Take 2 capsules daily with a meal or drink. Taking with food aids
+            absorption and reduces any chance of stomach discomfort.
+          </p>
+        </div>
+        <div
+          class="hiw-step reveal rv1"
+          style="
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.1);
+          "
+        >
+          <div class="hiw-num" style="color: var(--gold)">02</div>
+          <div class="hiw-title" style="color: #fff">Stay Consistent</div>
+          <p class="hiw-desc" style="color: rgba(255, 255, 255, 0.5)">
+            For optimal results, take Pometate daily as part of your routine.
+            Natural supplements work best with consistent, sustained use.
+          </p>
+        </div>
+        <div
+          class="hiw-step reveal rv2"
+          style="
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.1);
+          "
+        >
+          <div class="hiw-num" style="color: var(--gold)">03</div>
+          <div class="hiw-title" style="color: #fff">
+            Support Your Lifestyle
+          </div>
+          <p class="hiw-desc" style="color: rgba(255, 255, 255, 0.5)">
+            Pometate complements a balanced diet and healthy lifestyle. It's not
+            a replacement for a varied diet but a powerful enhancement to it.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FULL BROCHURE VISUAL + SPECS -->
+    <div class="split-section">
+      <div class="split-img reveal">
+        <img
+          src="assets/images/pometate-detail.jpg"
+          alt="Pometate brochure — detailed product information"
+        />
+      </div>
+      <div class="split-text" style="background: var(--white)">
+        <div class="eyebrow reveal">Product Specifications</div>
+        <h2
+          class="display reveal rv1"
+          style="font-size: clamp(1.9rem, 3vw, 2.6rem); margin-top: 14px"
+        >
+          Full Product <em>Details</em>
+        </h2>
+        <table class="specs-table reveal rv2">
+          <tr>
+            <td>Product Name</td>
+            <td>Pometate Dietary Supplements</td>
+          </tr>
+          <tr>
+            <td>Count</td>
+            <td>60 Vegetarian Capsules</td>
+          </tr>
+          <tr>
+            <td>Dosage</td>
+            <td>2 Capsules per day with drink or food</td>
+          </tr>
+          <tr>
+            <td>Key Ingredients</td>
+            <td>
+              Pomegranate (Ellagic Acid), Green Tea (EGCG), Turmeric (Curcumin),
+              Broccoli (Sulforaphane, Isothiocyanate)
+            </td>
+          </tr>
+          <tr>
+            <td>Additives</td>
+            <td>
+              None — no added colors, preservatives, flavouring, bulking or
+              chelating agents
+            </td>
+          </tr>
+          <tr>
+            <td>Suitable For</td>
+            <td>Vegetarians and Vegans</td>
+          </tr>
+          <tr>
+            <td>Regulatory</td>
+            <td>FDA Registered (Made in USA)</td>
+          </tr>
+          <tr>
+            <td>Manufactured For</td>
+            <td>PHARMA-Connectiv Pte Ltd, Singapore 368000</td>
+          </tr>
+        </table>
+        <div
+          class="reveal rv3"
+          style="margin-top: 32px; display: flex; gap: 12px; flex-wrap: wrap"
+        >
+          <a href="contact.html" class="btn btn-sage btn-arrow">Enquire Now</a>
+          <a href="products.html" class="btn btn-outline">All Products</a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- KEY INGREDIENTS -->
-<section class="section" style="background:var(--cream)">
-  <div class="eyebrow reveal">Active Ingredients</div>
-  <h2 class="display reveal rv1" style="font-size:clamp(2rem,3.5vw,3rem);margin-top:14px">Four Powerful<br><em>Natural Compounds</em></h2>
-  <p class="reveal rv2" style="font-size:.93rem;line-height:1.85;color:var(--grey-3);max-width:600px;margin-top:16px;margin-bottom:48px">Each ingredient is scientifically selected for its unique bioactive compounds and health-supporting properties.</p>
-  <div class="ingredient-showcase">
-    <div class="ingr-card reveal">
-      <div class="ingr-img"><img src="assets/images/pometate-photo1.jpg" alt="Pomegranate — source of ellagic acid" loading="lazy"/></div>
-      <div class="ingr-body">
-        <div class="ingr-compound">Ellagic Acid · Natural Polyphenol</div>
-        <div class="ingr-name">Pomegranate</div>
-        <p class="ingr-desc">Pomegranate skin and seeds contain ellagic acid — a natural polyphenol with powerful antioxidant properties. Rich in punicalagins, one of the most potent antioxidants known.</p>
-        <div class="ingr-benefit">Supports antioxidant defence against oxidative stress</div>
-        <div class="ingr-benefit">Natural polyphenol from pomegranate skin and seeds</div>
-        <div class="ingr-benefit">Rich in punicalagins and punicic acid</div>
+    <!-- RELATED -->
+    <section class="section" style="background: var(--cream)">
+      <div class="eyebrow reveal">Also From Our Range</div>
+      <h2
+        class="display reveal rv1"
+        style="font-size: clamp(1.9rem, 3vw, 2.6rem); margin-top: 14px"
+      >
+        <em>Related</em> Products
+      </h2>
+      <div class="related-grid">
+        <a href="prostamax.html" class="pcard reveal rv1">
+          <div class="pcard-img">
+            <img
+              src="assets/images/prostamax-photo-crop.jpg"
+              alt="ProstaMax"
+              loading="lazy"
+            />
+            <div class="pcard-gradient"></div>
+            <span class="pcard-badge badge-amber">Men's Health</span>
+            <div class="pcard-overlay-text">
+              <div class="pcard-cat">Prostate Health</div>
+              <div class="pcard-name">ProstaMax</div>
+            </div>
+          </div>
+          <div class="pcard-body">
+            <p>
+              Prostate-supportive supplement with Saw Palmetto, Selenium, Zinc
+              and Pumpkin Seed.
+            </p>
+            <div class="tag-row">
+              <span class="tag">Saw Palmetto</span
+              ><span class="tag">Selenium</span><span class="tag">Zinc</span>
+            </div>
+          </div>
+          <div class="pcard-foot">
+            <div class="pcard-origin">Made in <strong>USA</strong></div>
+            <span class="pcard-link">View Product</span>
+          </div>
+        </a>
+        <a href="vitaran.html" class="pcard reveal rv2">
+          <div class="pcard-img">
+            <img
+              src="assets/images/vitaran-knee-crop.jpg"
+              alt="HP Cell Vitaran J"
+              loading="lazy"
+            />
+            <div class="pcard-gradient"></div>
+            <span class="pcard-badge badge-navy">CE Class III</span>
+            <div class="pcard-overlay-text">
+              <div class="pcard-cat">Medical Device</div>
+              <div class="pcard-name">HP Cell Vitaran J</div>
+            </div>
+          </div>
+          <div class="pcard-body">
+            <p>
+              Polynucleotide intra-articular injection for joint mobility and
+              pain relief.
+            </p>
+            <div class="tag-row">
+              <span class="tag">Polynucleotide</span
+              ><span class="tag">Korea FDA</span>
+            </div>
+          </div>
+          <div class="pcard-foot">
+            <div class="pcard-origin">Made in <strong>Korea</strong></div>
+            <span class="pcard-link">View Product</span>
+          </div>
+        </a>
       </div>
-    </div>
-    <div class="ingr-card reveal rv1">
-      <div class="ingr-img"><img src="assets/images/pometate-photo2.jpg" alt="Green tea leaves — EGCG polyphenol extract" loading="lazy"/></div>
-      <div class="ingr-body">
-        <div class="ingr-compound">EGCG · Epigallocatechin Gallate</div>
-        <div class="ingr-name">Green Tea</div>
-        <p class="ingr-desc">Green tea leaves are used to extract polyphenols such as epigallocatechin gallate (EGCG) — one of the most studied and potent natural antioxidant compounds.</p>
-        <div class="ingr-benefit">EGCG is one of nature's most powerful antioxidants</div>
-        <div class="ingr-benefit">Supports metabolic and cellular health</div>
-        <div class="ingr-benefit">Standardised polyphenol extraction process</div>
+    </section>
+
+    <footer>
+      <div class="footer-top">
+        <div>
+          <!-- <div class="f-brand-name">PHARMA<span>-Connectiv</span></div> -->
+          <img
+            src="assets/images/logo.png"
+            alt="PHARMA-Connectiv Pte Ltd"
+            class="f-logo-img"
+          />
+          <p class="f-brand-desc">
+            Connecting healthcare professionals and patients with world-class
+            pharmaceutical, nutraceutical and veterinary solutions.
+          </p>
+          <div class="f-certs">
+            <span class="f-cert">FDA</span><span class="f-cert">GMP</span
+            ><span class="f-cert">CE</span><span class="f-cert">KFDA</span
+            ><span class="f-cert">DMF</span><span class="f-cert">ISO</span>
+          </div>
+        </div>
+        <div class="fcol">
+          <h5>Navigation</h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="fcol">
+          <h5>Products</h5>
+          <ul>
+            <li><a href="pometate.html">Pometate</a></li>
+            <li><a href="prostamax.html">ProstaMax</a></li>
+            <li><a href="megacal.html">MegaCal K2</a></li>
+            <li><a href="megaflex.html">MegaFlex Basic &amp; Forte</a></li>
+            <li><a href="willfertil.html">Willfertil</a></li>
+            <li><a href="crystal-white.html">Crystal White</a></li>
+            <li><a href="vitaran.html">HP Cell Vitaran J</a></li>
+            <li><a href="vetcare.html">Veterinary Care</a></li>
+          </ul>
+        </div>
+        <div class="fcol">
+          <h5>Contact</h5>
+          <ul>
+            <li><a href="tel:+6562828732">+65 6282 8732</a></li>
+            <li>
+              <a href="mailto:info@pharma-connectiv.com"
+                >info@pharma-connectiv.com</a
+              >
+            </li>
+            <li>
+              <a href="#">85 Playfair Road, L5<br />Singapore 368000</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-    <div class="ingr-card reveal">
-      <div class="ingr-img"><img src="assets/images/pometate-photo3.jpg" alt="Turmeric root — curcumin anti-inflammatory" loading="lazy"/></div>
-      <div class="ingr-body">
-        <div class="ingr-compound">Curcumin · Anti-Inflammatory Compound</div>
-        <div class="ingr-name">Turmeric</div>
-        <p class="ingr-desc">Turmeric's active compound curcumin has well-documented anti-inflammatory and antioxidant properties. Centuries of traditional use backed by modern clinical research.</p>
-        <div class="ingr-benefit">Clinically studied anti-inflammatory compound</div>
-        <div class="ingr-benefit">Powerful antioxidant — supports joint and cellular health</div>
-        <div class="ingr-benefit">Centuries of traditional use with modern validation</div>
-      </div>
-    </div>
-    <div class="ingr-card reveal rv1">
-      <div class="ingr-img"><img src="assets/images/pometate-ingredients.jpg" alt="Broccoli — sulforaphane and isothiocyanate" loading="lazy"/></div>
-      <div class="ingr-body">
-        <div class="ingr-compound">Sulforaphane · Isothiocyanate</div>
-        <div class="ingr-name">Broccoli</div>
-        <p class="ingr-desc">Broccoli's green florets and stems contain isothiocyanate and sulforaphane — bioactive compounds that support the body's natural detoxification and cellular defence mechanisms.</p>
-        <div class="ingr-benefit">Sulforaphane activates the body's natural detox pathways</div>
-        <div class="ingr-benefit">Isothiocyanates support healthy cellular function</div>
-        <div class="ingr-benefit">Extracted from premium broccoli florets and stems</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- HOW IT WORKS -->
-<section class="section" style="background:var(--ink)">
-  <div class="eyebrow light reveal">Usage Guide</div>
-  <h2 class="display reveal rv1" style="font-size:clamp(2rem,3.5vw,3rem);color:#fff;margin-top:14px">How to Take <span class="gold-em">Pometate</span></h2>
-  <div class="hiw-grid">
-    <div class="hiw-step reveal" style="background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.1)">
-      <div class="hiw-num" style="color:var(--gold)">01</div>
-      <div class="hiw-title" style="color:#fff">Take With Food</div>
-      <p class="hiw-desc" style="color:rgba(255,255,255,.5)">Take 2 capsules daily with a meal or drink. Taking with food aids absorption and reduces any chance of stomach discomfort.</p>
-    </div>
-    <div class="hiw-step reveal rv1" style="background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.1)">
-      <div class="hiw-num" style="color:var(--gold)">02</div>
-      <div class="hiw-title" style="color:#fff">Stay Consistent</div>
-      <p class="hiw-desc" style="color:rgba(255,255,255,.5)">For optimal results, take Pometate daily as part of your routine. Natural supplements work best with consistent, sustained use.</p>
-    </div>
-    <div class="hiw-step reveal rv2" style="background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.1)">
-      <div class="hiw-num" style="color:var(--gold)">03</div>
-      <div class="hiw-title" style="color:#fff">Support Your Lifestyle</div>
-      <p class="hiw-desc" style="color:rgba(255,255,255,.5)">Pometate complements a balanced diet and healthy lifestyle. It's not a replacement for a varied diet but a powerful enhancement to it.</p>
-    </div>
-  </div>
-</section>
-
-<!-- FULL BROCHURE VISUAL + SPECS -->
-<div class="split-section">
-  <div class="split-img reveal">
-    <img src="assets/images/pometate-detail.jpg" alt="Pometate brochure — detailed product information"/>
-  </div>
-  <div class="split-text" style="background:var(--white)">
-    <div class="eyebrow reveal">Product Specifications</div>
-    <h2 class="display reveal rv1" style="font-size:clamp(1.9rem,3vw,2.6rem);margin-top:14px">Full Product <em>Details</em></h2>
-    <table class="specs-table reveal rv2">
-      <tr><td>Product Name</td><td>Pometate Dietary Supplements</td></tr>
-      <tr><td>Count</td><td>60 Vegetarian Capsules</td></tr>
-      <tr><td>Dosage</td><td>2 Capsules per day with drink or food</td></tr>
-      <tr><td>Key Ingredients</td><td>Pomegranate (Ellagic Acid), Green Tea (EGCG), Turmeric (Curcumin), Broccoli (Sulforaphane, Isothiocyanate)</td></tr>
-      <tr><td>Additives</td><td>None — no added colors, preservatives, flavouring, bulking or chelating agents</td></tr>
-      <tr><td>Suitable For</td><td>Vegetarians and Vegans</td></tr>
-      <tr><td>Regulatory</td><td>FDA Registered (Made in USA)</td></tr>
-      <tr><td>Manufactured For</td><td>PHARMA-Connectiv Pte Ltd, Singapore 368000</td></tr>
-    </table>
-    <div class="reveal rv3" style="margin-top:32px;display:flex;gap:12px;flex-wrap:wrap">
-      <a href="contact.html" class="btn btn-sage btn-arrow">Enquire Now</a>
-      <a href="products.html" class="btn btn-outline">All Products</a>
-    </div>
-  </div>
-</div>
-
-<!-- RELATED -->
-<section class="section" style="background:var(--cream)">
-  <div class="eyebrow reveal">Also From Our Range</div>
-  <h2 class="display reveal rv1" style="font-size:clamp(1.9rem,3vw,2.6rem);margin-top:14px"><em>Related</em> Products</h2>
-  <div class="related-grid">
-    <a href="prostamax.html" class="pcard reveal rv1">
-      <div class="pcard-img"><img src="assets/images/prostamax-photo-crop.jpg" alt="ProstaMax" loading="lazy"/><div class="pcard-gradient"></div><span class="pcard-badge badge-amber">Men's Health</span><div class="pcard-overlay-text"><div class="pcard-cat">Prostate Health</div><div class="pcard-name">ProstaMax</div></div></div>
-      <div class="pcard-body"><p>Prostate-supportive supplement with Saw Palmetto, Selenium, Zinc and Pumpkin Seed.</p><div class="tag-row"><span class="tag">Saw Palmetto</span><span class="tag">Selenium</span><span class="tag">Zinc</span></div></div>
-      <div class="pcard-foot"><div class="pcard-origin">Made in <strong>USA</strong></div><span class="pcard-link">View Product</span></div>
-    </a>
-    <a href="vitaran.html" class="pcard reveal rv2">
-      <div class="pcard-img"><img src="assets/images/vitaran-knee-crop.jpg" alt="HP Cell Vitaran J" loading="lazy"/><div class="pcard-gradient"></div><span class="pcard-badge badge-navy">CE Class III</span><div class="pcard-overlay-text"><div class="pcard-cat">Medical Device</div><div class="pcard-name">HP Cell Vitaran J</div></div></div>
-      <div class="pcard-body"><p>Polynucleotide intra-articular injection for joint mobility and pain relief.</p><div class="tag-row"><span class="tag">Polynucleotide</span><span class="tag">Korea FDA</span></div></div>
-      <div class="pcard-foot"><div class="pcard-origin">Made in <strong>Korea</strong></div><span class="pcard-link">View Product</span></div>
-    </a>
-  </div>
-</section>
-
-<footer>
-  <div class="footer-top">
-    <div><div class="f-brand-name">PHARMA<span>-Connectiv</span></div><p class="f-brand-desc">Connecting healthcare professionals and patients with world-class pharmaceutical, nutraceutical and veterinary solutions.</p><div class="f-certs"><span class="f-cert">FDA</span><span class="f-cert">GMP</span><span class="f-cert">CE</span><span class="f-cert">KFDA</span><span class="f-cert">DMF</span><span class="f-cert">ISO</span></div></div>
-    <div class="fcol"><h5>Navigation</h5><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="products.html">Products</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
-    <div class="fcol"><h5>Products</h5><ul><li><a href="pometate.html">Pometate</a></li><li><a href="prostamax.html">ProstaMax</a></li><li><a href="vitaran.html">HP Cell Vitaran J</a></li></ul></div>
-    <div class="fcol"><h5>Contact</h5><ul><li><a href="tel:+6562828732">+65 6282 8732</a></li><li><a href="mailto:info@pharma-connectiv.com">info@pharma-connectiv.com</a></li><li><a href="#">85 Playfair Road, L5<br>Singapore 368000</a></li></ul></div>
-  </div>
-  <div class="footer-bottom nav-links"><p>© 2024 PHARMA-Connectiv Pte Ltd · Singapore 368000</p><p>This product is not intended to diagnose, treat, cure or prevent any disease.</p><p>
+      <div class="footer-bottom nav-links">
+        <p>© 2024 PHARMA-Connectiv Pte Ltd · Singapore 368000</p>
+        <p>
+          This product is not intended to diagnose, treat, cure or prevent any
+          disease.
+        </p>
+        <p>
           Web Solutions by
           <a href="https://www.renderinfotech.com/" target="_blank"
             >Render Infotech</a
           >
-        </p></div>
-</footer>
-<script src="js/main.js"></script>
-</body></html>
+        </p>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>

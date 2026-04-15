@@ -22,8 +22,8 @@
       .hero-bg {
         position: absolute;
         inset: 0;
-        background: url("assets/images/home-pometate-wide.jpg") center 40% /
-          cover no-repeat;
+        background: url("assets/images/home-page-hero.jpg") center 40% / cover
+          no-repeat;
         transform: scale(1.04);
         animation: hzoom 14s ease-out forwards;
       }
@@ -391,9 +391,9 @@
       /* Brands */
       .brands-grid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         gap: 2px;
-        margin-top: 56px;
+        margin-top: 48px;
         border: 1px solid var(--grey-2);
         border-radius: 12px;
         overflow: hidden;
@@ -410,8 +410,14 @@
         cursor: pointer;
         text-decoration: none;
       }
-      .brand-tile:last-child {
+      /* .brand-tile:last-child {
         border-right: none;
+      } */
+      .brand-tile:nth-child(4n) {
+        border-right: none;
+      }
+      .brand-tile:nth-child(n + 5) {
+        border-top: 1px solid var(--grey-2);
       }
       .brand-tile:hover {
         background: var(--grey-1);
@@ -461,7 +467,20 @@
         background: var(--gold-pale);
         color: var(--gold);
       }
+      .chip-blue {
+        background: #e8eef8;
+        color: #2a5298;
+      }
+      .chip-red {
+        background: #f8e8e8;
+        color: #8b1a1a;
+      }
 
+      @media (max-width: 1100px) {
+        .brands-grid {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
       @media (max-width: 1024px) {
         .hero-stats {
           grid-template-columns: 1fr 1fr;
@@ -484,7 +503,8 @@
           grid-template-columns: 1fr;
         }
         .brands-grid {
-          grid-template-columns: 1fr 1fr;
+          /* grid-template-columns: 1fr 1fr; */
+          grid-template-columns: repeat(2, 1fr);
         }
         .brand-tile:nth-child(2) {
           border-right: none;
@@ -507,7 +527,8 @@
           grid-template-columns: 1fr;
         }
         .brands-grid {
-          grid-template-columns: 1fr;
+          /* grid-template-columns: 1fr; */
+          grid-template-columns: repeat(2, 1fr);
         }
         .brand-tile {
           border-right: none !important;
@@ -542,9 +563,18 @@
   <body>
     <!-- NAVBAR -->
     <nav id="navbar">
-      <a href="index.html" class="nav-logo">
-        <div class="nav-logo-main">PHARMA<span>-Connectiv</span></div>
-        <div class="nav-logo-sub">Pte Ltd · Singapore</div>
+      <a
+        href="index.html"
+        class="nav-logo"
+        aria-label="PHARMA-Connectiv Pte Ltd"
+      >
+        <img
+          src="assets/images/logo.png"
+          alt="PHARMA-Connectiv Pte Ltd"
+          height="36"
+        />
+        <!-- <div class="nav-logo-main">PHARMA<span>-Connectiv</span></div>
+        <div class="nav-logo-sub">Pte Ltd · Singapore</div> -->
       </a>
       <ul class="nav-links">
         <li><a href="index.html" class="active">Home</a></li>
@@ -561,8 +591,24 @@
             <a href="prostamax.html"
               ><span class="nav-drop-icon">🛡️</span>ProstaMax</a
             >
+            <a href="megacal.html"
+              ><span class="nav-drop-icon">🦴</span>MegaCal K2</a
+            >
+            <a href="megaflex.html"
+              ><span class="nav-drop-icon">🔩</span>MegaFlex Basic &amp;
+              Forte</a
+            >
+            <a href="willfertil.html"
+              ><span class="nav-drop-icon">👫</span>Willfertil</a
+            >
+            <a href="crystal-white.html"
+              ><span class="nav-drop-icon">✨</span>Crystal White</a
+            >
             <a href="vitaran.html"
               ><span class="nav-drop-icon">💉</span>HP Cell Vitaran J</a
+            >
+            <a href="vetcare.html"
+              ><span class="nav-drop-icon">🐾</span>Veterinary Care</a
             >
           </div>
         </li>
@@ -578,7 +624,12 @@
       <a href="products.html">All Products</a>
       <a href="pometate.html">Pometate</a>
       <a href="prostamax.html">ProstaMax</a>
+      <a href="megacal.html">MegaCal K2</a>
+      <a href="megaflex.html">MegaFlex Basic &amp; Forte</a
+      ><a href="willfertil.html">Willfertil</a>
+      <a href="crystal-white.html">Crystal White</a>
       <a href="vitaran.html">HP Cell Vitaran J</a>
+      <a href="vetcare.html">Veterinary Care</a>
       <a href="contact.html" class="drawer-cta">Contact Us</a>
     </div>
 
@@ -766,26 +817,24 @@
           <div class="pcard-img">
             <img
               src="assets/images/pometate-product-crop.jpg"
-              alt="Pometate dietary supplement with pomegranate and natural herbs"
+              alt="Pometate supplement"
               loading="lazy"
             />
             <div class="pcard-gradient"></div>
             <span class="pcard-badge badge-green">Vegetarian</span>
             <div class="pcard-overlay-text">
-              <div class="pcard-cat">Dietary Supplement</div>
+              <div class="pcard-cat">Daily Wellness</div>
               <div class="pcard-name">Pometate</div>
             </div>
           </div>
           <div class="pcard-body">
             <p>
-              A unique vegetarian blend of pomegranate, green tea, turmeric and
-              broccoli in a convenient daily capsule.
+              Pomegranate, green tea, turmeric &amp; broccoli — 60 vegetarian
+              capsules for daily antioxidant and well-being support.
             </p>
             <div class="tag-row">
-              <span class="tag">Pomegranate</span
-              ><span class="tag">Green Tea</span
-              ><span class="tag">Turmeric</span
-              ><span class="tag">Broccoli</span>
+              <span class="tag">Pomegranate</span><span class="tag">EGCG</span
+              ><span class="tag">Curcumin</span>
             </div>
           </div>
           <div class="pcard-foot">
@@ -793,33 +842,121 @@
             <span class="pcard-link">Learn More</span>
           </div>
         </a>
-        <a href="prostamax.html" class="pcard reveal rv1">
+        <a href="megacal.html" class="pcard reveal rv1">
           <div class="pcard-img">
             <img
-              src="assets/images/prostamax-photo-crop.jpg"
-              alt="ProstaMax — prostate health supplement for men"
+              src="assets/images/megacal-card.jpg"
+              alt="MegaCal K2 bone health"
               loading="lazy"
             />
             <div class="pcard-gradient"></div>
-            <span class="pcard-badge badge-amber">Men's Health</span>
+            <span class="pcard-badge badge-navy">Bone Health</span>
             <div class="pcard-overlay-text">
-              <div class="pcard-cat">Prostate Health</div>
-              <div class="pcard-name">ProstaMax</div>
+              <div class="pcard-cat">Calcium &amp; Bone</div>
+              <div class="pcard-name">MegaCal K2</div>
             </div>
           </div>
           <div class="pcard-body">
             <p>
-              Saw Palmetto, Selenium, Zinc and Pumpkin Seed — clinically
-              validated prostate-supportive nutrients.
+              Calcium Citrate 1000mg + Vitamin K2 + D3 1000IU + Magnesium —
+              increases calcium absorption and supports strong bones.
             </p>
             <div class="tag-row">
-              <span class="tag">Saw Palmetto</span
-              ><span class="tag">Selenium</span><span class="tag">Zinc</span
-              ><span class="tag">Pumpkin Seed</span>
+              <span class="tag">Calcium Citrate</span
+              ><span class="tag">Vitamin K2</span
+              ><span class="tag">Vitamin D3</span>
             </div>
           </div>
           <div class="pcard-foot">
-            <div class="pcard-origin">Made in <strong>USA</strong></div>
+            <div class="pcard-origin">By <strong>PHARMA-Connectiv</strong></div>
+            <span class="pcard-link">Learn More</span>
+          </div>
+        </a>
+        <a href="megaflex.html" class="pcard reveal rv2">
+          <div class="pcard-img">
+            <img
+              src="assets/images/megaflex-basic-card.jpg"
+              alt="MegaFlex K2 D3"
+              loading="lazy"
+            />
+            <div class="pcard-gradient"></div>
+            <span class="pcard-badge badge-green">Liposomal</span>
+            <div class="pcard-overlay-text">
+              <div class="pcard-cat">Bone &amp; Cardiovascular</div>
+              <div class="pcard-name">MegaFlex Basic</div>
+            </div>
+          </div>
+          <div class="pcard-body">
+            <p>
+              Liposomal K2-7 150mcg + D3 1200 IU — superior bioavailability via
+              liposomal technology. Once-daily mini-tablet.
+            </p>
+            <div class="tag-row">
+              <span class="tag">MK-7</span><span class="tag">Liposomal D3</span
+              ><span class="tag">ISO</span>
+            </div>
+          </div>
+          <div class="pcard-foot">
+            <div class="pcard-origin">Made in <strong>France</strong></div>
+            <span class="pcard-link">Learn More</span>
+          </div>
+        </a>
+        <a href="willfertil.html" class="pcard reveal">
+          <div class="pcard-img">
+            <img
+              src="assets/images/willfertil-card.jpg"
+              alt="Willfertil fertility"
+              loading="lazy"
+            />
+            <div class="pcard-gradient"></div>
+            <span class="pcard-badge badge-green">Patented</span>
+            <div class="pcard-overlay-text">
+              <div class="pcard-cat">Fertility Health</div>
+              <div class="pcard-name">Willfertil</div>
+            </div>
+          </div>
+          <div class="pcard-body">
+            <p>
+              Patented formula for sperm health &amp; PCOS management.
+              L-Carnitine, L-Arginine, CoQ10, Selenium, Zinc, Folic Acid.
+            </p>
+            <div class="tag-row">
+              <span class="tag">L-Carnitine</span><span class="tag">CoQ10</span
+              ><span class="tag">Folic Acid</span>
+            </div>
+          </div>
+          <div class="pcard-foot">
+            <div class="pcard-origin">Made in <strong>France</strong></div>
+            <span class="pcard-link">Learn More</span>
+          </div>
+        </a>
+        <a href="crystal-white.html" class="pcard reveal rv1">
+          <div class="pcard-img">
+            <img
+              src="assets/images/crystal-white-card.jpg"
+              alt="Crystal White skin brightening"
+              loading="lazy"
+            />
+            <div class="pcard-gradient"></div>
+            <span class="pcard-badge badge-green">Skin Care</span>
+            <div class="pcard-overlay-text">
+              <div class="pcard-cat">Beauty &amp; Skin</div>
+              <div class="pcard-name">Crystal White</div>
+            </div>
+          </div>
+          <div class="pcard-body">
+            <p>
+              Microgranule technology with Curcumin &amp; Polypodium — brightens
+              skin, reduces hyperpigmentation, UV protection.
+            </p>
+            <div class="tag-row">
+              <span class="tag">Curcumin</span
+              ><span class="tag">Polypodium</span
+              ><span class="tag">Anti-aging</span>
+            </div>
+          </div>
+          <div class="pcard-foot">
+            <div class="pcard-origin">Made in <strong>France</strong></div>
             <span class="pcard-link">Learn More</span>
           </div>
         </a>
@@ -827,7 +964,7 @@
           <div class="pcard-img">
             <img
               src="assets/images/vitaran-knee-crop.jpg"
-              alt="HP Cell Vitaran J — intra-articular polynucleotide injection for joint pain"
+              alt="HP Cell Vitaran J joint"
               loading="lazy"
             />
             <div class="pcard-gradient"></div>
@@ -840,7 +977,7 @@
           <div class="pcard-body">
             <p>
               Polynucleotide intra-articular injection — reduces joint friction,
-              restores mobility and relieves pain.
+              improves knee mobility and relieves inflammation.
             </p>
             <div class="tag-row">
               <span class="tag">Polynucleotide</span
@@ -853,6 +990,11 @@
             <span class="pcard-link">Learn More</span>
           </div>
         </a>
+      </div>
+      <div style="text-align: center; margin-top: 40px">
+        <a href="products.html" class="btn btn-sage btn-arrow"
+          >See All 9+ Products</a
+        >
       </div>
     </section>
 
@@ -935,39 +1077,76 @@
         Products <em>By Brand</em>
       </h2>
       <div class="brands-grid">
-        <a href="pometate.html" class="brand-tile reveal">
-          <div class="bt-img">
-            <img
-              src="assets/images/pometate-product-crop.jpg"
-              alt="Pometate brand"
-            />
+        <a href="pometate.html" class="brand-tile reveal"
+          ><div class="bt-img">
+            <img src="assets/images/pometate-product-crop.jpg" alt="Pometate" />
           </div>
           <div class="bt-name">Pometate</div>
-          <div class="bt-sub">Dietary Supplements</div>
-          <div class="bt-chip chip-sage">Supplements</div>
-        </a>
-        <a href="prostamax.html" class="brand-tile reveal rv1">
-          <div class="bt-img">
-            <img
-              src="assets/images/prostamax-photo-crop.jpg"
-              alt="ProstaMax brand"
-            />
+          <div class="bt-sub">Daily Wellness</div>
+          <div class="bt-chip chip-sage">Supplement</div></a
+        >
+        <a href="prostamax.html" class="brand-tile reveal rv1"
+          ><div class="bt-img">
+            <img src="assets/images/prostamax-hero-clean.jpg" alt="ProstaMax" />
           </div>
           <div class="bt-name">ProstaMax</div>
           <div class="bt-sub">Prostate Health</div>
-          <div class="bt-chip chip-sage">Supplements</div>
-        </a>
-        <a href="vitaran.html" class="brand-tile reveal rv2">
-          <div class="bt-img">
+          <div class="bt-chip chip-sage">Supplement</div></a
+        >
+        <a href="megacal.html" class="brand-tile reveal rv2"
+          ><div class="bt-img">
+            <img src="assets/images/megacal-card.jpg" alt="MegaCal K2" />
+          </div>
+          <div class="bt-name">MegaCal K2</div>
+          <div class="bt-sub">Bone Health</div>
+          <div class="bt-chip chip-sage">Supplement</div></a
+        >
+        <a href="megaflex.html" class="brand-tile reveal rv3"
+          ><div class="bt-img">
+            <img src="assets/images/megaflex-basic-card.jpg" alt="MegaFlex" />
+          </div>
+          <div class="bt-name">MegaFlex</div>
+          <div class="bt-sub">Basic &amp; Forte</div>
+          <div class="bt-chip chip-blue">Jose Lea Pharma</div></a
+        >
+        <a href="willfertil.html" class="brand-tile reveal"
+          ><div class="bt-img">
+            <img src="assets/images/willfertil-card.jpg" alt="Willfertil" />
+          </div>
+          <div class="bt-name">Willfertil</div>
+          <div class="bt-sub">Fertility Health</div>
+          <div class="bt-chip chip-blue">Jose Lea Pharma</div></a
+        >
+        <a href="crystal-white.html" class="brand-tile reveal rv1"
+          ><div class="bt-img">
+            <img
+              src="assets/images/crystal-white-card.jpg"
+              alt="Crystal White"
+            />
+          </div>
+          <div class="bt-name">Crystal White</div>
+          <div class="bt-sub">Skin Brightening</div>
+          <div class="bt-chip chip-blue">Made in France</div></a
+        >
+        <a href="vitaran.html" class="brand-tile reveal rv2"
+          ><div class="bt-img">
             <img
               src="assets/images/vitaran-knee-crop.jpg"
-              alt="HP Cell Vitaran J brand"
+              alt="HP Cell Vitaran J"
             />
           </div>
           <div class="bt-name">HP Cell Vitaran J</div>
           <div class="bt-sub">by BR PHARM</div>
-          <div class="bt-chip chip-gold">Medical Device</div>
-        </a>
+          <div class="bt-chip chip-gold">Medical Device</div></a
+        >
+        <a href="vetcare.html" class="brand-tile reveal rv3"
+          ><div class="bt-img">
+            <img src="assets/images/vet-care-hero.jpg" alt="Vet Care" />
+          </div>
+          <div class="bt-name">Vet Care Range</div>
+          <div class="bt-sub">3 Products</div>
+          <div class="bt-chip chip-red">Veterinary</div></a
+        >
       </div>
     </section>
 
@@ -1027,7 +1206,12 @@
     <footer>
       <div class="footer-top">
         <div>
-          <div class="f-brand-name">PHARMA<span>-Connectiv</span></div>
+          <!-- <div class="f-brand-name">PHARMA<span>-Connectiv</span></div> -->
+          <img
+            src="assets/images/logo.png"
+            alt="PHARMA-Connectiv Pte Ltd"
+            class="f-logo-img"
+          />
           <p class="f-brand-desc">
             Connecting healthcare professionals and patients with world-class
             pharmaceutical, nutraceutical and veterinary solutions across
@@ -1053,7 +1237,12 @@
           <ul>
             <li><a href="pometate.html">Pometate</a></li>
             <li><a href="prostamax.html">ProstaMax</a></li>
+            <li><a href="megacal.html">MegaCal K2</a></li>
+            <li><a href="megaflex.html">MegaFlex Basic &amp; Forte</a></li>
+            <li><a href="willfertil.html">Willfertil</a></li>
+            <li><a href="crystal-white.html">Crystal White</a></li>
             <li><a href="vitaran.html">HP Cell Vitaran J</a></li>
+            <li><a href="vetcare.html">Veterinary Care</a></li>
           </ul>
         </div>
         <div class="fcol">
