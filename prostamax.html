@@ -150,7 +150,8 @@
         margin-top: 52px;
       }
       .ingr-box {
-        padding: 32px 28px;
+        /* padding: 32px 28px; */
+        overflow: hidden;
         border-radius: 12px;
         border: 1px solid var(--border);
         background: var(--white);
@@ -162,6 +163,23 @@
       .ingr-box:hover {
         transform: translateY(-5px);
         box-shadow: var(--shadow-md);
+      }
+      .ingr-img {
+        height: 200px;
+        position: relative;
+        overflow: hidden;
+      }
+      .ingr-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        transition: transform 0.5s;
+      }
+      .ingr-box:hover .ingr-img img {
+        transform: scale(1.05);
+      }
+      .ingr-body {
+        padding: 24px;
       }
       .ib-icon {
         font-size: 2.2rem;
@@ -362,7 +380,7 @@
         aria-label="PHARMA-Connectiv Pte Ltd"
       >
         <img
-          src="assets/images/logo.png"
+          src="assets/images/logo-new.png"
           alt="PHARMA-Connectiv Pte Ltd"
           height="36"
         />
@@ -469,7 +487,7 @@
         <div class="phc-right">
           <img
             class="product-box-img"
-            src="assets/images/prostamax-hero-clean.jpg"
+            src="assets/images/prostamax-detail-ad-removed.jpg"
             alt="ProstaMax — prostate health supplement for men"
           />
         </div>
@@ -769,77 +787,128 @@
       </p>
       <div class="ingr-4">
         <div class="ingr-box reveal">
-          <div class="ib-icon">🌴</div>
-          <div class="ib-compound">Serenoa Repens Extract</div>
-          <div class="ib-name">Saw Palmetto</div>
-          <p class="ib-desc">
-            Saw Palmetto is the most widely used and extensively researched
-            supplement for prostate health. According to clinical research, Saw
-            Palmetto has the ability to reduce prostate gland size and improve
-            urine flow — making it the cornerstone ingredient in ProstaMax.
-          </p>
-          <div class="ib-benefit">
-            Most widely studied prostate health supplement
+          <!-- <div class="ib-icon">🌴</div> -->
+          <div
+            class="ingr-img"
+            style="background: linear-gradient(135deg, #e8f5e9, #c8e6c9)"
+          >
+            <img
+              src="assets/images/embedded/saw-palmetto.png"
+              alt="Saw Palmetto"
+              loading="lazy"
+            />
           </div>
-          <div class="ib-benefit">May help reduce prostate gland size</div>
-          <div class="ib-benefit">Clinically shown to improve urinary flow</div>
+          <div class="ingr-body">
+            <div class="ib-compound">Serenoa Repens Extract</div>
+            <div class="ib-name">Saw Palmetto</div>
+            <p class="ib-desc">
+              Saw Palmetto is the most widely used and extensively researched
+              supplement for prostate health. According to clinical research,
+              Saw Palmetto has the ability to reduce prostate gland size and
+              improve urine flow — making it the cornerstone ingredient in
+              ProstaMax.
+            </p>
+            <div class="ib-benefit">
+              Most widely studied prostate health supplement
+            </div>
+            <div class="ib-benefit">May help reduce prostate gland size</div>
+            <div class="ib-benefit">
+              Clinically shown to improve urinary flow
+            </div>
+          </div>
         </div>
         <div class="ingr-box reveal rv1">
-          <div class="ib-icon">⚗️</div>
-          <div class="ib-compound">Essential Trace Mineral</div>
-          <div class="ib-name">Selenium</div>
-          <p class="ib-desc">
-            Selenium is an essential trace mineral with powerful antioxidant
-            properties. It plays a critical role in immune function and cellular
-            health. Research suggests selenium is particularly important for
-            prostate tissue health and normal cellular function.
-          </p>
-          <div class="ib-benefit">
-            Powerful antioxidant for prostate tissue protection
+          <!-- <div class="ib-icon">⚗️</div> -->
+          <div
+            class="ingr-img"
+            style="background: linear-gradient(135deg, #e8eaf6, #c5cae9)"
+          >
+            <img
+              src="assets/images/embedded/selenium.png"
+              alt="Selenium"
+              loading="lazy"
+            />
           </div>
-          <div class="ib-benefit">Supports normal immune system function</div>
-          <div class="ib-benefit">
-            Essential trace mineral for cellular health
+          <div class="ingr-body">
+            <div class="ib-compound">Essential Trace Mineral</div>
+            <div class="ib-name">Selenium</div>
+            <p class="ib-desc">
+              Selenium is an essential trace mineral with powerful antioxidant
+              properties. It plays a critical role in immune function and
+              cellular health. Research suggests selenium is particularly
+              important for prostate tissue health and normal cellular function.
+            </p>
+            <div class="ib-benefit">
+              Powerful antioxidant for prostate tissue protection
+            </div>
+            <div class="ib-benefit">Supports normal immune system function</div>
+            <div class="ib-benefit">
+              Essential trace mineral for cellular health
+            </div>
           </div>
         </div>
         <div class="ingr-box reveal">
-          <div class="ib-icon">🔩</div>
-          <div class="ib-compound">Essential Mineral</div>
-          <div class="ib-name">Zinc</div>
-          <p class="ib-desc">
-            Zinc is found in high concentrations in the prostate gland and plays
-            a fundamental role in prostate health. It is essential for hormone
-            regulation and immune function. Zinc deficiency has been associated
-            with various prostate health concerns.
-          </p>
-          <div class="ib-benefit">
-            Naturally concentrated in healthy prostate tissue
+          <!-- <div class="ib-icon">🔩</div> -->
+          <div
+            class="ingr-img"
+            style="background: linear-gradient(135deg, #e8eaf6, #c5cae9)"
+          >
+            <img
+              src="assets/images/embedded/zinc.png"
+              alt="Zinc"
+              loading="lazy"
+            />
           </div>
-          <div class="ib-benefit">
-            Essential for hormone balance and regulation
-          </div>
-          <div class="ib-benefit">
-            Supports immune function and cellular integrity
+          <div class="ingr-body">
+            <div class="ib-compound">Essential Mineral</div>
+            <div class="ib-name">Zinc</div>
+            <p class="ib-desc">
+              Zinc is found in high concentrations in the prostate gland and
+              plays a fundamental role in prostate health. It is essential for
+              hormone regulation and immune function. Zinc deficiency has been
+              associated with various prostate health concerns.
+            </p>
+            <div class="ib-benefit">
+              Naturally concentrated in healthy prostate tissue
+            </div>
+            <div class="ib-benefit">
+              Essential for hormone balance and regulation
+            </div>
+            <div class="ib-benefit">
+              Supports immune function and cellular integrity
+            </div>
           </div>
         </div>
         <div class="ingr-box reveal rv1">
-          <div class="ib-icon">🎃</div>
-          <div class="ib-compound">Cucurbita Pepo Extract</div>
-          <div class="ib-name">Pumpkin Seed</div>
-          <p class="ib-desc">
-            Pumpkin seed extract is a traditional remedy for urinary and
-            prostate health, now backed by modern science. Rich in phytosterols
-            and zinc, pumpkin seeds help support healthy urinary tract function
-            and complement the other ingredients in ProstaMax.
-          </p>
-          <div class="ib-benefit">
-            Rich in phytosterols that support prostate health
+          <!-- <div class="ib-icon">🎃</div> -->
+          <div
+            class="ingr-img"
+            style="background: linear-gradient(135deg, #e8f5e9, #c8e6c9)"
+          >
+            <img
+              src="assets/images/embedded/pumpkin-seeds.png"
+              alt="Pumpkin Seeds"
+              loading="lazy"
+            />
           </div>
-          <div class="ib-benefit">
-            Traditionally used for urinary tract support
-          </div>
-          <div class="ib-benefit">
-            Natural source of zinc and essential fatty acids
+          <div class="ingr-body">
+            <div class="ib-compound">Cucurbita Pepo Extract</div>
+            <div class="ib-name">Pumpkin Seed</div>
+            <p class="ib-desc">
+              Pumpkin seed extract is a traditional remedy for urinary and
+              prostate health, now backed by modern science. Rich in
+              phytosterols and zinc, pumpkin seeds help support healthy urinary
+              tract function and complement the other ingredients in ProstaMax.
+            </p>
+            <div class="ib-benefit">
+              Rich in phytosterols that support prostate health
+            </div>
+            <div class="ib-benefit">
+              Traditionally used for urinary tract support
+            </div>
+            <div class="ib-benefit">
+              Natural source of zinc and essential fatty acids
+            </div>
           </div>
         </div>
       </div>
@@ -943,7 +1012,7 @@
       </div>
       <div class="split-img reveal">
         <img
-          src="assets/images/prostamax-detail.jpg"
+          src="assets/images/prostamax-detail-ad-removed.jpg"
           alt="ProstaMax supplement details — why choose ProstaMax"
         />
       </div>
@@ -1026,7 +1095,7 @@
         <div>
           <!-- <div class="f-brand-name">PHARMA<span>-Connectiv</span></div> -->
           <img
-            src="assets/images/logo.png"
+            src="assets/images/footer-logo-new.png"
             alt="PHARMA-Connectiv Pte Ltd"
             class="f-logo-img"
           />

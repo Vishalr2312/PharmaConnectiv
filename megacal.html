@@ -153,8 +153,9 @@
       }
       .ingr-card {
         background: var(--white);
+        overflow: hidden;
         border-radius: var(--r);
-        padding: 28px;
+        /* padding: 28px; */
         border: 1px solid var(--border);
         box-shadow: var(--shadow-sm);
         transition:
@@ -162,8 +163,25 @@
           box-shadow 0.3s;
       }
       .ingr-card:hover {
-        transform: translateY(-4px);
+        transform: translateY(-5px);
         box-shadow: var(--shadow-md);
+      }
+      .ingr-img {
+        height: 200px;
+        position: relative;
+        overflow: hidden;
+      }
+      .ingr-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        transition: transform 0.5s;
+      }
+      .ingr-box:hover .ingr-img img {
+        transform: scale(1.05);
+      }
+      .ingr-body {
+        padding: 24px;
       }
       .ingr-icon {
         font-size: 2rem;
@@ -353,7 +371,7 @@
         aria-label="PHARMA-Connectiv Pte Ltd"
       >
         <img
-          src="assets/images/logo.png"
+          src="assets/images/logo-new.png"
           alt="PHARMA-Connectiv Pte Ltd"
           height="36"
         />
@@ -465,7 +483,7 @@
         <div class="phc-right">
           <img
             class="product-box-img"
-            src="assets/images/megacal-1.jpg"
+            src="assets/images/megacal-1-ad-removed.jpg"
             alt="MegaCal K2 supplement"
           />
         </div>
@@ -625,81 +643,130 @@
       </p>
       <div class="ingr-grid">
         <div class="ingr-card reveal">
-          <div class="ingr-icon">🦴</div>
-          <div class="ingr-compound">Calcium Citrate · 1000mg</div>
-          <div class="ingr-name">Calcium Citrate</div>
-          <p class="ingr-desc">
-            Calcium Citrate is the most bioavailable form of calcium supplement.
-            Unlike calcium carbonate, it can be absorbed without food and is
-            particularly beneficial for those with low stomach acid.
-          </p>
-          <div class="ingr-benefit">
-            Helps address low calcium levels and supports bone density
+          <!-- <div class="ingr-icon">🦴</div> -->
+          <div
+            class="ingr-img"
+            style="background: linear-gradient(135deg, #e8f5e9, #c8e6c9)"
+          >
+            <img
+              src="assets/images/embedded/calcium-citrate.png"
+              alt="Calcium Citrate"
+              loading="lazy"
+            />
           </div>
-          <div class="ingr-benefit">
-            Superior absorption compared to calcium carbonate
-          </div>
-          <div class="ingr-benefit">
-            Supports teeth mineralisation and muscle contraction
+          <div class="ingr-body">
+            <div class="ingr-compound">Calcium Citrate · 1000mg</div>
+            <div class="ingr-name">Calcium Citrate</div>
+            <p class="ingr-desc">
+              Calcium Citrate is the most bioavailable form of calcium
+              supplement. Unlike calcium carbonate, it can be absorbed without
+              food and is particularly beneficial for those with low stomach
+              acid.
+            </p>
+            <div class="ingr-benefit">
+              Helps address low calcium levels and supports bone density
+            </div>
+            <div class="ingr-benefit">
+              Superior absorption compared to calcium carbonate
+            </div>
+            <div class="ingr-benefit">
+              Supports teeth mineralisation and muscle contraction
+            </div>
           </div>
         </div>
         <div class="ingr-card reveal rv1">
-          <div class="ingr-icon">🩸</div>
-          <div class="ingr-compound">Vitamin K2-7 (1%) · 100mcg</div>
-          <div class="ingr-name">Vitamin K2</div>
-          <p class="ingr-desc">
-            Vitamin K2 (as Menaquinone-7) activates osteocalcin — the protein
-            that anchors calcium into bone tissue. It also activates Matrix Gla
-            Protein (MGP), which prevents arterial calcification.
-          </p>
-          <div class="ingr-benefit">
-            Directs calcium into bones rather than arteries
+          <!-- <div class="ingr-icon">🩸</div> -->
+          <div
+            class="ingr-img"
+            style="background: linear-gradient(135deg, #e8f5e9, #c8e6c9)"
+          >
+            <img
+              src="assets/images/embedded/vitamin-k2.png"
+              alt="Vitamin K2"
+              loading="lazy"
+            />
           </div>
-          <div class="ingr-benefit">
-            Prevents damage to blood vessels from calcium deposits
-          </div>
-          <div class="ingr-benefit">
-            Synergistic effect with Vitamin D3 for optimal calcium use
+          <div class="ingr-body">
+            <div class="ingr-compound">Vitamin K2-7 (1%) · 100mcg</div>
+            <div class="ingr-name">Vitamin K2</div>
+            <p class="ingr-desc">
+              Vitamin K2 (as Menaquinone-7) activates osteocalcin — the protein
+              that anchors calcium into bone tissue. It also activates Matrix
+              Gla Protein (MGP), which prevents arterial calcification.
+            </p>
+            <div class="ingr-benefit">
+              Directs calcium into bones rather than arteries
+            </div>
+            <div class="ingr-benefit">
+              Prevents damage to blood vessels from calcium deposits
+            </div>
+            <div class="ingr-benefit">
+              Synergistic effect with Vitamin D3 for optimal calcium use
+            </div>
           </div>
         </div>
         <div class="ingr-card reveal">
-          <div class="ingr-icon">☀️</div>
-          <div class="ingr-compound">Vitamin D3 · 1000 IU</div>
-          <div class="ingr-name">Vitamin D3</div>
-          <p class="ingr-desc">
-            Vitamin D3 (cholecalciferol) is essential for calcium absorption
-            from the intestines. Without adequate D3, even high calcium intake
-            cannot be effectively used by the body for bone formation.
-          </p>
-          <div class="ingr-benefit">
-            Treats and prevents bone disorders including osteoporosis
+          <!-- <div class="ingr-icon">☀️</div> -->
+          <div
+            class="ingr-img"
+            style="background: linear-gradient(135deg, #e8f5e9, #c8e6c9)"
+          >
+            <img
+              src="assets/images/embedded/vitamin-d3.png"
+              alt="Vitamin D3"
+              loading="lazy"
+            />
           </div>
-          <div class="ingr-benefit">
-            Enhances intestinal absorption of calcium and phosphorus
-          </div>
-          <div class="ingr-benefit">
-            Supports immune system, muscle function and general well-being
+          <div class="ingr-body">
+            <div class="ingr-compound">Vitamin D3 · 1000 IU</div>
+            <div class="ingr-name">Vitamin D3</div>
+            <p class="ingr-desc">
+              Vitamin D3 (cholecalciferol) is essential for calcium absorption
+              from the intestines. Without adequate D3, even high calcium intake
+              cannot be effectively used by the body for bone formation.
+            </p>
+            <div class="ingr-benefit">
+              Treats and prevents bone disorders including osteoporosis
+            </div>
+            <div class="ingr-benefit">
+              Enhances intestinal absorption of calcium and phosphorus
+            </div>
+            <div class="ingr-benefit">
+              Supports immune system, muscle function and general well-being
+            </div>
           </div>
         </div>
         <div class="ingr-card reveal rv1">
-          <div class="ingr-icon">⚡</div>
-          <div class="ingr-compound">
-            Magnesium Hydroxide · 100mg + Zinc + Boron
+          <!-- <div class="ingr-icon">⚡</div> -->
+          <div
+            class="ingr-img"
+            style="background: linear-gradient(135deg, #e8f5e9, #c8e6c9)"
+          >
+            <img
+              src="assets/images/embedded/magnesium-hydroxide.png"
+              alt="Magnesium Hydroxide"
+              loading="lazy"
+            />
           </div>
-          <div class="ingr-name">Magnesium, Zinc &amp; Boron</div>
-          <p class="ingr-desc">
-            Magnesium supports over 300 enzymatic reactions including muscle and
-            energy production. Zinc (3mg elemental) is essential for bone
-            metabolism, and Boron (3mg) aids calcium and magnesium retention.
-          </p>
-          <div class="ingr-benefit">
-            Magnesium supports muscle function and energy production
-          </div>
-          <div class="ingr-benefit">
-            Zinc is essential for bone cell formation and immune health
-          </div>
-          <div class="ingr-benefit">
-            Boron enhances the retention and use of calcium and magnesium
+          <div class="ingr-body">
+            <div class="ingr-compound">
+              Magnesium Hydroxide · 100mg + Zinc + Boron
+            </div>
+            <div class="ingr-name">Magnesium, Zinc &amp; Boron</div>
+            <p class="ingr-desc">
+              Magnesium supports over 300 enzymatic reactions including muscle
+              and energy production. Zinc (3mg elemental) is essential for bone
+              metabolism, and Boron (3mg) aids calcium and magnesium retention.
+            </p>
+            <div class="ingr-benefit">
+              Magnesium supports muscle function and energy production
+            </div>
+            <div class="ingr-benefit">
+              Zinc is essential for bone cell formation and immune health
+            </div>
+            <div class="ingr-benefit">
+              Boron enhances the retention and use of calcium and magnesium
+            </div>
           </div>
         </div>
       </div>
@@ -774,7 +841,7 @@
       </div>
       <div class="split-img reveal">
         <img
-          src="assets/images/megacal-1.jpg"
+          src="assets/images/megacal-1-ad-removed.jpg"
           alt="MegaCal K2 — detailed nutritional information and specifications"
         />
       </div>
@@ -882,7 +949,7 @@
       <div class="footer-top">
         <div>
           <img
-            src="assets/images/logo.png"
+            src="assets/images/footer-logo-new.png"
             alt="PHARMA-Connectiv Pte Ltd"
             class="f-logo-img"
           />

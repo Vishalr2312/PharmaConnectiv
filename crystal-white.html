@@ -127,7 +127,8 @@
       .ingr-card {
         background: var(--white);
         border-radius: var(--r);
-        padding: 28px;
+        /* padding: 28px; */
+        overflow: hidden;
         border: 1px solid var(--border);
         box-shadow: var(--shadow-sm);
         transition:
@@ -135,8 +136,25 @@
           box-shadow 0.3s;
       }
       .ingr-card:hover {
-        transform: translateY(-4px);
+        transform: translateY(-5px);
         box-shadow: var(--shadow-md);
+      }
+      .ingr-img {
+        height: 200px;
+        position: relative;
+        overflow: hidden;
+      }
+      .ingr-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        transition: transform 0.5s;
+      }
+      .ingr-box:hover .ingr-img img {
+        transform: scale(1.05);
+      }
+      .ingr-body {
+        padding: 24px;
       }
       .ingr-icon {
         font-size: 2rem;
@@ -382,7 +400,7 @@
         aria-label="PHARMA-Connectiv Pte Ltd"
       >
         <img
-          src="assets/images/logo.png"
+          src="assets/images/logo-new.png"
           alt="PHARMA-Connectiv Pte Ltd"
           height="36"
         />
@@ -664,45 +682,69 @@
       </h2>
       <div class="ingr-grid">
         <div class="ingr-card reveal">
-          <div class="ingr-icon">🌿</div>
-          <div class="ingr-compound">From Turmeric · Anti-pigmentation</div>
-          <div class="ingr-name">Curcumin</div>
-          <p class="ingr-desc">
-            Curcumin is obtained from Turmeric. It decreases excess melanin
-            production and lightens skin tone. It also aids in collagen
-            deposition on the skin, supporting a firmer and more youthful
-            appearance.
-          </p>
-          <div class="ingr-benefit">
-            Decreases excess melanin production for a lighter complexion
+          <!-- <div class="ingr-icon">🌿</div> -->
+          <div
+            class="ingr-img"
+            style="background: linear-gradient(135deg, #e8f5e9, #c8e6c9)"
+          >
+            <img
+              src="assets/images/embedded/curcumin.png"
+              alt="Curcumin"
+              loading="lazy"
+            />
           </div>
-          <div class="ingr-benefit">
-            Aids collagen deposition for firmer, younger-looking skin
-          </div>
-          <div class="ingr-benefit">
-            Anti-inflammatory properties reduce skin redness and irritation
+          <div class="ingr-body">
+            <div class="ingr-compound">From Turmeric · Anti-pigmentation</div>
+            <div class="ingr-name">Curcumin</div>
+            <p class="ingr-desc">
+              Curcumin is obtained from Turmeric. It decreases excess melanin
+              production and lightens skin tone. It also aids in collagen
+              deposition on the skin, supporting a firmer and more youthful
+              appearance.
+            </p>
+            <div class="ingr-benefit">
+              Decreases excess melanin production for a lighter complexion
+            </div>
+            <div class="ingr-benefit">
+              Aids collagen deposition for firmer, younger-looking skin
+            </div>
+            <div class="ingr-benefit">
+              Anti-inflammatory properties reduce skin redness and irritation
+            </div>
           </div>
         </div>
         <div class="ingr-card reveal rv1">
-          <div class="ingr-icon">🌊</div>
-          <div class="ingr-compound">
-            PhytoflORAL® · UV Protection + PhytoflORAL Carotenoids
+          <!-- <div class="ingr-icon">🌊</div> -->
+          <div
+            class="ingr-img"
+            style="background: linear-gradient(135deg, #e8f5e9, #c8e6c9)"
+          >
+            <img
+              src="assets/images/embedded/phytofloral-polypodium.png"
+              alt="Polypodium & PhytoflORAL"
+              loading="lazy"
+            />
           </div>
-          <div class="ingr-name">Polypodium &amp; PhytoflORAL®</div>
-          <p class="ingr-desc">
-            Polypodium includes antioxidants that protect the skin from
-            inflammatory diseases and UV damage. PhytoflORAL® contains phytoene
-            and phytofluene — colorless carotenoids that lighten and level skin
-            tone, aiding anti-aging and a more youthful appearance.
-          </p>
-          <div class="ingr-benefit">
-            Immunoprotection against UVA and UVB radiation
-          </div>
-          <div class="ingr-benefit">
-            Phytoene and phytofluene lighten and even skin texture
-          </div>
-          <div class="ingr-benefit">
-            Anti-aging benefits for a more youthful skin appearance
+          <div class="ingr-body">
+            <div class="ingr-compound">
+              PhytoflORAL® · UV Protection + PhytoflORAL Carotenoids
+            </div>
+            <div class="ingr-name">Polypodium &amp; PhytoflORAL®</div>
+            <p class="ingr-desc">
+              Polypodium includes antioxidants that protect the skin from
+              inflammatory diseases and UV damage. PhytoflORAL® contains
+              phytoene and phytofluene — colorless carotenoids that lighten and
+              level skin tone, aiding anti-aging and a more youthful appearance.
+            </p>
+            <div class="ingr-benefit">
+              Immunoprotection against UVA and UVB radiation
+            </div>
+            <div class="ingr-benefit">
+              Phytoene and phytofluene lighten and even skin texture
+            </div>
+            <div class="ingr-benefit">
+              Anti-aging benefits for a more youthful skin appearance
+            </div>
           </div>
         </div>
       </div>
@@ -765,7 +807,7 @@
         </div>
         <div class="reveal rv2">
           <img
-            src="assets/images/crystal-white-1.jpg"
+            src="assets/images/microgranule.jpg"
             alt="Crystal White — microgranule technology and product packaging"
             style="
               border-radius: 12px;
@@ -838,7 +880,7 @@
       <div class="footer-top">
         <div>
           <img
-            src="assets/images/logo.png"
+            src="assets/images/footer-logo-new.png"
             alt="PHARMA-Connectiv Pte Ltd"
             class="f-logo-img"
           />
