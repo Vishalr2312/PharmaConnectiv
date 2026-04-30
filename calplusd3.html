@@ -3,10 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>MegaCal K2 — Bone Health Supplement | PHARMA-Connectiv</title>
+    <title>
+      Cal-Plus D3 — Liquid Calcium with Vitamin D3 | PHARMA-Connectiv
+    </title>
     <meta
       name="description"
-      content="MegaCal K2 — Increase absorption of calcium with K2 Vitamin. Calcium Citrate 1000mg, Vitamin K2, D3 1000IU, Magnesium, Zinc, Boron. Singapore."
+      content="Cal-Plus D3 — Liquid Calcium with Vitamin D3. Supports bone density, teeth mineralisation, muscle function and immune health. Rapid absorption liquid formula. Singapore."
     />
     <link rel="stylesheet" href="css/styles.css" />
     <style>
@@ -35,6 +37,12 @@
       .prod-hero-overlay {
         position: absolute;
         inset: 0;
+        background: linear-gradient(
+          120deg,
+          rgba(10, 25, 55, 0.95) 0%,
+          rgba(10, 25, 55, 0.78) 50%,
+          rgba(0, 60, 100, 0.32) 100%
+        );
       }
       .prod-hero-content {
         position: relative;
@@ -144,7 +152,8 @@
         font-weight: 600;
         color: #fff;
       }
-      /* Content sections */
+
+      /* Ingredients grid */
       .ingr-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -155,7 +164,6 @@
         background: var(--white);
         overflow: hidden;
         border-radius: var(--r);
-        /* padding: 28px; */
         border: 1px solid var(--border);
         box-shadow: var(--shadow-sm);
         transition:
@@ -177,15 +185,11 @@
         object-fit: contain;
         transition: transform 0.5s;
       }
-      .ingr-box:hover .ingr-img img {
+      .ingr-card:hover .ingr-img img {
         transform: scale(1.05);
       }
       .ingr-body {
         padding: 24px;
-      }
-      .ingr-icon {
-        font-size: 2rem;
-        margin-bottom: 12px;
       }
       .ingr-compound {
         font-size: 0.75rem;
@@ -222,6 +226,8 @@
         font-weight: 700;
         flex-shrink: 0;
       }
+
+      /* Split section */
       .split-sec {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -248,8 +254,10 @@
         color: var(--grey-4);
         margin-bottom: 14px;
       }
+
+      /* Specs table */
       .specs-table {
-        width: 100%;
+        width: 50%;
         border-collapse: collapse;
         margin-top: 28px;
       }
@@ -272,12 +280,8 @@
         color: var(--grey-4);
         line-height: 1.65;
       }
-      .related-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 22px;
-        margin-top: 36px;
-      }
+
+      /* How it works */
       .hiw-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -311,6 +315,48 @@
         line-height: 1.7;
         color: rgba(255, 255, 255, 0.5);
       }
+
+      /* Related grid */
+      .related-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+        margin-top: 36px;
+      }
+
+      /* Benefit banner */
+      .benefit-banner {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0;
+        margin-top: 48px;
+      }
+      .benefit-item {
+        padding: 36px 32px;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        text-align: center;
+      }
+      /* .benefit-item:last-child {
+        border-right: none;
+      } */
+      .benefit-icon {
+        font-size: 2.2rem;
+        margin-bottom: 14px;
+      }
+      .benefit-title {
+        font-family: "Playfair Display", serif;
+        font-size: 1.15rem;
+        font-weight: 400;
+        color: var(--ink);
+        margin-bottom: 8px;
+      }
+      .benefit-desc {
+        font-size: 0.84rem;
+        line-height: 1.75;
+        color: var(--grey-4);
+      }
+
       @media (max-width: 900px) {
         .prod-hero-content {
           grid-template-columns: 1fr;
@@ -337,6 +383,16 @@
         .hiw-grid {
           grid-template-columns: 1fr;
         }
+        .benefit-banner {
+          grid-template-columns: 1fr;
+        }
+        .benefit-item {
+          border-right: none;
+          border-bottom: 1px solid var(--border);
+        }
+        .benefit-item:last-child {
+          border-bottom: none;
+        }
       }
       @media (max-width: 600px) {
         .related-grid {
@@ -352,14 +408,6 @@
           width: 100%;
           justify-content: center;
         }
-      }
-      .prod-hero-overlay {
-        background: linear-gradient(
-          120deg,
-          rgba(13, 17, 23, 0.96) 0%,
-          rgba(13, 17, 23, 0.8) 50%,
-          rgba(5, 20, 60, 0.35) 100%
-        );
       }
     </style>
   </head>
@@ -425,59 +473,61 @@
       </button>
     </nav>
     <div class="nav-drawer" id="nav-drawer">
-      <a href="index.html">Home</a><a href="about.html">About Us</a
-      ><a href="products.html">All Products</a>
-      <a href="pometate.html">Pometate</a><a href="prostamax.html">ProstaMax</a
-      ><a href="megacal.html">MegaCal K2</a>
-      <a href="megaflex.html">MegaFlex Basic &amp; Forte</a
-      ><a href="coracal.html">CORA-CAL 1000</a
-      ><a href="calplusd3.html">Cal-Plus D3</a
-      ><a href="willfertil.html">Willfertil</a>
-      <a href="crystal-white.html">Crystal White</a
-      ><a href="vitaran.html">HP Cell Vitaran J</a>
+      <a href="index.html">Home</a><a href="about.html">About Us</a>
+      <a href="products.html">All Products</a>
+      <a href="pometate.html">Pometate</a><a href="prostamax.html">ProstaMax</a>
+      <a href="megacal.html">MegaCal K2</a>
+      <a href="megaflex.html">MegaFlex Basic &amp; Forte</a>
+      <a href="coracal.html">CORA-CAL 1000</a>
+      <a href="calplusd3.html">Cal-Plus D3</a>
+      <a href="willfertil.html">Willfertil</a>
+      <a href="crystal-white.html">Crystal White</a>
+      <a href="vitaran.html">HP Cell Vitaran J</a>
       <a href="vetcare.html">Veterinary Care</a>
       <a href="contact.html" class="drawer-cta">Contact Us</a>
     </div>
 
+    <!-- HERO -->
     <section class="prod-hero">
       <img
         class="prod-hero-bg"
-        src="assets/images/megacal-banner.jpg"
-        alt="MegaCal K2 — Increase Absorption of Calcium with K2 Vitamin"
+        src="assets/images/calplus-banner.jpg"
+        alt="Cal-Plus D3 — Liquid Calcium with Vitamin D3"
       />
       <div class="prod-hero-overlay"></div>
       <div class="prod-hero-content">
         <div class="phc-left">
           <div class="breadcrumb" style="margin-bottom: 20px">
-            <a href="index.html">Home</a><span class="breadcrumb-sep">/</span
-            ><a href="products.html">Products</a
-            ><span class="breadcrumb-sep">/</span><span>MegaCal K2</span>
+            <a href="index.html">Home</a><span class="breadcrumb-sep">/</span>
+            <a href="products.html">Products</a
+            ><span class="breadcrumb-sep">/</span>
+            <span>Cal-Plus D3</span>
           </div>
           <div class="eyebrow light">Bone Health · Nutraceutical</div>
-          <h1>MegaCal K2</h1>
+          <h1>Cal-Plus D3</h1>
           <p class="tagline">
-            Increase Absorption of Calcium with K2 Vitamin — a comprehensive
-            bone health formula combining Calcium Citrate, Vitamin K2, D3,
-            Magnesium, Zinc and Boron.
+            Liquid Calcium with Vitamin D3 — a fast-absorbing formula designed
+            to support bone density, teeth mineralisation, muscle function and a
+            healthy immune system.
           </p>
           <div class="phc-pills">
-            <span class="phc-pill gold">1000mg Calcium Citrate</span>
-            <span class="phc-pill gold">Vitamin K2-7</span>
-            <span class="phc-pill">D3 1000 IU</span>
-            <span class="phc-pill">100mg Magnesium</span>
-            <span class="phc-pill">Film Coated Tablet</span>
+            <span class="phc-pill gold">Liquid Calcium</span>
+            <span class="phc-pill gold">Vitamin D3 (Cholecalciferol)</span>
+            <span class="phc-pill">Rapid Absorption</span>
+            <span class="phc-pill">Bone Density Support</span>
+            <span class="phc-pill">Liquid / Softgel</span>
           </div>
           <div class="spec-pills">
             <div class="spec-pill">
               <div>
                 <div class="spec-pill-label">Key Mineral</div>
-                <div class="spec-pill-value">Calcium Citrate 1000mg</div>
+                <div class="spec-pill-value">Liquid Calcium</div>
               </div>
             </div>
             <div class="spec-pill">
               <div>
-                <div class="spec-pill-label">Vitamin K2-7(1%)</div>
-                <div class="spec-pill-value">100 mcg</div>
+                <div class="spec-pill-label">Absorption Booster</div>
+                <div class="spec-pill-value">Vitamin D3 (Cholecalciferol)</div>
               </div>
             </div>
           </div>
@@ -488,65 +538,66 @@
             <a href="products.html" class="btn btn-ghost">All Products</a>
           </div>
         </div>
-        <div class="phc-right">
+        <!-- <div class="phc-right">
           <img
             class="product-box-img"
-            src="assets/images/megacal-1-ad-removed.jpg"
-            alt="MegaCal K2 supplement"
+            src="assets/images/calplus-product.jpg"
+            alt="Cal-Plus D3 — Liquid Calcium with Vitamin D3 supplement"
           />
-        </div>
+        </div> -->
       </div>
     </section>
 
+    <!-- MARQUEE -->
     <div class="marquee-wrap" aria-hidden="true">
       <div class="marquee-track">
         <span class="marquee-item"
-          ><span class="marquee-dot"></span>Calcium Citrate 1000mg</span
+          ><span class="marquee-dot"></span>Liquid Calcium</span
         >
         <span class="marquee-item"
-          ><span class="marquee-dot"></span>Vitamin K2-7 100mcg</span
+          ><span class="marquee-dot"></span>Vitamin D3 Cholecalciferol</span
         >
         <span class="marquee-item"
-          ><span class="marquee-dot"></span>Vitamin D3 1000 IU</span
+          ><span class="marquee-dot"></span>Bone Density Support</span
         >
         <span class="marquee-item"
-          ><span class="marquee-dot"></span>Magnesium Hydroxide 100mg</span
+          ><span class="marquee-dot"></span>Rapid Absorption</span
         >
         <span class="marquee-item"
-          ><span class="marquee-dot"></span>Zinc 3mg</span
+          ><span class="marquee-dot"></span>Teeth Mineralisation</span
         >
         <span class="marquee-item"
-          ><span class="marquee-dot"></span>Boron 100mcg</span
+          ><span class="marquee-dot"></span>Muscle Function</span
         >
         <span class="marquee-item"
-          ><span class="marquee-dot"></span>Bone Health</span
+          ><span class="marquee-dot"></span>Immune System</span
         >
         <span class="marquee-item"
-          ><span class="marquee-dot"></span>Cardiovascular Support</span
+          ><span class="marquee-dot"></span>Osteoporosis Prevention</span
         >
         <span class="marquee-item"
-          ><span class="marquee-dot"></span>Calcium Citrate 1000mg</span
+          ><span class="marquee-dot"></span>Liquid Calcium</span
         >
         <span class="marquee-item"
-          ><span class="marquee-dot"></span>Vitamin K2-7 100mcg</span
+          ><span class="marquee-dot"></span>Vitamin D3 Cholecalciferol</span
         >
         <span class="marquee-item"
-          ><span class="marquee-dot"></span>Vitamin D3 1000 IU</span
+          ><span class="marquee-dot"></span>Bone Density Support</span
         >
         <span class="marquee-item"
-          ><span class="marquee-dot"></span>Magnesium Hydroxide 100mg</span
+          ><span class="marquee-dot"></span>Rapid Absorption</span
         >
         <span class="marquee-item"
-          ><span class="marquee-dot"></span>Zinc 3mg</span
+          ><span class="marquee-dot"></span>Teeth Mineralisation</span
         >
         <span class="marquee-item"
-          ><span class="marquee-dot"></span>Boron 100mcg</span
+          ><span class="marquee-dot"></span>Muscle Function</span
         >
         <span class="marquee-item"
-          ><span class="marquee-dot"></span>Bone Health</span
+          ><span class="marquee-dot"></span>Immune System</span
         >
         <span class="marquee-item"
-          ><span class="marquee-dot"></span>Cardiovascular Support</span
+          ><span class="marquee-dot"></span>Osteoporosis Prevention</span
         >
       </div>
     </div>
@@ -562,12 +613,12 @@
         "
       >
         <div>
-          <div class="eyebrow reveal">What is MegaCal K2?</div>
+          <div class="eyebrow reveal">What is Cal-Plus D3?</div>
           <h2
             class="display reveal rv1"
             style="font-size: clamp(2rem, 3.5vw, 3rem); margin: 16px 0 22px"
           >
-            Comprehensive Bone Health<br /><em>in One Tablet</em>
+            Liquid Calcium for<br /><em>Rapid Bone Support</em>
           </h2>
           <p
             class="reveal rv2"
@@ -578,10 +629,12 @@
               margin-bottom: 14px;
             "
           >
-            MegaCal K2 is a nutraceutical film-coated tablet delivering a
-            powerful combination of nutrients specifically formulated to support
-            bone density, muscle function, cardiovascular health and energy
-            production.
+            Cal-Plus D3 is a liquid calcium supplement enriched with Vitamin D3
+            (cholecalciferol), specifically formulated to support bone density,
+            teeth mineralisation, and overall muscle function. The liquid form —
+            or liquid-filled softgel — is chosen for its rapid absorption
+            profile and ease of swallowing compared to traditional large calcium
+            tablets.
           </p>
           <p
             class="reveal rv2"
@@ -592,30 +645,31 @@
               margin-bottom: 14px;
             "
           >
-            The unique inclusion of Vitamin K2 is key — it activates proteins
-            that direct calcium specifically into the bones and teeth, while
-            preventing it from accumulating in arteries and soft tissues. This
-            makes MegaCal K2 superior to conventional calcium supplements.
+            The inclusion of Vitamin D3 is essential — it significantly enhances
+            the body's ability to absorb calcium from the intestines, ensuring
+            that the calcium you take in is effectively utilised for bone
+            formation and maintenance, rather than being excreted.
           </p>
           <p
             class="reveal rv2"
             style="font-size: 0.93rem; line-height: 1.9; color: var(--grey-4)"
           >
-            Store in a cool &amp; dry place, protect from direct sunlight. Usage
-            as directed by the dietician or health practitioner. Nutraceutical,
-            not for medicinal use.
+            Beyond the skeleton, Cal-Plus D3 also supports the immune system,
+            the nervous system, and proper heart rhythm — making it a
+            comprehensive daily supplement for those seeking broader health
+            maintenance. Nutraceutical, not for medicinal use.
           </p>
           <div class="reveal rv3" style="margin-top: 28px">
             <a href="contact.html" class="btn btn-sage btn-arrow"
-              >Enquire About MegaCal K2</a
+              >Enquire About Cal-Plus D3</a
             >
           </div>
         </div>
         <div class="bg-product-wrap">
           <div class="reveal rv2">
             <img
-              src="assets/images/megacalk2-bgremoved.jpeg"
-              alt="MegaCal K2 nutritional information table"
+              src="assets/images/calplusd3-bgremoved.jpeg"
+              alt="Cal-Plus D3 liquid calcium supplement"
               style="
                 border-radius: 12px;
                 box-shadow: var(--shadow-xl);
@@ -627,14 +681,60 @@
       </div>
     </section>
 
+    <!-- KEY BENEFITS BANNER -->
+    <section
+      class="section"
+      style="background: var(--cream); padding-top: 48px; padding-bottom: 48px"
+    >
+      <div class="eyebrow reveal" style="text-align: center">Core Benefits</div>
+      <h2
+        class="display reveal rv1"
+        style="
+          font-size: clamp(2rem, 3.5vw, 3rem);
+          margin-top: 14px;
+          text-align: center;
+        "
+      >
+        Three Pillars of<br /><em>Cal-Plus D3 Support</em>
+      </h2>
+      <div class="benefit-banner reveal rv2">
+        <div class="benefit-item">
+          <div class="benefit-icon">🦴</div>
+          <div class="benefit-title">Bone Health</div>
+          <p class="benefit-desc">
+            Helps build strong, dense bones and may help prevent or manage
+            osteoporosis and fractures — especially beneficial for
+            post-menopausal women.
+          </p>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">⚡</div>
+          <div class="benefit-title">Enhanced Absorption</div>
+          <p class="benefit-desc">
+            The liquid or liquid-filled softgel format delivers rapid
+            absorption, making it easier on the digestive system and more
+            effective than bulky tablets.
+          </p>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">🛡️</div>
+          <div class="benefit-title">Wider System Support</div>
+          <p class="benefit-desc">
+            Goes beyond the skeleton to support immune system function, nervous
+            system health, and proper cardiac rhythm for overall wellbeing.
+          </p>
+        </div>
+      </div>
+    </section>
+
     <!-- KEY INGREDIENTS -->
-    <section class="section" style="background: var(--cream)">
+    <section class="section" style="background: var(--white)">
       <div class="eyebrow reveal">Active Ingredients</div>
       <h2
         class="display reveal rv1"
         style="font-size: clamp(2rem, 3.5vw, 3rem); margin-top: 14px"
       >
-        Four Pillars of<br /><em>Bone Health</em>
+        Two Essential Nutrients,<br /><em>One Powerful Formula</em>
       </h2>
       <p
         class="reveal rv2"
@@ -646,144 +746,134 @@
           margin-top: 14px;
         "
       >
-        Each ingredient in MegaCal K2 plays a distinct and complementary role in
-        supporting overall bone and cardiovascular health.
+        Cal-Plus D3 brings together two scientifically validated ingredients
+        that work in synergy to maximise bone health outcomes.
       </p>
       <div class="ingr-grid">
         <div class="ingr-card reveal">
-          <!-- <div class="ingr-icon">🦴</div> -->
           <div
             class="ingr-img"
-            style="background: linear-gradient(135deg, #e8f5e9, #c8e6c9)"
+            style="background: linear-gradient(135deg, #e3f2fd, #bbdefb)"
           >
             <img
-              src="assets/images/embedded/calcium-citrate.png"
-              alt="Calcium Citrate"
+              src="assets/images/embedded/liq-calcium.png"
+              alt="Liquid Calcium"
               loading="lazy"
             />
           </div>
           <div class="ingr-body">
-            <div class="ingr-compound">Calcium Citrate · 1000mg</div>
-            <div class="ingr-name">Calcium Citrate</div>
+            <div class="ingr-compound">Key Mineral · Liquid Calcium</div>
+            <div class="ingr-name">Liquid Calcium</div>
             <p class="ingr-desc">
-              Calcium Citrate is the most bioavailable form of calcium
-              supplement. Unlike calcium carbonate, it can be absorbed without
-              food and is particularly beneficial for those with low stomach
-              acid.
+              Calcium is the primary mineral required for bone formation and
+              maintenance. In its liquid form, it is rapidly absorbed and gentle
+              on the digestive tract — making it an ideal choice for individuals
+              who struggle with traditional calcium tablets or those with
+              reduced stomach acid.
             </p>
             <div class="ingr-benefit">
-              Helps address low calcium levels and supports bone density
+              Builds and maintains strong, dense bones and teeth
             </div>
             <div class="ingr-benefit">
-              Superior absorption compared to calcium carbonate
+              Supports prevention and management of osteoporosis and fractures
             </div>
             <div class="ingr-benefit">
-              Supports teeth mineralisation and muscle contraction
+              Faster, more efficient absorption versus conventional tablet forms
+            </div>
+            <div class="ingr-benefit">
+              Supports proper muscle contraction and cardiac rhythm
             </div>
           </div>
         </div>
         <div class="ingr-card reveal rv1">
-          <!-- <div class="ingr-icon">🩸</div> -->
           <div
             class="ingr-img"
-            style="background: linear-gradient(135deg, #e8f5e9, #c8e6c9)"
-          >
-            <img
-              src="assets/images/embedded/vitamin-k2.png"
-              alt="Vitamin K2"
-              loading="lazy"
-            />
-          </div>
-          <div class="ingr-body">
-            <div class="ingr-compound">Vitamin K2-7 (1%) · 100mcg</div>
-            <div class="ingr-name">Vitamin K2</div>
-            <p class="ingr-desc">
-              Vitamin K2 (as Menaquinone-7) activates osteocalcin — the protein
-              that anchors calcium into bone tissue. It also activates Matrix
-              Gla Protein (MGP), which prevents arterial calcification.
-            </p>
-            <div class="ingr-benefit">
-              Directs calcium into bones rather than arteries
-            </div>
-            <div class="ingr-benefit">
-              Prevents damage to blood vessels from calcium deposits
-            </div>
-            <div class="ingr-benefit">
-              Synergistic effect with Vitamin D3 for optimal calcium use
-            </div>
-          </div>
-        </div>
-        <div class="ingr-card reveal">
-          <!-- <div class="ingr-icon">☀️</div> -->
-          <div
-            class="ingr-img"
-            style="background: linear-gradient(135deg, #e8f5e9, #c8e6c9)"
+            style="background: linear-gradient(135deg, #fff8e1, #ffecb3)"
           >
             <img
               src="assets/images/embedded/vitamin-d3.png"
-              alt="Vitamin D3"
-              loading="lazy"
-            />
-          </div>
-          <div class="ingr-body">
-            <div class="ingr-compound">Vitamin D3 · 1000 IU</div>
-            <div class="ingr-name">Vitamin D3</div>
-            <p class="ingr-desc">
-              Vitamin D3 (cholecalciferol) is essential for calcium absorption
-              from the intestines. Without adequate D3, even high calcium intake
-              cannot be effectively used by the body for bone formation.
-            </p>
-            <div class="ingr-benefit">
-              Treats and prevents bone disorders including osteoporosis
-            </div>
-            <div class="ingr-benefit">
-              Enhances intestinal absorption of calcium and phosphorus
-            </div>
-            <div class="ingr-benefit">
-              Supports immune system, muscle function and general well-being
-            </div>
-          </div>
-        </div>
-        <div class="ingr-card reveal rv1">
-          <!-- <div class="ingr-icon">⚡</div> -->
-          <div
-            class="ingr-img"
-            style="background: linear-gradient(135deg, #e8f5e9, #c8e6c9)"
-          >
-            <img
-              src="assets/images/embedded/magnesium-hydroxide.png"
-              alt="Magnesium Hydroxide"
+              alt="Vitamin D3 Cholecalciferol"
               loading="lazy"
             />
           </div>
           <div class="ingr-body">
             <div class="ingr-compound">
-              Magnesium Hydroxide · 100mg + Zinc + Boron
+              Absorption Booster · Vitamin D3 (Cholecalciferol)
             </div>
-            <div class="ingr-name">Magnesium, Zinc &amp; Boron</div>
+            <div class="ingr-name">Vitamin D3</div>
             <p class="ingr-desc">
-              Magnesium supports over 300 enzymatic reactions including muscle
-              and energy production. Zinc (3mg elemental) is essential for bone
-              metabolism, and Boron (3mg) aids calcium and magnesium retention.
+              Vitamin D3 (cholecalciferol) is the most bioactive form of Vitamin
+              D. It is essential for regulating calcium absorption in the
+              intestines — without sufficient D3, the body cannot make effective
+              use of calcium regardless of intake levels.
             </p>
             <div class="ingr-benefit">
-              Magnesium supports muscle function and energy production
+              Significantly enhances intestinal absorption of calcium
             </div>
             <div class="ingr-benefit">
-              Zinc is essential for bone cell formation and immune health
+              Supports treatment and prevention of bone disorders
             </div>
             <div class="ingr-benefit">
-              Boron enhances the retention and use of calcium and magnesium
+              Promotes immune system function and nervous system health
+            </div>
+            <div class="ingr-benefit">
+              Works in synergy with calcium for optimal bone mineralisation
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SPECS + BROCHURE IMAGE -->
-    <div class="split-sec">
+    <!-- HOW IT WORKS -->
+    <section class="section dark-section" style="background: var(--ink)">
+      <div class="eyebrow light reveal">Mechanism of Action</div>
+      <h2
+        class="display reveal rv1"
+        style="
+          font-size: clamp(2rem, 3.5vw, 3rem);
+          margin-top: 14px;
+          color: #fff;
+        "
+      >
+        How Cal-Plus D3<br /><em style="color: var(--gold-light)"
+          >Works in Your Body</em
+        >
+      </h2>
+      <div class="hiw-grid">
+        <div class="hiw-card reveal">
+          <div class="hiw-num">01</div>
+          <div class="hiw-title">Ingestion &amp; Dissolution</div>
+          <p class="hiw-desc">
+            The liquid calcium formula is ingested and rapidly disperses in the
+            digestive tract, bypassing the dissolution step required by
+            traditional solid tablets.
+          </p>
+        </div>
+        <div class="hiw-card reveal rv1">
+          <div class="hiw-num">02</div>
+          <div class="hiw-title">D3-Activated Absorption</div>
+          <p class="hiw-desc">
+            Vitamin D3 stimulates the production of calcium-binding proteins in
+            the intestinal lining, dramatically increasing the proportion of
+            calcium absorbed into the bloodstream.
+          </p>
+        </div>
+        <div class="hiw-card reveal rv2">
+          <div class="hiw-num">03</div>
+          <div class="hiw-title">Bone &amp; System Delivery</div>
+          <p class="hiw-desc">
+            Absorbed calcium is transported to bones and teeth for
+            mineralisation, while also supporting muscle contraction, nerve
+            signalling, and immune cell function throughout the body.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SPECS + IMAGE SPLIT -->
+    <!-- <div class="split-sec"> -->
       <div class="split-text" style="background: var(--white)">
-        <div class="eyebrow reveal">Nutritional Information</div>
+        <div class="eyebrow reveal">Product Information</div>
         <h2
           class="display reveal rv1"
           style="font-size: clamp(1.9rem, 3vw, 2.6rem); margin-top: 14px"
@@ -793,31 +883,30 @@
         <table class="specs-table reveal rv2">
           <tr>
             <td>Product</td>
-            <td>MegaCal K2 Film Coated Tablets</td>
+            <td>Cal-Plus D3 — Liquid Calcium with Vitamin D3</td>
           </tr>
           <tr>
-            <td>Calcium Citrate</td>
-            <td>1000 mg per tablet</td>
+            <td>Key Mineral</td>
+            <td>Liquid Calcium</td>
           </tr>
           <tr>
             <td>Vitamin D3</td>
-            <td>1000 I.U. per tablet</td>
+            <td>Cholecalciferol</td>
           </tr>
           <tr>
-            <td>Magnesium Hydroxide</td>
-            <td>100 mg per tablet</td>
+            <td>Form</td>
+            <td>Liquid / Liquid-filled Softgel</td>
           </tr>
           <tr>
-            <td>Zinc (Elemental)</td>
-            <td>3.0 mg per tablet</td>
+            <td>Key Benefits</td>
+            <td>
+              Bone density, teeth mineralisation, muscle function, immune
+              support
+            </td>
           </tr>
           <tr>
-            <td>Boron</td>
-            <td>3.0 mg per tablet</td>
-          </tr>
-          <tr>
-            <td>Vitamin K2-7 (1%)</td>
-            <td>100 mcg per tablet</td>
+            <td>Suitable For</td>
+            <td>Adults; post-menopausal women; those with osteoporosis risk</td>
           </tr>
           <tr>
             <td>Storage</td>
@@ -825,18 +914,6 @@
               Cool &amp; dry place. Protect from direct sunlight. Keep out of
               reach of children.
             </td>
-          </tr>
-          <tr>
-            <td>Usage</td>
-            <td>As directed by the dietician or health practitioner</td>
-          </tr>
-          <tr>
-            <td>Type</td>
-            <td>Nutraceutical — not for medicinal use</td>
-          </tr>
-          <tr>
-            <td>Distributed by</td>
-            <td>PHARMA-Connectiv Pte Ltd, Singapore 368000 · Tel: 6282 8732</td>
           </tr>
         </table>
         <div
@@ -847,13 +924,13 @@
           <a href="products.html" class="btn btn-outline">All Products</a>
         </div>
       </div>
-      <div class="split-img reveal">
+      <!-- <div class="split-img reveal">
         <img
-          src="assets/images/megacal-1-ad-removed.jpg"
-          alt="MegaCal K2 — detailed nutritional information and specifications"
+          src="assets/images/calplus-specs.jpg"
+          alt="Cal-Plus D3 — Liquid Calcium with Vitamin D3 specifications"
         />
-      </div>
-    </div>
+      </div> -->
+    <!-- </div> -->
 
     <!-- RELATED -->
     <section class="section" style="background: var(--cream)">
@@ -865,7 +942,37 @@
         <em>Related</em> Products
       </h2>
       <div class="related-grid">
-        <a href="megaflex.html" class="pcard reveal">
+        <a href="megacal.html" class="pcard reveal">
+          <div class="pcard-img">
+            <img
+              src="assets/images/megacal-banner.jpg"
+              alt="MegaCal K2"
+              loading="lazy"
+            />
+            <div class="pcard-gradient"></div>
+            <span class="pcard-badge badge-green">Nutraceutical</span>
+            <div class="pcard-overlay-text">
+              <div class="pcard-cat">Bone Health</div>
+              <div class="pcard-name">MegaCal K2</div>
+            </div>
+          </div>
+          <div class="pcard-body">
+            <p>
+              Calcium Citrate 1000mg with Vitamin K2-7, D3 1000IU, Magnesium,
+              Zinc and Boron for comprehensive bone health.
+            </p>
+            <div class="tag-row">
+              <span class="tag">K2-7</span><span class="tag">D3 1000IU</span>
+            </div>
+          </div>
+          <div class="pcard-foot">
+            <div class="pcard-origin">
+              Distributed by <strong>PHARMA-Connectiv</strong>
+            </div>
+            <span class="pcard-link">Learn More</span>
+          </div>
+        </a>
+        <a href="megaflex.html" class="pcard reveal rv1">
           <div class="pcard-img">
             <img
               src="assets/images/megaflex-basic-hero.jpg"
@@ -881,8 +988,8 @@
           </div>
           <div class="pcard-body">
             <p>
-              Liposomal K2-7 150mcg + D3 1200 IU — superior bioavailability. 30
-              mini-tablets once daily.
+              Liposomal K2-7 150mcg + D3 1200 IU for superior bioavailability.
+              30 mini-tablets once daily.
             </p>
             <div class="tag-row">
               <span class="tag">MK-7</span><span class="tag">Liposomal D3</span>
@@ -890,34 +997,6 @@
           </div>
           <div class="pcard-foot">
             <div class="pcard-origin">Made in <strong>France</strong></div>
-            <span class="pcard-link">Learn More</span>
-          </div>
-        </a>
-        <a href="prostamax.html" class="pcard reveal rv1">
-          <div class="pcard-img">
-            <img
-              src="assets/images/prostamax-hero-clean.jpg"
-              alt="ProstaMax"
-              loading="lazy"
-            />
-            <div class="pcard-gradient"></div>
-            <span class="pcard-badge badge-amber">Men's Health</span>
-            <div class="pcard-overlay-text">
-              <div class="pcard-cat">Prostate Health</div>
-              <div class="pcard-name">ProstaMax</div>
-            </div>
-          </div>
-          <div class="pcard-body">
-            <p>
-              Saw Palmetto, Selenium, Zinc &amp; Pumpkin Seed for prostate and
-              urinary support.
-            </p>
-            <div class="tag-row">
-              <span class="tag">Saw Palmetto</span><span class="tag">Zinc</span>
-            </div>
-          </div>
-          <div class="pcard-foot">
-            <div class="pcard-origin">Made in <strong>USA</strong></div>
             <span class="pcard-link">Learn More</span>
           </div>
         </a>
@@ -967,9 +1046,9 @@
             Singapore and Southeast Asia.
           </p>
           <div class="f-certs">
-            <span class="f-cert">FDA</span><span class="f-cert">GMP</span
-            ><span class="f-cert">CE</span><span class="f-cert">KFDA</span
-            ><span class="f-cert">DMF</span><span class="f-cert">ISO</span>
+            <span class="f-cert">FDA</span><span class="f-cert">GMP</span>
+            <span class="f-cert">CE</span><span class="f-cert">KFDA</span>
+            <span class="f-cert">DMF</span><span class="f-cert">ISO</span>
           </div>
         </div>
         <div class="fcol">

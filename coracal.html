@@ -3,10 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>MegaCal K2 — Bone Health Supplement | PHARMA-Connectiv</title>
+    <title>
+      CORA-CAL 1000 — Calcium Citrate, Vitamin D3 &amp; C Tablets |
+      PHARMA-Connectiv
+    </title>
     <meta
       name="description"
-      content="MegaCal K2 — Increase absorption of calcium with K2 Vitamin. Calcium Citrate 1000mg, Vitamin K2, D3 1000IU, Magnesium, Zinc, Boron. Singapore."
+      content="CORA-CAL 1000 — Calcium Citrate 1000mg, Vitamin D3 1000IU &amp; Vitamin C 85mg. 24-hour bone health support. Film coated tablets. Made under license from Jose Lea Pharma France. Singapore."
     />
     <link rel="stylesheet" href="css/styles.css" />
     <style>
@@ -35,6 +38,12 @@
       .prod-hero-overlay {
         position: absolute;
         inset: 0;
+        background: linear-gradient(
+          120deg,
+          rgba(8, 28, 70, 0.96) 0%,
+          rgba(8, 28, 70, 0.8) 50%,
+          rgba(0, 80, 140, 0.3) 100%
+        );
       }
       .prod-hero-content {
         position: relative;
@@ -144,7 +153,8 @@
         font-weight: 600;
         color: #fff;
       }
-      /* Content sections */
+
+      /* Ingredients grid */
       .ingr-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -155,7 +165,6 @@
         background: var(--white);
         overflow: hidden;
         border-radius: var(--r);
-        /* padding: 28px; */
         border: 1px solid var(--border);
         box-shadow: var(--shadow-sm);
         transition:
@@ -167,9 +176,12 @@
         box-shadow: var(--shadow-md);
       }
       .ingr-img {
-        height: 200px;
+        height: 180px;
         position: relative;
         overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
       .ingr-img img {
         width: 100%;
@@ -177,15 +189,11 @@
         object-fit: contain;
         transition: transform 0.5s;
       }
-      .ingr-box:hover .ingr-img img {
+      .ingr-card:hover .ingr-img img {
         transform: scale(1.05);
       }
       .ingr-body {
         padding: 24px;
-      }
-      .ingr-icon {
-        font-size: 2rem;
-        margin-bottom: 12px;
       }
       .ingr-compound {
         font-size: 0.75rem;
@@ -197,19 +205,19 @@
       }
       .ingr-name {
         font-family: "Playfair Display", serif;
-        font-size: 1.45rem;
+        font-size: 1.35rem;
         font-weight: 400;
         color: var(--ink);
         margin-bottom: 10px;
       }
       .ingr-desc {
-        font-size: 0.95rem;
+        font-size: 0.88rem;
         line-height: 1.85;
         color: var(--grey-4);
       }
       .ingr-benefit {
-        margin-top: 12px;
-        font-size: 0.9rem;
+        margin-top: 10px;
+        font-size: 0.85rem;
         color: var(--grey-3);
         line-height: 1.7;
         display: flex;
@@ -222,6 +230,8 @@
         font-weight: 700;
         flex-shrink: 0;
       }
+
+      /* Split section */
       .split-sec {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -248,6 +258,8 @@
         color: var(--grey-4);
         margin-bottom: 14px;
       }
+
+      /* Specs table */
       .specs-table {
         width: 100%;
         border-collapse: collapse;
@@ -272,12 +284,8 @@
         color: var(--grey-4);
         line-height: 1.65;
       }
-      .related-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 22px;
-        margin-top: 36px;
-      }
+
+      /* How it works */
       .hiw-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -311,6 +319,111 @@
         line-height: 1.7;
         color: rgba(255, 255, 255, 0.5);
       }
+
+      /* 24-hour badge strip */
+      .badge-strip {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: var(--r);
+        padding: 14px 20px;
+        backdrop-filter: blur(8px);
+        width: fit-content;
+        margin-bottom: 28px;
+      }
+      .badge-strip-icon {
+        font-size: 1.8rem;
+      }
+      .badge-strip-text {
+        font-size: 0.72rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: var(--gold-light);
+        line-height: 1.4;
+      }
+
+      /* Related grid */
+      .related-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+        margin-top: 36px;
+      }
+
+      /* Benefit cards */
+      .benefit-banner {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0;
+        margin-top: 48px;
+        border: 1px solid var(--border);
+        border-radius: var(--r);
+        overflow: hidden;
+      }
+      .benefit-item {
+        padding: 36px 28px;
+        border-right: 1px solid var(--border);
+        text-align: center;
+        background: var(--white);
+      }
+      .benefit-item:last-child {
+        border-right: none;
+      }
+      .benefit-icon {
+        font-size: 2.2rem;
+        margin-bottom: 14px;
+      }
+      .benefit-title {
+        font-family: "Playfair Display", serif;
+        font-size: 1.1rem;
+        font-weight: 400;
+        color: var(--ink);
+        margin-bottom: 8px;
+      }
+      .benefit-desc {
+        font-size: 0.84rem;
+        line-height: 1.75;
+        color: var(--grey-4);
+      }
+
+      /* Made in France badge */
+      .france-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 8px 16px;
+        border-radius: 100px;
+        border: 1px solid var(--border);
+        background: var(--cream);
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--grey-3);
+        margin-bottom: 20px;
+      }
+      .france-flag {
+        display: inline-flex;
+        gap: 2px;
+        border-radius: 2px;
+        overflow: hidden;
+        width: 18px;
+        height: 12px;
+        flex-shrink: 0;
+      }
+      .france-flag span {
+        flex: 1;
+        display: block;
+      }
+
+      @media (max-width: 1024px) {
+        .ingr-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
       @media (max-width: 900px) {
         .prod-hero-content {
           grid-template-columns: 1fr;
@@ -337,6 +450,16 @@
         .hiw-grid {
           grid-template-columns: 1fr;
         }
+        .benefit-banner {
+          grid-template-columns: 1fr;
+        }
+        .benefit-item {
+          border-right: none;
+          border-bottom: 1px solid var(--border);
+        }
+        .benefit-item:last-child {
+          border-bottom: none;
+        }
       }
       @media (max-width: 600px) {
         .related-grid {
@@ -352,14 +475,6 @@
           width: 100%;
           justify-content: center;
         }
-      }
-      .prod-hero-overlay {
-        background: linear-gradient(
-          120deg,
-          rgba(13, 17, 23, 0.96) 0%,
-          rgba(13, 17, 23, 0.8) 50%,
-          rgba(5, 20, 60, 0.35) 100%
-        );
       }
     </style>
   </head>
@@ -425,47 +540,55 @@
       </button>
     </nav>
     <div class="nav-drawer" id="nav-drawer">
-      <a href="index.html">Home</a><a href="about.html">About Us</a
-      ><a href="products.html">All Products</a>
-      <a href="pometate.html">Pometate</a><a href="prostamax.html">ProstaMax</a
-      ><a href="megacal.html">MegaCal K2</a>
-      <a href="megaflex.html">MegaFlex Basic &amp; Forte</a
-      ><a href="coracal.html">CORA-CAL 1000</a
-      ><a href="calplusd3.html">Cal-Plus D3</a
-      ><a href="willfertil.html">Willfertil</a>
-      <a href="crystal-white.html">Crystal White</a
-      ><a href="vitaran.html">HP Cell Vitaran J</a>
+      <a href="index.html">Home</a><a href="about.html">About Us</a>
+      <a href="products.html">All Products</a>
+      <a href="pometate.html">Pometate</a><a href="prostamax.html">ProstaMax</a>
+      <a href="megacal.html">MegaCal K2</a>
+      <a href="megaflex.html">MegaFlex Basic &amp; Forte</a>
+      <a href="coracal.html">CORA-CAL 1000</a>
+      <a href="calplusd3.html">Cal-Plus D3</a>
+      <a href="willfertil.html">Willfertil</a>
+      <a href="crystal-white.html">Crystal White</a>
+      <a href="vitaran.html">HP Cell Vitaran J</a>
       <a href="vetcare.html">Veterinary Care</a>
       <a href="contact.html" class="drawer-cta">Contact Us</a>
     </div>
 
+    <!-- HERO -->
     <section class="prod-hero">
       <img
         class="prod-hero-bg"
-        src="assets/images/megacal-banner.jpg"
-        alt="MegaCal K2 — Increase Absorption of Calcium with K2 Vitamin"
+        src="assets/images/coracal-banner.jpg"
+        alt="CORA-CAL 1000 — Calcium Citrate, Vitamin D3 &amp; Vitamin C Tablets"
       />
       <div class="prod-hero-overlay"></div>
       <div class="prod-hero-content">
         <div class="phc-left">
           <div class="breadcrumb" style="margin-bottom: 20px">
-            <a href="index.html">Home</a><span class="breadcrumb-sep">/</span
-            ><a href="products.html">Products</a
-            ><span class="breadcrumb-sep">/</span><span>MegaCal K2</span>
+            <a href="index.html">Home</a><span class="breadcrumb-sep">/</span>
+            <a href="products.html">Products</a
+            ><span class="breadcrumb-sep">/</span>
+            <span>CORA-CAL 1000</span>
           </div>
           <div class="eyebrow light">Bone Health · Nutraceutical</div>
-          <h1>MegaCal K2</h1>
+          <h1>CORA-CAL 1000</h1>
           <p class="tagline">
-            Increase Absorption of Calcium with K2 Vitamin — a comprehensive
-            bone health formula combining Calcium Citrate, Vitamin K2, D3,
-            Magnesium, Zinc and Boron.
+            Calcium Citrate, Vitamin D3 &amp; Vitamin C Tablets — a 24-hour bone
+            health formula combining three key nutrients in a single film-coated
+            tablet, made under license from Jose Lea Pharma France.
           </p>
+          <div class="badge-strip">
+            <div class="badge-strip-icon">🕐</div>
+            <div class="badge-strip-text">
+              24 Hour Support<br />3 × 10 Tablets per Pack
+            </div>
+          </div>
           <div class="phc-pills">
-            <span class="phc-pill gold">1000mg Calcium Citrate</span>
-            <span class="phc-pill gold">Vitamin K2-7</span>
-            <span class="phc-pill">D3 1000 IU</span>
-            <span class="phc-pill">100mg Magnesium</span>
+            <span class="phc-pill gold">Calcium Citrate 1000mg</span>
+            <span class="phc-pill gold">Vitamin D3 1000 IU</span>
+            <span class="phc-pill">Vitamin C 85mg</span>
             <span class="phc-pill">Film Coated Tablet</span>
+            <span class="phc-pill">Made in France</span>
           </div>
           <div class="spec-pills">
             <div class="spec-pill">
@@ -476,8 +599,14 @@
             </div>
             <div class="spec-pill">
               <div>
-                <div class="spec-pill-label">Vitamin K2-7(1%)</div>
-                <div class="spec-pill-value">100 mcg</div>
+                <div class="spec-pill-label">Vitamin D3</div>
+                <div class="spec-pill-value">1000 I.U.</div>
+              </div>
+            </div>
+            <div class="spec-pill">
+              <div>
+                <div class="spec-pill-label">Vitamin C</div>
+                <div class="spec-pill-value">85 mg</div>
               </div>
             </div>
           </div>
@@ -491,62 +620,63 @@
         <div class="phc-right">
           <img
             class="product-box-img"
-            src="assets/images/megacal-1-ad-removed.jpg"
-            alt="MegaCal K2 supplement"
+            src="assets/images/coracal-1-new.jpg"
+            alt="CORA-CAL 1000 supplement pack"
           />
         </div>
       </div>
     </section>
 
+    <!-- MARQUEE -->
     <div class="marquee-wrap" aria-hidden="true">
       <div class="marquee-track">
         <span class="marquee-item"
           ><span class="marquee-dot"></span>Calcium Citrate 1000mg</span
         >
         <span class="marquee-item"
-          ><span class="marquee-dot"></span>Vitamin K2-7 100mcg</span
-        >
-        <span class="marquee-item"
           ><span class="marquee-dot"></span>Vitamin D3 1000 IU</span
         >
         <span class="marquee-item"
-          ><span class="marquee-dot"></span>Magnesium Hydroxide 100mg</span
+          ><span class="marquee-dot"></span>Vitamin C 85mg</span
         >
         <span class="marquee-item"
-          ><span class="marquee-dot"></span>Zinc 3mg</span
+          ><span class="marquee-dot"></span>24 Hour Support</span
         >
         <span class="marquee-item"
-          ><span class="marquee-dot"></span>Boron 100mcg</span
+          ><span class="marquee-dot"></span>Bone Density</span
         >
         <span class="marquee-item"
-          ><span class="marquee-dot"></span>Bone Health</span
+          ><span class="marquee-dot"></span>Film Coated Tablet</span
         >
         <span class="marquee-item"
-          ><span class="marquee-dot"></span>Cardiovascular Support</span
+          ><span class="marquee-dot"></span>Jose Lea Pharma France</span
+        >
+        <span class="marquee-item"
+          ><span class="marquee-dot"></span>Teeth Mineralisation</span
         >
         <span class="marquee-item"
           ><span class="marquee-dot"></span>Calcium Citrate 1000mg</span
         >
         <span class="marquee-item"
-          ><span class="marquee-dot"></span>Vitamin K2-7 100mcg</span
-        >
-        <span class="marquee-item"
           ><span class="marquee-dot"></span>Vitamin D3 1000 IU</span
         >
         <span class="marquee-item"
-          ><span class="marquee-dot"></span>Magnesium Hydroxide 100mg</span
+          ><span class="marquee-dot"></span>Vitamin C 85mg</span
         >
         <span class="marquee-item"
-          ><span class="marquee-dot"></span>Zinc 3mg</span
+          ><span class="marquee-dot"></span>24 Hour Support</span
         >
         <span class="marquee-item"
-          ><span class="marquee-dot"></span>Boron 100mcg</span
+          ><span class="marquee-dot"></span>Bone Density</span
         >
         <span class="marquee-item"
-          ><span class="marquee-dot"></span>Bone Health</span
+          ><span class="marquee-dot"></span>Film Coated Tablet</span
         >
         <span class="marquee-item"
-          ><span class="marquee-dot"></span>Cardiovascular Support</span
+          ><span class="marquee-dot"></span>Jose Lea Pharma France</span
+        >
+        <span class="marquee-item"
+          ><span class="marquee-dot"></span>Teeth Mineralisation</span
         >
       </div>
     </div>
@@ -562,12 +692,20 @@
         "
       >
         <div>
-          <div class="eyebrow reveal">What is MegaCal K2?</div>
+          <div class="france-badge">
+            <div class="france-flag">
+              <span style="background: #002395"></span>
+              <span style="background: #ededed"></span>
+              <span style="background: #ed2939"></span>
+            </div>
+            Made under license from Jose Lea Pharma France
+          </div>
+          <div class="eyebrow reveal">What is CORA-CAL 1000?</div>
           <h2
             class="display reveal rv1"
             style="font-size: clamp(2rem, 3.5vw, 3rem); margin: 16px 0 22px"
           >
-            Comprehensive Bone Health<br /><em>in One Tablet</em>
+            Three Nutrients,<br /><em>One Complete Formula</em>
           </h2>
           <p
             class="reveal rv2"
@@ -578,10 +716,11 @@
               margin-bottom: 14px;
             "
           >
-            MegaCal K2 is a nutraceutical film-coated tablet delivering a
-            powerful combination of nutrients specifically formulated to support
-            bone density, muscle function, cardiovascular health and energy
-            production.
+            CORA-CAL 1000 is a film-coated nutraceutical tablet formulated with
+            three complementary nutrients — Calcium Citrate, Vitamin D3, and
+            Vitamin C — each contributing a distinct and clinically recognised
+            role in supporting bone health, calcium absorption, and connective
+            tissue integrity.
           </p>
           <p
             class="reveal rv2"
@@ -592,30 +731,31 @@
               margin-bottom: 14px;
             "
           >
-            The unique inclusion of Vitamin K2 is key — it activates proteins
-            that direct calcium specifically into the bones and teeth, while
-            preventing it from accumulating in arteries and soft tissues. This
-            makes MegaCal K2 superior to conventional calcium supplements.
+            The addition of Vitamin C sets CORA-CAL 1000 apart. Beyond its
+            well-known antioxidant properties, Vitamin C is essential for
+            collagen synthesis — the structural protein that forms the organic
+            matrix of bone and supports the health of joints, tendons, and
+            cartilage surrounding skeletal tissue.
           </p>
           <p
             class="reveal rv2"
             style="font-size: 0.93rem; line-height: 1.9; color: var(--grey-4)"
           >
-            Store in a cool &amp; dry place, protect from direct sunlight. Usage
-            as directed by the dietician or health practitioner. Nutraceutical,
-            not for medicinal use.
+            Made under license from Jose Lea Pharma France, Lyon — each pack
+            contains 3 × 10 film-coated tablets for convenient, continuous
+            24-hour bone support. Nutraceutical, not for medicinal use.
           </p>
           <div class="reveal rv3" style="margin-top: 28px">
             <a href="contact.html" class="btn btn-sage btn-arrow"
-              >Enquire About MegaCal K2</a
+              >Enquire About CORA-CAL 1000</a
             >
           </div>
         </div>
         <div class="bg-product-wrap">
           <div class="reveal rv2">
             <img
-              src="assets/images/megacalk2-bgremoved.jpeg"
-              alt="MegaCal K2 nutritional information table"
+              src="assets/images/coracal-bgremoved.jpeg"
+              alt="CORA-CAL 1000 nutritional information"
               style="
                 border-radius: 12px;
                 box-shadow: var(--shadow-xl);
@@ -627,14 +767,63 @@
       </div>
     </section>
 
+    <!-- KEY BENEFITS -->
+    <section
+      class="section"
+      style="background: var(--cream); padding-top: 56px; padding-bottom: 56px"
+    >
+      <div class="eyebrow reveal" style="text-align: center">
+        Why CORA-CAL 1000
+      </div>
+      <h2
+        class="display reveal rv1"
+        style="
+          font-size: clamp(2rem, 3.5vw, 3rem);
+          margin-top: 14px;
+          text-align: center;
+        "
+      >
+        Comprehensive Bone<br /><em>Support in Every Tablet</em>
+      </h2>
+      <div class="benefit-banner reveal rv2">
+        <div class="benefit-item">
+          <div class="benefit-icon">🦴</div>
+          <div class="benefit-title">Strong Bone Matrix</div>
+          <p class="benefit-desc">
+            Calcium Citrate delivers a highly bioavailable form of calcium that
+            actively builds and maintains bone mineral density, reducing
+            fracture risk and supporting skeletal strength.
+          </p>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">☀️</div>
+          <div class="benefit-title">D3-Enhanced Absorption</div>
+          <p class="benefit-desc">
+            Vitamin D3 (cholecalciferol) maximises calcium uptake from the
+            intestines, ensuring that the calcium in every tablet is efficiently
+            utilised by bones and muscles rather than excreted.
+          </p>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">🔬</div>
+          <div class="benefit-title">Collagen &amp; Tissue Support</div>
+          <p class="benefit-desc">
+            Vitamin C is critical for collagen synthesis — the protein scaffold
+            that forms the organic matrix of bone and supports joint, cartilage,
+            and connective tissue health around the skeleton.
+          </p>
+        </div>
+      </div>
+    </section>
+
     <!-- KEY INGREDIENTS -->
-    <section class="section" style="background: var(--cream)">
+    <section class="section" style="background: var(--white)">
       <div class="eyebrow reveal">Active Ingredients</div>
       <h2
         class="display reveal rv1"
         style="font-size: clamp(2rem, 3.5vw, 3rem); margin-top: 14px"
       >
-        Four Pillars of<br /><em>Bone Health</em>
+        Three Pillars of<br /><em>Bone &amp; Joint Health</em>
       </h2>
       <p
         class="reveal rv2"
@@ -642,16 +831,17 @@
           font-size: 0.92rem;
           color: var(--grey-3);
           line-height: 1.85;
-          max-width: 580px;
+          max-width: 620px;
           margin-top: 14px;
         "
       >
-        Each ingredient in MegaCal K2 plays a distinct and complementary role in
-        supporting overall bone and cardiovascular health.
+        Every ingredient in CORA-CAL 1000 plays a precise, synergistic role —
+        together they address calcium supply, calcium absorption, and the
+        structural integrity of bone and connective tissue.
       </p>
       <div class="ingr-grid">
+        <!-- Calcium Citrate -->
         <div class="ingr-card reveal">
-          <!-- <div class="ingr-icon">🦴</div> -->
           <div
             class="ingr-img"
             style="background: linear-gradient(135deg, #e8f5e9, #c8e6c9)"
@@ -663,61 +853,30 @@
             />
           </div>
           <div class="ingr-body">
-            <div class="ingr-compound">Calcium Citrate · 1000mg</div>
+            <div class="ingr-compound">Key Mineral · 1000mg per tablet</div>
             <div class="ingr-name">Calcium Citrate</div>
             <p class="ingr-desc">
-              Calcium Citrate is the most bioavailable form of calcium
-              supplement. Unlike calcium carbonate, it can be absorbed without
-              food and is particularly beneficial for those with low stomach
-              acid.
+              Calcium Citrate is among the most bioavailable forms of
+              supplemental calcium. It can be absorbed with or without food and
+              is particularly effective for individuals with low stomach acid,
+              making it a superior choice over calcium carbonate.
             </p>
             <div class="ingr-benefit">
-              Helps address low calcium levels and supports bone density
+              Builds and maintains strong, dense bones and teeth
             </div>
             <div class="ingr-benefit">
-              Superior absorption compared to calcium carbonate
+              Effective absorption with or without food
             </div>
             <div class="ingr-benefit">
-              Supports teeth mineralisation and muscle contraction
+              Supports proper muscle contraction and nerve signalling
             </div>
           </div>
         </div>
+        <!-- Vitamin D3 -->
         <div class="ingr-card reveal rv1">
-          <!-- <div class="ingr-icon">🩸</div> -->
           <div
             class="ingr-img"
-            style="background: linear-gradient(135deg, #e8f5e9, #c8e6c9)"
-          >
-            <img
-              src="assets/images/embedded/vitamin-k2.png"
-              alt="Vitamin K2"
-              loading="lazy"
-            />
-          </div>
-          <div class="ingr-body">
-            <div class="ingr-compound">Vitamin K2-7 (1%) · 100mcg</div>
-            <div class="ingr-name">Vitamin K2</div>
-            <p class="ingr-desc">
-              Vitamin K2 (as Menaquinone-7) activates osteocalcin — the protein
-              that anchors calcium into bone tissue. It also activates Matrix
-              Gla Protein (MGP), which prevents arterial calcification.
-            </p>
-            <div class="ingr-benefit">
-              Directs calcium into bones rather than arteries
-            </div>
-            <div class="ingr-benefit">
-              Prevents damage to blood vessels from calcium deposits
-            </div>
-            <div class="ingr-benefit">
-              Synergistic effect with Vitamin D3 for optimal calcium use
-            </div>
-          </div>
-        </div>
-        <div class="ingr-card reveal">
-          <!-- <div class="ingr-icon">☀️</div> -->
-          <div
-            class="ingr-img"
-            style="background: linear-gradient(135deg, #e8f5e9, #c8e6c9)"
+            style="background: linear-gradient(135deg, #fff8e1, #ffecb3)"
           >
             <img
               src="assets/images/embedded/vitamin-d3.png"
@@ -726,61 +885,113 @@
             />
           </div>
           <div class="ingr-body">
-            <div class="ingr-compound">Vitamin D3 · 1000 IU</div>
+            <div class="ingr-compound">
+              Absorption Booster · 1000 I.U. per tablet
+            </div>
             <div class="ingr-name">Vitamin D3</div>
             <p class="ingr-desc">
-              Vitamin D3 (cholecalciferol) is essential for calcium absorption
-              from the intestines. Without adequate D3, even high calcium intake
-              cannot be effectively used by the body for bone formation.
+              Vitamin D3 (cholecalciferol) is the body's preferred form of
+              Vitamin D. It regulates the expression of calcium-binding proteins
+              in the intestinal lining, dramatically increasing the proportion
+              of ingested calcium that enters the bloodstream.
             </p>
             <div class="ingr-benefit">
-              Treats and prevents bone disorders including osteoporosis
+              Significantly enhances intestinal calcium absorption
             </div>
             <div class="ingr-benefit">
-              Enhances intestinal absorption of calcium and phosphorus
+              Supports prevention and management of bone disorders
             </div>
             <div class="ingr-benefit">
-              Supports immune system, muscle function and general well-being
+              Contributes to immune and muscle function
             </div>
           </div>
         </div>
-        <div class="ingr-card reveal rv1">
-          <!-- <div class="ingr-icon">⚡</div> -->
+        <!-- Vitamin C -->
+        <div class="ingr-card reveal rv2">
           <div
             class="ingr-img"
-            style="background: linear-gradient(135deg, #e8f5e9, #c8e6c9)"
+            style="background: linear-gradient(135deg, #fce4ec, #f8bbd0)"
           >
             <img
-              src="assets/images/embedded/magnesium-hydroxide.png"
-              alt="Magnesium Hydroxide"
+              src="assets/images/embedded/Vitamin C.png"
+              alt="Vitamin C"
               loading="lazy"
             />
           </div>
           <div class="ingr-body">
             <div class="ingr-compound">
-              Magnesium Hydroxide · 100mg + Zinc + Boron
+              Structural Support · 85mg per tablet
             </div>
-            <div class="ingr-name">Magnesium, Zinc &amp; Boron</div>
+            <div class="ingr-name">Vitamin C</div>
             <p class="ingr-desc">
-              Magnesium supports over 300 enzymatic reactions including muscle
-              and energy production. Zinc (3mg elemental) is essential for bone
-              metabolism, and Boron (3mg) aids calcium and magnesium retention.
+              Vitamin C (ascorbic acid) is an essential cofactor in collagen
+              synthesis. Collagen forms the organic framework of bone and is the
+              primary structural protein of cartilage, tendons, and the
+              connective tissue surrounding every joint in the body.
             </p>
             <div class="ingr-benefit">
-              Magnesium supports muscle function and energy production
+              Essential for collagen production and bone matrix formation
             </div>
             <div class="ingr-benefit">
-              Zinc is essential for bone cell formation and immune health
+              Supports joint, cartilage and connective tissue health
             </div>
             <div class="ingr-benefit">
-              Boron enhances the retention and use of calcium and magnesium
+              Powerful antioxidant protecting bone cells from oxidative stress
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SPECS + BROCHURE IMAGE -->
+    <!-- HOW IT WORKS -->
+    <section class="section dark-section" style="background: var(--ink)">
+      <div class="eyebrow light reveal">Mechanism of Action</div>
+      <h2
+        class="display reveal rv1"
+        style="
+          font-size: clamp(2rem, 3.5vw, 3rem);
+          margin-top: 14px;
+          color: #fff;
+        "
+      >
+        How CORA-CAL 1000<br /><em style="color: var(--gold-light)"
+          >Works Around the Clock</em
+        >
+      </h2>
+      <div class="hiw-grid">
+        <div class="hiw-card reveal">
+          <div class="hiw-num">01</div>
+          <div class="hiw-title">Calcium Supply</div>
+          <p class="hiw-desc">
+            Calcium Citrate releases readily available calcium ions in the
+            digestive tract, even in low-acid environments, providing a reliable
+            and consistent supply of the body's most abundant mineral.
+          </p>
+        </div>
+        <div class="hiw-card reveal rv1">
+          <div class="hiw-num">02</div>
+          <div class="hiw-title">D3-Activated Uptake</div>
+          <p class="hiw-desc">
+            Vitamin D3 triggers the production of calbindin and other
+            calcium-transport proteins in the gut wall, increasing the fraction
+            of calcium absorbed into the bloodstream by up to threefold compared
+            to unsupplemented intake.
+          </p>
+        </div>
+        <div class="hiw-card reveal rv2">
+          <div class="hiw-num">03</div>
+          <div class="hiw-title">Collagen Scaffolding</div>
+          <p class="hiw-desc">
+            Vitamin C activates prolyl hydroxylase and lysyl hydroxylase —
+            enzymes required to cross-link collagen fibres into the resilient
+            organic matrix onto which calcium is deposited to form strong, dense
+            bone tissue.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SPECS + IMAGE SPLIT -->
     <div class="split-sec">
       <div class="split-text" style="background: var(--white)">
         <div class="eyebrow reveal">Nutritional Information</div>
@@ -793,7 +1004,7 @@
         <table class="specs-table reveal rv2">
           <tr>
             <td>Product</td>
-            <td>MegaCal K2 Film Coated Tablets</td>
+            <td>CORA-CAL 1000 Film Coated Tablets</td>
           </tr>
           <tr>
             <td>Calcium Citrate</td>
@@ -804,20 +1015,23 @@
             <td>1000 I.U. per tablet</td>
           </tr>
           <tr>
-            <td>Magnesium Hydroxide</td>
-            <td>100 mg per tablet</td>
+            <td>Vitamin C</td>
+            <td>85 mg per tablet</td>
           </tr>
           <tr>
-            <td>Zinc (Elemental)</td>
-            <td>3.0 mg per tablet</td>
+            <td>Other Ingredients</td>
+            <td>
+              Starch (E1422), DCP (E341), PVPK 30 (E1202), Aerosil (E551), Talc
+              (E553b), Magnesium Stearate (E572), Natural Food Colour
+            </td>
           </tr>
           <tr>
-            <td>Boron</td>
-            <td>3.0 mg per tablet</td>
+            <td>Pack Size</td>
+            <td>3 × 10 Tablets (30 tablets total)</td>
           </tr>
           <tr>
-            <td>Vitamin K2-7 (1%)</td>
-            <td>100 mcg per tablet</td>
+            <td>Support Duration</td>
+            <td>24 Hour Support</td>
           </tr>
           <tr>
             <td>Storage</td>
@@ -835,7 +1049,11 @@
             <td>Nutraceutical — not for medicinal use</td>
           </tr>
           <tr>
-            <td>Distributed by</td>
+            <td>Made Under License</td>
+            <td>Jose Lea Pharma France, Lyon, France</td>
+          </tr>
+          <tr>
+            <td>Sole Distributor</td>
             <td>PHARMA-Connectiv Pte Ltd, Singapore 368000 · Tel: 6282 8732</td>
           </tr>
         </table>
@@ -849,8 +1067,8 @@
       </div>
       <div class="split-img reveal">
         <img
-          src="assets/images/megacal-1-ad-removed.jpg"
-          alt="MegaCal K2 — detailed nutritional information and specifications"
+          src="assets/images/coracal-1-new.jpg"
+          alt="CORA-CAL 1000 product packaging and specifications"
         />
       </div>
     </div>
@@ -865,7 +1083,37 @@
         <em>Related</em> Products
       </h2>
       <div class="related-grid">
-        <a href="megaflex.html" class="pcard reveal">
+        <a href="megacal.html" class="pcard reveal">
+          <div class="pcard-img">
+            <img
+              src="assets/images/megacal-banner.jpg"
+              alt="MegaCal K2"
+              loading="lazy"
+            />
+            <div class="pcard-gradient"></div>
+            <span class="pcard-badge badge-green">Nutraceutical</span>
+            <div class="pcard-overlay-text">
+              <div class="pcard-cat">Bone Health</div>
+              <div class="pcard-name">MegaCal K2</div>
+            </div>
+          </div>
+          <div class="pcard-body">
+            <p>
+              Calcium Citrate 1000mg + Vitamin K2-7, D3 1000IU, Magnesium, Zinc
+              and Boron for comprehensive bone support.
+            </p>
+            <div class="tag-row">
+              <span class="tag">K2-7</span><span class="tag">D3 1000IU</span>
+            </div>
+          </div>
+          <div class="pcard-foot">
+            <div class="pcard-origin">
+              Distributed by <strong>PHARMA-Connectiv</strong>
+            </div>
+            <span class="pcard-link">Learn More</span>
+          </div>
+        </a>
+        <a href="megaflex.html" class="pcard reveal rv1">
           <div class="pcard-img">
             <img
               src="assets/images/megaflex-basic-hero.jpg"
@@ -881,8 +1129,8 @@
           </div>
           <div class="pcard-body">
             <p>
-              Liposomal K2-7 150mcg + D3 1200 IU — superior bioavailability. 30
-              mini-tablets once daily.
+              Liposomal K2-7 150mcg + D3 1200 IU for superior bioavailability.
+              30 mini-tablets once daily.
             </p>
             <div class="tag-row">
               <span class="tag">MK-7</span><span class="tag">Liposomal D3</span>
@@ -890,34 +1138,6 @@
           </div>
           <div class="pcard-foot">
             <div class="pcard-origin">Made in <strong>France</strong></div>
-            <span class="pcard-link">Learn More</span>
-          </div>
-        </a>
-        <a href="prostamax.html" class="pcard reveal rv1">
-          <div class="pcard-img">
-            <img
-              src="assets/images/prostamax-hero-clean.jpg"
-              alt="ProstaMax"
-              loading="lazy"
-            />
-            <div class="pcard-gradient"></div>
-            <span class="pcard-badge badge-amber">Men's Health</span>
-            <div class="pcard-overlay-text">
-              <div class="pcard-cat">Prostate Health</div>
-              <div class="pcard-name">ProstaMax</div>
-            </div>
-          </div>
-          <div class="pcard-body">
-            <p>
-              Saw Palmetto, Selenium, Zinc &amp; Pumpkin Seed for prostate and
-              urinary support.
-            </p>
-            <div class="tag-row">
-              <span class="tag">Saw Palmetto</span><span class="tag">Zinc</span>
-            </div>
-          </div>
-          <div class="pcard-foot">
-            <div class="pcard-origin">Made in <strong>USA</strong></div>
             <span class="pcard-link">Learn More</span>
           </div>
         </a>
@@ -967,9 +1187,9 @@
             Singapore and Southeast Asia.
           </p>
           <div class="f-certs">
-            <span class="f-cert">FDA</span><span class="f-cert">GMP</span
-            ><span class="f-cert">CE</span><span class="f-cert">KFDA</span
-            ><span class="f-cert">DMF</span><span class="f-cert">ISO</span>
+            <span class="f-cert">FDA</span><span class="f-cert">GMP</span>
+            <span class="f-cert">CE</span><span class="f-cert">KFDA</span>
+            <span class="f-cert">DMF</span><span class="f-cert">ISO</span>
           </div>
         </div>
         <div class="fcol">
